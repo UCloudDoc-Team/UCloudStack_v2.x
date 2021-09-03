@@ -1,24 +1,17 @@
-<!-- 请勿添加产品标题，标题行将由系统自动增加，名称将于您申请邮件提供的仓库名称一致 -->
+<div class="sidebar_title icon-product__ucloudstack">私有云UCloudStack v2.x版本</div>
 
-* [概览](README.md)
-* 产品介绍   <!-- 以下是参考的目录模版，旨在建议产品文档应该包含的内容模块。实际章节划分可根据实际内容进行调整 -->
-   * [什么是云主机](相对链接)
-   * [功能与优势](相对链接)
-   * [应用场景](相对链接)
-* 计费
-   * [计费模式](相对链接)
-   * [定价表](相对链接)
-   * [配置变更](相对链接)
-   * [续费](相对链接)
-   * [退款](相对链接)
-* 注意事项与使用限制
-   * [注意事项描述](相对链接)
-* 创建第一台云主机
-   * [创建资源](相对链接)
+* [文档概览](UCloudStack/README.md)
+* 产品介绍
+  * [产品简介](UCloudStack/introduction/README.md)
+  * [技术白皮书](UCloudStack/techwhitepaper/README.md)
 * 操作指南
-   * [创建](相对链接)
-   * [管理](相对链接)
-* 常见问题
-   * 场景相关 <!-- 平台已支持三级及以下目录收起展开，为确保点击区域充分，包含三级目录的二级标题请勿添加链接 -->
-      * [问题描述](相对链接)
-* [词汇表](_glossary.md)
+  * [用户手册](UCloudStack/userguide/README.md)
+  * [管理员手册](UCloudStack/adminguide/README.md)
+  * [自定义镜像制作](UCloudStack/customimage/README.md)
+* 开发者指南
+  * [API手册](UCloudStack/apiguide/README.md)
+  * [API状态码列表](UCloudStack/apiretcode/README.md)
+* 更新历史
+  * [更新历史](UCloudStack/changelog/README.md)
+* [返回主页](UCloudStack/README.md)
+* [常见问题](UCloudStack/faq.md)
