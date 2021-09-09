@@ -3,7 +3,7 @@
 
 平台支持用户导入 Linux 和 Windows 两种类型的自定义镜像：
 
-* Linux 类型： **CentOS 6.5 至7.9、Ubuntu 14.04 至20.01**
+* Linux 类型： **CentOS 6.5 至7.9、Ubuntu 14.04 至20.10**
 * Windows 类型： **Windows7 至 10，Windows server 2003 至2019**
 
 >如需导入其它版本的镜像或在配置过程中碰到问题，请联系平台客户经理或技术支持。
