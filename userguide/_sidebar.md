@@ -26,6 +26,5 @@
 * [22 计费管理](UCloudStack_v2.x/userguide/charge.md)
 * [23 容器服务](UCloudStack_v2.x/userguide/k8s.md)
 * [24 容器镜像仓库](UCloudStack_v2.x/userguide/containerimage.md)
-* [25 数据库审计](UCloudStack_v2.x/userguide/das.md)
 * [返回主页](UCloudStack_v2.x/README.md)
 
