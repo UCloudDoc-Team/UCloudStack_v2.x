@@ -1,4 +1,4 @@
-# linux virtoi驱动安装
+# linux virtio驱动安装
 
 ## 操作场景
 虚拟机系统内核需要支持 Virtio 驱动才能在平台上正常运行。为避免导入自定义镜像后，创建的虚拟机无法启动，您需要在导入镜像前，检查是否需要在源服务器中检查以及修复镜像中对 Virtio 驱动的支持。
@@ -7,7 +7,7 @@
 
 <span id = "CheckVirtio"></span>
 
-### 步骤一.检查内核是否安装Virito驱动
+### 步骤一.检查内核是否安装Virtio驱动
 
  运行 ` grep -i virtio /boot/config-$(uname -r)` 检查内核是否支持 Virtio 驱动。
 
@@ -18,8 +18,8 @@
 |检查结果|说明 |
 |:---|:--- |
 |参数取值有 m|执行[步骤二](#CheckVirtioForInitramfs) 检查返回为 m 的 返回结果 |
-|参数取值都为 y|表示操作系统中已经包含了Viritio驱动，请根据 [导入镜像流程](https://docs.ucloud.cn/UCloudStack/customimage/README?id=_3-导入镜像流程)  继续操作 |
-|没有这三个参数|表示没有安装virito相关驱动，不能直接导入云平台。需要编译安装virtio驱动。具体请参见[步骤四](#DownloadKernel) |
+|参数取值都为 y|表示操作系统中已经包含了Virtio驱动，请根据 [导入镜像流程](https://docs.ucloud.cn/UCloudStack/customimage/README?id=_3-导入镜像流程)  继续操作 |
+|没有这三个参数|表示没有安装virtio相关驱动，不能直接导入云平台。需要编译安装virtio驱动。具体请参见[步骤四](#DownloadKernel) |
 
 <span id = "CheckVirtioForInitramfs"></span>
 
