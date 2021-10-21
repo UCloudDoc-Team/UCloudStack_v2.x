@@ -22,7 +22,7 @@
 | **RetCode** | int | 返回状态码，为 0 则为成功返回，非 0 为失败 | **Yes** |
 | **Action** | string | 操作指令名称 | **Yes** |
 | **Message** | string | 返回错误消息，当 `RetCode` 非 0 时提供详细的描述信息 | No |
-| **Region** | string | 地域 | No |
+| **Region** | string | 地域，请参考[DescribeRegion接口] | No |
 | **Name** | string | 资源名称 | No |
 | **ChargeType** | string | 计费模式。枚举值：Dynamic，表示小时；Month，表示月；Year，表示年； | No |
 | **Quantity** | int | 购买时长。默认值1。小时不生效，月范围【1，11】，年范围【1，5】。 | No |
@@ -70,7 +70,7 @@
 | **RetCode** | int | 返回状态码，为 0 则为成功返回，非 0 为失败 | **Yes** |
 | **Action** | string | 操作指令名称 | **Yes** |
 | **Message** | string | 返回错误消息，当 `RetCode` 非 0 时提供详细的描述信息 | No |
-| **Region** | string | 地域 | No |
+| **Region** | string | 地域，请参考[DescribeRegion接口] | No |
 | **CompanyID** | int | 租户ID，仅admin操作时生效 | No |
 | **Keyword** | string | 关键字 | No |
 | **ProjectID** | string | 项目组ID | No |
@@ -96,25 +96,6 @@
 
 ### 数据模型
 
-
-    
-
-    
-
-    
-#### NATGWEIPInfo
-
-    
-    
-| 字段名 | 类型 | 描述信息 | 必填 |
-|:---|:---|:---|:---|
-| **RetCode** | int | 返回状态码，为 0 则为成功返回，非 0 为失败 | **Yes** |
-| **Action** | string | 操作指令名称 | **Yes** |
-| **Message** | string | 返回错误消息，当 `RetCode` 非 0 时提供详细的描述信息 | No |
-| **IPID** | string | EIP的ID | No |
-| **IP** | string | EIP的地址 | No |
-| **IPStatus** | string | EIP的状态 | No |
-    
 
     
 #### NATGWInfo
@@ -153,6 +134,25 @@
 | **DeleteTime** | int | 删除时间，时间戳 | No |
     
 
+    
+
+    
+
+    
+#### NATGWEIPInfo
+
+    
+    
+| 字段名 | 类型 | 描述信息 | 必填 |
+|:---|:---|:---|:---|
+| **RetCode** | int | 返回状态码，为 0 则为成功返回，非 0 为失败 | **Yes** |
+| **Action** | string | 操作指令名称 | **Yes** |
+| **Message** | string | 返回错误消息，当 `RetCode` 非 0 时提供详细的描述信息 | No |
+| **IPID** | string | EIP的ID | No |
+| **IP** | string | EIP的地址 | No |
+| **IPStatus** | string | EIP的状态 | No |
+    
+
 
 
 
@@ -174,7 +174,7 @@
 | **RetCode** | int | 返回状态码，为 0 则为成功返回，非 0 为失败 | **Yes** |
 | **Action** | string | 操作指令名称 | **Yes** |
 | **Message** | string | 返回错误消息，当 `RetCode` 非 0 时提供详细的描述信息 | No |
-| **Region** | string | 地域 | No |
+| **Region** | string | 地域，请参考[DescribeRegion接口] | No |
 | **NATGWID** | string | NATGWID | No |
 | **CompanyID** | int | 租户ID，仅admin操作时生效 | No |
 
@@ -211,7 +211,7 @@
 | **RetCode** | int | 返回状态码，为 0 则为成功返回，非 0 为失败 | **Yes** |
 | **Action** | string | 操作指令名称 | **Yes** |
 | **Message** | string | 返回错误消息，当 `RetCode` 非 0 时提供详细的描述信息 | No |
-| **Region** | string | 地域 | No |
+| **Region** | string | 地域，请参考[DescribeRegion接口] | No |
 | **NATGWID** | string | NAT网关ID | No |
 | **BindResourceType** | string | 资源类型， 枚举值范围：VM、VPC、Subnet。类型为VPC时，BindResourceID不能为空 | No |
 | **CompanyID** | int | 租户ID，仅admin操作时生效 | No |
@@ -252,7 +252,7 @@
 | **RetCode** | int | 返回状态码，为 0 则为成功返回，非 0 为失败 | **Yes** |
 | **Action** | string | 操作指令名称 | **Yes** |
 | **Message** | string | 返回错误消息，当 `RetCode` 非 0 时提供详细的描述信息 | No |
-| **Region** | string | 地域 | No |
+| **Region** | string | 地域，请参考[DescribeRegion接口] | No |
 | **NATGWID** | string | NAT网关ID | No |
 | **Offset** | int | 列表起始位置偏移量，默认为0。 | No |
 | **Limit** | int | 返回数据长度，默认为20，最大100。 | No |
@@ -327,7 +327,7 @@
 | **RetCode** | int | 返回状态码，为 0 则为成功返回，非 0 为失败 | **Yes** |
 | **Action** | string | 操作指令名称 | **Yes** |
 | **Message** | string | 返回错误消息，当 `RetCode` 非 0 时提供详细的描述信息 | No |
-| **Region** | string | 地域 | No |
+| **Region** | string | 地域，请参考[DescribeRegion接口] | No |
 | **RuleID** | string | RuleID | No |
 | **NATGWID** | string | NATGWID | No |
 | **CompanyID** | int | 租户ID，仅admin操作时生效 | No |

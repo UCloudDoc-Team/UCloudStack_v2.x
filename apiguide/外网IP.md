@@ -22,7 +22,7 @@
 | **RetCode** | int | 返回状态码，为 0 则为成功返回，非 0 为失败 | **Yes** |
 | **Action** | string | 操作指令名称 | **Yes** |
 | **Message** | string | 返回错误消息，当 `RetCode` 非 0 时提供详细的描述信息 | No |
-| **Region** | string | 地域 | No |
+| **Region** | string | 地域，请参考[DescribeRegion接口] | No |
 | **Name** | string | 资源名称 | No |
 | **ChargeType** | string | 计费模式。枚举值：Dynamic，表示小时；Month，表示月；Year，表示年； | No |
 | **Bandwidth** | int | 带宽，默认值1，默认范围1~100 | No |
@@ -72,7 +72,7 @@
 | **RetCode** | int | 返回状态码，为 0 则为成功返回，非 0 为失败 | **Yes** |
 | **Action** | string | 操作指令名称 | **Yes** |
 | **Message** | string | 返回错误消息，当 `RetCode` 非 0 时提供详细的描述信息 | No |
-| **Region** | string | 地域 | No |
+| **Region** | string | 地域，请参考[DescribeRegion接口] | No |
 | **CompanyID** | int | 租户ID，仅admin操作时生效 | No |
 | **ProjectID** | string | 项目组ID | No |
 | **Keyword** | string | 关键字 | No |
@@ -165,7 +165,7 @@
 | **RetCode** | int | 返回状态码，为 0 则为成功返回，非 0 为失败 | **Yes** |
 | **Action** | string | 操作指令名称 | **Yes** |
 | **Message** | string | 返回错误消息，当 `RetCode` 非 0 时提供详细的描述信息 | No |
-| **Region** | string | 地域 | No |
+| **Region** | string | 地域，请参考[DescribeRegion接口] | No |
 | **ChargeType** | string | 计费模式。枚举值：Dynamic，表示小时；Month，表示月；Year，表示年； | No |
 | **OpertatorName** | string | 线路。目前支持Bgp | No |
 | **Bandwidth** | int | 带宽，默认值1，默认范围1~100 | No |
@@ -229,7 +229,7 @@
 | **RetCode** | int | 返回状态码，为 0 则为成功返回，非 0 为失败 | **Yes** |
 | **Action** | string | 操作指令名称 | **Yes** |
 | **Message** | string | 返回错误消息，当 `RetCode` 非 0 时提供详细的描述信息 | No |
-| **Region** | string | 地域 | No |
+| **Region** | string | 地域，请参考[DescribeRegion接口] | No |
 | **ResourceType** | string | 资源类型。VM：虚拟机 | No |
 | **ResourceID** | string | 资源ID | No |
 | **EIPID** | string | 外网IP的ID | No |
@@ -268,7 +268,7 @@
 | **RetCode** | int | 返回状态码，为 0 则为成功返回，非 0 为失败 | **Yes** |
 | **Action** | string | 操作指令名称 | **Yes** |
 | **Message** | string | 返回错误消息，当 `RetCode` 非 0 时提供详细的描述信息 | No |
-| **Region** | string | 地域 | No |
+| **Region** | string | 地域，请参考[DescribeRegion接口] | No |
 | **ResourceType** | string | 资源类型。VM：虚拟机 | No |
 | **ResourceID** | string | 资源ID | No |
 | **EIPID** | string | 外网IP的ID | No |
@@ -307,7 +307,7 @@
 | **RetCode** | int | 返回状态码，为 0 则为成功返回，非 0 为失败 | **Yes** |
 | **Action** | string | 操作指令名称 | **Yes** |
 | **Message** | string | 返回错误消息，当 `RetCode` 非 0 时提供详细的描述信息 | No |
-| **Region** | string | 地域 | No |
+| **Region** | string | 地域，请参考[DescribeRegion接口] | No |
 | **EIPID** | string | 外网IP的ID | No |
 | **Bandwidth** | int | 调整后的带宽 | No |
 | **CompanyID** | int | 租户ID，仅admin操作时生效 | No |
@@ -347,7 +347,7 @@
 | **RetCode** | int | 返回状态码，为 0 则为成功返回，非 0 为失败 | **Yes** |
 | **Action** | string | 操作指令名称 | **Yes** |
 | **Message** | string | 返回错误消息，当 `RetCode` 非 0 时提供详细的描述信息 | No |
-| **Region** | string | 地域 | No |
+| **Region** | string | 地域，请参考[DescribeRegion接口] | No |
 | **EIPID** | string | 外网IP的ID | No |
 | **CompanyID** | int | 租户ID，仅admin操作时生效 | No |
 
