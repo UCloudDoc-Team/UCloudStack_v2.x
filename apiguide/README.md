@@ -2,7 +2,7 @@
 
 * [版权声明](UCloudStack_v2.x/apiguide/copyright.md)
 * [API 概述](UCloudStack_v2.x/apiguide/overview.md)
-* [1 计算](UCloudStack_v2.x/apiguide/计算.md)
+* [1 虚拟机](UCloudStack_v2.x/apiguide/虚拟机.md)
 * [2 镜像管理](UCloudStack_v2.x/apiguide/镜像管理.md)
 * [3 计算集群](UCloudStack_v2.x/apiguide/计算集群.md)
 * [4 云硬盘](UCloudStack_v2.x/apiguide/云硬盘.md)
