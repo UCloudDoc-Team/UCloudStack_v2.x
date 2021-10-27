@@ -155,7 +155,7 @@ UCloudStack用户主要通过两种方式管理用户K8s集群：
 
 ![us-k8s](../images/techwhitepaper/us-k8s.png)
 
-​                                                                                                               用户K8S集群管理架构图
+​																													用户K8S集群管理架构图
 
 
 
@@ -163,7 +163,7 @@ UCloudStack用户主要通过两种方式管理用户K8s集群：
 
 ![GPU&K8S](../images/techwhitepaper/gpu2.png)
 
-​                                                                                                                K8S使用GPU节点架构图
+​																												K8S使用GPU节点架构图
 
  
 
@@ -179,7 +179,7 @@ UCloudStack用户主要通过两种方式管理用户K8s集群：
 
 ![GPU](../images/techwhitepaper/gpu.png)
 
-​                                                                                                      k8s集群与GPU节点调用关系示意图
+​																							 k8s集群与GPU节点调用关系示意图
 
 
 
@@ -197,7 +197,7 @@ CSI-Plugin 是Kubernetes生态中提供的一种存储扩展接口标准，主�
 
 ![CSI](../images/techwhitepaper/csi.png)
 
-​                                                                                                                      CSI插件架构图
+​																													 CSI插件架构图
 
 组件分类：
 
@@ -271,7 +271,7 @@ UCloudStack容器服务采用Calico IPIP的模式，网络层互通即可通讯�
 
 ![calico](../images/techwhitepaper/calico.png)
 
-​                                                                                                                        Calico部署示意图
+​																											 Calico部署示意图
 
 
 
@@ -291,7 +291,7 @@ UCloudStack容器服务使用Prometheus来实现，Prometheus在集群范围获�
 
 ![promethues](../images/techwhitepaper/promethus.png)
 
-​                                                                                                                      Prometheus 架构图
+​																											 Prometheus 架构图
 
  
 
@@ -313,7 +313,9 @@ Alertmanager: 从 Prometheus server 端接收到 alerts 后，会去除重复数
 
 ![prometheus-operator](../images/techwhitepaper/prometheus_operator.png)
 
-​                                                                                                              Prometheus Operator 架构图
+​																											 Prometheus Operator 架构图
+
+
 
 Prometheus 作为一个核心的控制器，它会创建 Prometheus、ServiceMonitor、AlertManager 以及我们的 prometheus-rule 这四个资源对象，operator 会一直监控并维持这四个资源对象的状态，其中创建Prometheus 资源对象就是最为 Prometheus Server 进行监控，而 ServiceMonitor 就是我们用的 exporter 的各种抽象(exporter 就是提供我们各种服务的 metrics 的工具)。Prometheus 就是通过 ServiceMonitor 提供的 metrics 数据接口把我们数据 pull 过来的。现在我们监控 prometheus 不需要每个服务单独创建修改规则。通过直接管理 Operator 来进行集群的监控。这里还要说一下，一个 ServiceMonitor 可以通过我们的 label 标签去匹配集群内部的 service，而我们的 prometheus 也可以通过 label 匹配多个 ServiceMonitor。
 
@@ -321,6 +323,6 @@ Prometheus 作为一个核心的控制器，它会创建 Prometheus、ServiceMon
 
 ![US-prometheus](../images/techwhitepaper/us_prometheus.png)
 
-​                                                                                             UCloudStack容器服务监控告警架构图
+​																									UCloudStack容器服务监控告警架构图
 
 UCloudStack 容器服务监控告警服务前端通过 Kubernetes 代理服务和管理 K8S 模块与用户 K8s 集群中的 Prometheus Operator 进行交互，通过操作 Prometheus Operator 的 Kubernetes CRD 资源管理监控告警服务；用户 K8s 集群可以将 Prometheus、Alertmanager 和 Grafana 暴露内网或外网使用。
