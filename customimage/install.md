@@ -8,7 +8,9 @@
 
 
 
-## 镜像规范检测
+## 使用镜像工具自动安装
+
+### 镜像规范检测
 
 <!-- tabs:start -->
 ### ** Linux **
@@ -92,7 +94,7 @@ check qga enable                                           [FAILED]
 <!-- tabs:end -->
 
 
-## 镜像工具安装与检测
+### 镜像工具安装与检测
 
 <!-- tabs:start -->
 ### ** Linux **
@@ -197,16 +199,14 @@ reset repo                                                 [OK]
  ![windows_virtio_02](../images/customimage/win_virtio_02.png)
  * 安装完后，再次运行检测工具，进行检测，直至所有的检查项都为 `success` 为止。
 
->- 如果仍有 `Failed` 出现，请参照 [检测项和手动安装方式](#check_install_manual) 中的说明进行相对应检查项的安装。
 <!-- tabs:end -->
 
-
-
+!> 如果仍有 `Failed` 出现，请参照 [手动检测项和安装方式](#check_install_manual) 中的说明进行相对应检查项的安装。
 
 
 <span id = "check_install_manual"></span>
 
-## 检测项和手动安装方式
+## 手动检测项和安装方式
 <!-- tabs:start -->
 ### ** Linux **
 |检查项           |检查项影响   |检查项目原因  |  达成项目方式 |
@@ -222,8 +222,7 @@ reset repo                                                 [OK]
 |acpid   |无法执行关机命令| 虚拟机关机依赖 acpid| 参见[安装acpid服务](#install_acpid)|
 |arping  | 绑定外网的虚拟机无法访问| 外网绑定成功需要对外发送arp包|参见[arping安装](#install_arping)|
 |hotplug | 云硬盘和弹性网卡热插拔后不生效| 系统热插拔设备需要支持 |参见[hotplug配置](#config_hotplug)|
-|hhga   |无法正常启动机器| 虚拟机网络配置,改密码等都依赖hhga| 参见[hhga安装](#install_hhga)|
-|hhgad   |NA| hhga的守护服务| 参见[hhgad安装](#install_hhgad)|
+|qemu-guest-agent   |无法正常启动机器| 虚拟机网络配置,改密码等都依赖qga| 参见[qga安装](#install_qga)|
 |exporter   |监控信息无法显示| guest os 监控信息收集| 参见[node exporter安装](#install_node_exporter)|
 
 <span id = "virt_console"></span>
@@ -257,10 +256,10 @@ reset repo                                                 [OK]
 ### 各个操作系统关系防火墙
 #### CentOS6.5
 
-    //关闭IPv4
+    * 关闭IPv4
     service  iptables stop
     chkconfig iptables off
-    //关闭IPv6
+    * 关闭IPv6
     service  ip6tables stop
     chkconfig iptables off
 #### CentOS7 以上
@@ -310,30 +309,15 @@ reset repo                                                 [OK]
     # Memory hotAdd request
     SUBSYSTEM=="memory", ACTION=="add", ATTR{state}=="offline", ATTR{state}="online"
 
-<span id = "install_hhga"></span>
+<span id = "install_qga"></span>
 
-### hhga安装 （下面安装文件联系服务经理索取）
+### qemu-guest-agent安装 
+    启动第三方平台已安装完成或已有的 Linux 虚拟机；
+    使用命令`yum install qemu-guest-agent -y（CentOS）`或`apt-get install qemu-guest-agent -y（Ubuntu）`进行安装Qemu Guest Agent，安装过程无报错;
+    使用命令`qemu-ga --version`，检查qemu-guest-agent版本为2.10以上；
 
-#### CentOS 6 && Ubuntu 14 (服务配置文件) [CentOS6_hhga](#centos6_hhga) [Ubuntu14_hhga](#ubuntu14_hhga)
-    1.拷贝服务二进制文件 hhga 到 /usr/sbin 目录下
-    2.将服务配置文件内容拷贝到 /etc/init.d/hhga文件中
-    3.添加执行权限
-        chmod +x /etc/init.d/hhga
-    4.ubuntu 设置开机启动
-        update-rc.d hhga defaults
-#### CentOS 7 && Ubuntu 16 (服务配置文件) [CentOS7_hhga](#centos7_ubuntu16_hhga) [Ubuntu16_hhga](#centos7_ubuntu16_hhga)
-    1. 安装二进制文件hhga到/usr/sbin/目录下面
-    2. 安装service文件到/usr/lib/systemd/system/hhga.service文件中
-    3. 将hhga server 设置成开启启动方式
-        systemctl enable hhga
-    
-<span id = "install_hhgad"></span>
-### hhgad安装
-    参考 hhga 安装步骤
-    
-<span id = "install_node_exporter"></span>
-### node exporter安装
-    参考 hhga 安装步骤
+### node exporter安装 (安装请联系服务经理）
+
 
 
 
@@ -344,8 +328,7 @@ reset repo                                                 [OK]
 |PasswordComplexity|创建机器时设置额密码无法使用|N/A| 参见[密码复杂度设置](#set_passwd_complex)|
 |Firewall|可能导致机器无法启动|UCloudStack平台已经提供安全组因此可以关闭机器中防火墙|参见[关闭系统防火墙](#win_disable_firewall)|
 |Remote Desktop|无法通过远程连接工具连接虚拟机|如果需要远程连接,需要打开远程连接功能|参见[开启远程桌面连接](#enable_remote_desktop)|
-|hhga   |无法正常启动机器| 虚拟机网络配置,改密码等都依赖hhga| 参见[hhga安装](#install_hhga)|
-|hhgad   |NA| hhga的守护服务| 参见[hhgad安装](#install_hhgad)|
+|qemu-guest-agent   |无法正常启动机器| 虚拟机网络配置,改密码等都依赖qga| 参见[qga安装](#install_qga)|
 |exporter   |监控信息无法显示| guest os 监控信息收集| 参见[wmi_exporter安装](#install_wmi_exporter)|
 
 
@@ -375,30 +358,33 @@ reset repo                                                 [OK]
 #### 打开远程桌面选项
 ![](../images/customimage/windows_init_docs_pic_06.png)
 
-<span id = "install_hhga"></span>
+<span id = "install_qga"></span>
 
-### 安装hhga
-#### 使用srvany.exe 安装hhga服务
-    1. srvany:
-        是Microsoft Windows Resource Kits工具集的一个实用的小工具，用于将任何EXE程序作为Windows服务运行。
-    2. 将srvany.exe和instsrv.exe拷贝到C:\Windows\System32\后,64位系统需要同时复制到C:\Windows\SysWow64\下
-    3. C:\Windows\System32\instsrv.exe hhga C:\Windows\System32\srvany.exe
-    4. 安装完毕后，我们需要对srvany.exe进行配置，以便于能够加载我们指定的程序，配置的方法是:
-        开始 –> 运行 –> regedit，打开注册表，定位到下面的路径 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\hhga
-    5. 如果该服务名下没有Parameters项目，则对服务名称项目右击新建项，名称为Parameters，然后定位到Parametes项，新建以下几个字符串值
-        名称 Application 值为你要作为服务运行的程序地址。
-        名称 AppDirectory 值为你要作为服务运行的程序所在文件夹路径。
-        名称 AppParameters 值为你要作为服务运行的程序启动所需要的参数。
+### 安装qemu-guest-agent
+   * 启动第三方平台已安装完成或已有的 Windows 虚拟机；
+* 下载并安装VirtIO驱动程序，选择最新的iso文件；
+`https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/`
 
-<span id = "install_hhgad"></span>
+    **流程：**
 
-### 安装hhgad
-参见[hhga安装](#install_hhga)
+    * 启动虚拟机并连接至图形控制台；
+    *  登录 Windows 用户会话；
+    *  下载virtio驱动程序中的virtio-win-0.1.xxx.iso文件到虚拟机，如 C 盘根目录下；
+    *  将iso文件进行解压至当前虚拟机，在 `vioserial` 文件夹中找到相应的操作系统版本；
+    *  以管理员身份运行 `Windows PowerShell` ，切换至上一步的文件夹目录， 如
+    `C:\virtio-win-0.1.204\vioserial\2k16\amd64` , 运行 `PnPutil.exe -i -a .\vioser.inf` 进行安装，且安装过程无报错；
+    *  安装后在设备管理器--系统设备列表下出现 `VirtIO Serial Driver` 条目则表示安装成功。
     
-<span id = "install_wmi_exporter"></span>
+*  下载并安装qemu guest agent程序；
+    `https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-qemu-ga/`
 
-### 安装wmi_exporter
-参见[hhga安装](#install_hhga)
+     **流程：**
+    * 下载并安装相对应版本的 `qemu-ga` 安装包，如 C 盘根目录下；
+    * 运行msi文件，安装 `qemu-guest-agent`，且安装过程无报错。
+    * 打开任务管理器，检查 `QEMU Guest Agent`进程已运行。
+* 安装完成后，将 QCOW2 格式的镜像文件上传并导入到平台，即可使用镜像创建并运行虚拟机。
 
+
+### 安装wmi_exporter （安装请联系服务经理）
 
 <!-- tabs:end -->
