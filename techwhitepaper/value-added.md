@@ -10,24 +10,24 @@ UCloudStack容器服务基于Kubernetes，植入UCloud易用性与实用性结�
 
 
 
-| **UCloudStack****容器服务对象名称** | **Kubernetes****原生概念** |
-| ----------------------------------- | -------------------------- |
-| 命名空间                            | Namespace                  |
-| 存储类                              | Storage  Class             |
-| 持久卷                              | Persistent  Volume         |
-| 持久卷声明                          | Persistent  Volume Claim   |
-| 资源配额                            | Resource  Quota            |
-| 资源限制                            | Limit  Ranges              |
-| 工作负载                            | Workload                   |
-| 部署                                | Deployment                 |
-| 有状态副本集                        | StatefulSet                |
-| 守护进程集                          | DaemonSet                  |
-| 任务                                | Job                        |
-| 计划任务                            | CronJob                    |
-| 容器组                              | Pod                        |
-| 服务                                | Service                    |
-| 配置字典                            | ConfigMap                  |
-| 保密字典                            | Secret                     |
+| **UCloudStack容器服务对象名称** | **Kubernetes原生概念**   |
+| ------------------------------- | ------------------------ |
+| 命名空间                        | Namespace                |
+| 存储类                          | Storage  Class           |
+| 持久卷                          | Persistent  Volume       |
+| 持久卷声明                      | Persistent  Volume Claim |
+| 资源配额                        | Resource  Quota          |
+| 资源限制                        | Limit  Ranges            |
+| 工作负载                        | Workload                 |
+| 部署                            | Deployment               |
+| 有状态副本集                    | StatefulSet              |
+| 守护进程集                      | DaemonSet                |
+| 任务                            | Job                      |
+| 计划任务                        | CronJob                  |
+| 容器组                          | Pod                      |
+| 服务                            | Service                  |
+| 配置字典                        | ConfigMap                |
+| 保密字典                        | Secret                   |
 
 ​                                                                             UCloudStack容器服务与Kubernetes原生概念对照图
 
@@ -153,7 +153,7 @@ UCloudStack用户主要通过两种方式管理用户K8s集群：
 
 2）通过 UCloudStack 管理K8s模块操作cluster-manager服务管理用户集群，主要实现用户集群的生命周期管理，插件管理和扩缩容等功能，同时计费、账号权限均由管理模块提供支持
 
-<img src="../images/techwhitepaper/us-k8s.png"  />
+![us-k8s](../images/techwhitepaper/us-k8s.png)
 
 ​                                                                                                               用户K8S集群管理架构图
 
@@ -161,7 +161,7 @@ UCloudStack用户主要通过两种方式管理用户K8s集群：
 
 ### 7.5.2 GPU节点
 
-<img src="../images/techwhitepaper/gpu2.png"  />
+![GPU&K8S](../images/techwhitepaper/gpu2.png)
 
 ​                                                                                                                K8S使用GPU节点架构图
 
@@ -175,7 +175,9 @@ UCloudStack用户主要通过两种方式管理用户K8s集群：
 
  
 
-<img src="../images/techwhitepaper/gpu.png"  />
+
+
+![GPU](../images/techwhitepaper/gpu.png)
 
 ​                                                                                                      k8s集群与GPU节点调用关系示意图
 
@@ -191,7 +193,9 @@ daemonset启动之后，会将资源注册到kubelet，kubelet同时会上报到
 
 CSI-Plugin 是Kubernetes生态中提供的一种存储扩展接口标准，主要功能是实现外置存储卷挂载到Pod内部，为Pod内部的应用提供存储服务。
 
-<img src="../images/techwhitepaper/csi.png"  />
+
+
+![CSI](../images/techwhitepaper/csi.png)
 
 ​                                                                                                                      CSI插件架构图
 
@@ -265,7 +269,7 @@ CSI Identity Driver（Controller、Node会同时实现该服务）
 
 UCloudStack容器服务采用Calico IPIP的模式，网络层互通即可通讯。原始包经过<tunl0>进行封装，通过路由器转发达到达到目标Node，再由其<tunl0>进行解封装，分发给目标容器。在这种模式下对物理网络环境没有特殊要求，只要节点之间IP层可以路由互通即可，同时封装协议IPIP的header更轻量，相交同类网络插件解决方案拥有更小的拆解包损耗。
 
-<img src="../images/techwhitepaper/calico.png"  />
+![calico](../images/techwhitepaper/calico.png)
 
 ​                                                                                                                        Calico部署示意图
 
@@ -275,7 +279,7 @@ UCloudStack容器服务采用Calico IPIP的模式，网络层互通即可通讯�
 
 插件系统(Plugin)为用户提供可插拔的方式扩展 UCloudStack 容器集群功能。
 
-<img src="../images/techwhitepaper/plugin.png"  />
+![Plugin](../images/techwhitepaper/plugin.png)
 
 插件系统的是通过 kubernetes 的 Operator 机制实现的，整个控制流程在管理集群中实现，这样做的好处是无需侵入用户集群，安装类似 agent 的程序，弊端是由于无法监听用户集群内插件组件的状态变化，所以除了启用、禁用操作，无法实现更完整的状态调和。
 
@@ -285,7 +289,7 @@ UCloudStack容器服务采用Calico IPIP的模式，网络层互通即可通讯�
 
 UCloudStack容器服务使用Prometheus来实现，Prometheus在集群范围获取metrics和事件数据，通过Grafana组件来进行展示，结合AlertManager进行告警。
 
-<img src="../images/techwhitepaper/promethus.png"  />
+![promethues](../images/techwhitepaper/promethus.png)
 
 ​                                                                                                                      Prometheus 架构图
 
@@ -307,7 +311,7 @@ Alertmanager: 从 Prometheus server 端接收到 alerts 后，会去除重复数
 
  
 
-<img src="../images/techwhitepaper/prometheus_operator.png"  />
+![prometheus-operator](../images/techwhitepaper/prometheus_operator.png)
 
 ​                                                                                                              Prometheus Operator 架构图
 
@@ -315,7 +319,7 @@ Prometheus 作为一个核心的控制器，它会创建 Prometheus、ServiceMon
 
 
 
-<img src="../images/techwhitepaper/us_prometheus.png"  />
+![US-prometheus](../images/techwhitepaper/us_prometheus.png)
 
 ​                                                                                             UCloudStack容器服务监控告警架构图
 
