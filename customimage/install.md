@@ -175,7 +175,7 @@ reset repo                                                 [OK]
 
 确保检测信息中，无 `error` 出现，表示已安装正常。
 
->- 如果仍有 `error` 出现，请参照 [检测项和手动安装方式](#check_install_manual) 中的说明进行相对应检查项的安装。
+
 
 ### ** Windows **
 
@@ -201,7 +201,7 @@ reset repo                                                 [OK]
 
 <!-- tabs:end -->
 
-!> 如果仍有 `Failed` 出现，请参照 [手动检测项和安装方式](#check_install_manual) 中的说明进行相对应检查项的安装。
+!> 如果仍有 `error` 或 `Failed` 出现，请参照 [手动检测项和安装方式](#check_install_manual) 中的说明进行相对应检查项的安装。
 
 
 <span id = "check_install_manual"></span>
