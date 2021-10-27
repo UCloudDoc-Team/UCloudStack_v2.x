@@ -201,7 +201,7 @@ reset repo                                                 [OK]
 
 <!-- tabs:end -->
 
-!> 如果仍有 `error` 或 `Failed` 出现，请参照 [手动检测项和安装方式](#check_install_manual) 中的说明进行相对应检查项的安装。
+!> 如果仍有 `error` 或`Failed` 出现，请参照 [手动检测项和安装方式](#check_install_manual) 中的说明进行相对应检查项的安装。
 
 
 <span id = "check_install_manual"></span>
@@ -316,6 +316,8 @@ reset repo                                                 [OK]
     使用命令`yum install qemu-guest-agent -y（CentOS）`或`apt-get install qemu-guest-agent -y（Ubuntu）`进行安装Qemu Guest Agent，安装过程无报错;
     使用命令`qemu-ga --version`，检查qemu-guest-agent版本为2.10以上；
 
+<span id = "install_node_exporter"></span>
+
 ### node exporter安装 (安装请联系服务经理）
 
 
@@ -384,7 +386,7 @@ reset repo                                                 [OK]
     * 打开任务管理器，检查 `QEMU Guest Agent`进程已运行。
 * 安装完成后，将 QCOW2 格式的镜像文件上传并导入到平台，即可使用镜像创建并运行虚拟机。
 
-
+<span id = "install_wmi_exporter"></span>
 ### 安装wmi_exporter （安装请联系服务经理）
 
 <!-- tabs:end -->
