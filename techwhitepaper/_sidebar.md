@@ -18,7 +18,5 @@
 
 * [6 灾备服务](UCloudStack_v2.x/techwhitepaper/recovery.md)
 
-* [7 增值服务](UCloudStack_v2.x/techwhitepaper/value-added.md)
-
 * [返回主页](UCloudStack_v2.x/README.md)
 
