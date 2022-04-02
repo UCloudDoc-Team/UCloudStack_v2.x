@@ -654,9 +654,4 @@ UCloudStack 信创版私有云，提供通过信创互认证的 IaaS 和 PaaS �
 
 ![localization](../images/techwhitepaper/localization.png)
 
-## 3.7 快杰私有云
-
-UCloudStack 快杰版基于软硬协同的技术方案，提供业界领先的计算、存储、网络服务，存储 IOPS 最高可达 120万。
-
-![kj](../images/techwhitepaper/kj.png)
 
