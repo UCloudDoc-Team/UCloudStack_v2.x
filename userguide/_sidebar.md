@@ -16,7 +16,7 @@
 * [12 NAT 网关](UCloudStack_v2.x/userguide/natgw.md)
 * [13 IPSecVPN](UCloudStack_v2.x/userguide/ipsecvpn.md )
 * [14 弹性伸缩](UCloudStack_v2.x/userguide/autoscale.md)
-* [15 高可用VIP](UCloudStack_v2.x/userguide/vip.md)
+* [15 高可用VIP](UCloudStack_v2.x/userguide/havip.md)
 * [16 定时器](UCloudStack_v2.x/userguide/job.md)
 * [17 物理机纳管](UCloudStack_v2.x/userguide/bms.md)
 * [18 审批流程](UCloudStack_v2.x/userguide/approve.md)
