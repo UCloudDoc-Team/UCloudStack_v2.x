@@ -65,7 +65,7 @@ NAT 网关通过 SNAT 规则支持 SNAT（Source Network Address Translation 源
 
 SNAT 规则中不同源地址类型的规则优先级不同，以优先级高的规则为准： 
 
-**（1）源地址为 VPC ** 
+**（1）源地址为 VPC** 
 
 - NAT 网关所属 VPC 下所有虚拟机均可通过 NAT 网关访问外网。
 - 一个 NAT 网关仅允许创建一条源地址为 ALL 的 SNAT 规则。
