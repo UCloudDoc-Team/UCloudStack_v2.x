@@ -1,4 +1,4 @@
-<div class="sidebar_title icon-product__ucloudstack">产品简介 v2.x版本</div>
+<div class="sidebar_title icon-product__ucloudstack">产品简介 v2.1版本</div>
 
 * [产品概述](UCloudStack_v2.x/introduction/README.md)
 * [产品架构](UCloudStack_v2.x/introduction/arch.md)
