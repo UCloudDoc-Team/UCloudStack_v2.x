@@ -10,9 +10,10 @@
  * [6 虚拟资源管理](UCloudStack_v2.x/adminguide/virtual.md)
  * [7 租户管理](UCloudStack_v2.x/adminguide/tenant.md)
  * [8 审批管理](UCloudStack_v2.x/adminguide/approve.md)
- * [9 账务管理](UCloudStack_v2.x/adminguide/billing.md)
- * [10 平台管理](UCloudStack_v2.x/adminguide/platform.md)
+ * [9 财务管理](UCloudStack_v2.x/adminguide/billing.md)
+ * [10 系统管理](UCloudStack_v2.x/adminguide/platform.md)
  * [11 操作日志](UCloudStack_v2.x/adminguide/log.md)
  * [12 监控大屏](UCloudStack_v2.x/adminguide/screen.md)
+ * [13 一键巡检](UCloudStack_v2.x/adminguide/inspection.md)
  * [返回主页](UCloudStack_v2.x/README.md)
 
