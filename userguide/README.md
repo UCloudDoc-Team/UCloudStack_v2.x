@@ -25,4 +25,5 @@
 * [22 账号管理](UCloudStack_v2.x/userguide/account.md)
 * [23 计费管理](UCloudStack_v2.x/userguide/charge.md)
 * [24 应用商店](UCloudStack_v2.x/userguide/app.md)
+* [25 文件存储](UCloudStack_v2.x/userguide/fs.md)
 * [返回主页](UCloudStack_v2.x/README.md)
