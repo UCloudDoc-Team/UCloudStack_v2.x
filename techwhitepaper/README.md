@@ -1,4 +1,4 @@
-# 技术白皮书 TechWhitepaper
+# 技术白皮书 
 
 * [版权声明](UCloudStack_v2.x/techwhitepaper/copyright.md)
 * [前言](UCloudStack_v2.x/techwhitepaper/abstract.md)
