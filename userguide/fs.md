@@ -95,7 +95,7 @@ mount -t nfs4 192.168.179.179:/ /datanfs
 
 ![FSunlinkeip](../images/userguide/FSunlinkeip.png)
 
-## 25.7 续费文件存储
+## 25.7 文件存储续费
 
 支持用户手动对文件存储进行续费。
 
