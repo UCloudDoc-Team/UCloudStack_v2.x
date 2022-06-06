@@ -19,6 +19,7 @@
 * [14 监控](UCloudStack_v2.x/apiguide/监控.md)
 * [15 回收站](UCloudStack_v2.x/apiguide/回收站.md)
 * [16 资源通用操作](UCloudStack_v2.x/apiguide/资源通用操作.md)
-* [17 Python Demo](UCloudStack_v2.x/apiguide/demo.md)
+* [17 VPN网关](UCloudStack_v2.x/apiguide/VPN网关.md)
+* [18 Python Demo](UCloudStack_v2.x/apiguide/demo.md)
 * [返回主页](UCloudStack_v2.x/README.md)
 
