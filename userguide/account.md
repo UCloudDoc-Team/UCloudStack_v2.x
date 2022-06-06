@@ -42,13 +42,21 @@
 
 ### 22.1.2 开通登录保护
 
-平台提供基于 TOTP（Time-Based One-Time Password Algorithm）的免费登录二次认证服务，开通本服务后，账号登录控制台均需通过授权认证。开通登录保护的前提条件如下：
+平台提供基于 TOTP（Time-Based One-Time Password Algorithm）的免费登录二次认证服务，开通本服务后，账号登录控制台均需通过授权认证，支持国密硬件版和普通软件版，用户可根据需要通过部署进行配置。开通登录保护的前提条件如下：
 
 （1）开通对象为独立主账号或子账号；
 
 （2）移动设备上安装有 FortiToken 或其他基于 TOTP 技术的令牌工具；
 
 （3）推荐使用 FortiToken 。
+
+![openfortitoken](../images/userguide/fortitoken.png)
+
+点击下一步，国密硬件版需输入SN信息，不可为空：
+
+![openfortitoken](../images/userguide/fortitoken01.png)
+
+普通软件版显示如下：
 
 ![openfortitoken](../images/userguide/openfortitoken.png)
 
@@ -91,7 +99,7 @@ A：可切换至手动获取，手动输入账号密钥绑定并获取授权码�
 
 Q：是否可以用其他工具绑定账号？
 
-A：若使用的是 FortiToken 身份认证方式，可以用基于 TOTP 算法的其他动态令牌工具绑定账号，如微信小程序“二次验证码”等，75为安全起见，推荐使用谷歌官方 “FortiToken” 。
+A：若使用的是 FortiToken 身份认证方式，可以用基于 TOTP 算法的其他动态令牌工具绑定账号，如微信小程序“二次验证码”等，为安全起见，推荐使用谷歌官方 “FortiToken” 。
 
 ### 22.1.3 登录访问限制
 
