@@ -20,13 +20,13 @@
 
 
 <center>
-<B><font size=5>产品版本：V2.1.0 </font></B>
+<B><font size=5>产品版本：V2.2 </font></B>
 </center>
 
 
 
 <center>
-<B><font size=4>文档版本：202204 </font></B>
+<B><font size=4>文档版本：202206 </font></B>
 </center>
 
 

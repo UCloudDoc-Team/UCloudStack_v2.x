@@ -20,8 +20,9 @@
 
 
 <center>
-<B><font size=5>产品版本：V2.2.0 </font></B>
+<B><font size=5>产品版本：V2.2 </font></B>
 </center>
+
 
 
 

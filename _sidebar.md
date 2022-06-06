@@ -1,4 +1,4 @@
-<div class="sidebar_title icon-product__ucloudstack_v2.x">私有云UCloudStack v2.1版本</div>
+<div class="sidebar_title icon-product__ucloudstack_v2.x">私有云UCloudStack v2.2版本</div>
 
 * [文档概览](UCloudStack_v2.x/README.md)
 * 产品介绍
@@ -11,7 +11,5 @@
 * 开发者指南
   * [API手册](UCloudStack_v2.x/apiguide/README.md)
   * [API状态码列表](UCloudStack_v2.x/apiretcode/README.md)
-* 更新历史
-  * [更新历史](UCloudStack_v2.x/changelog/README.md)
 * [返回主页](UCloudStack_v2.x/README.md)
 * [常见问题](UCloudStack_v2.x/faq.md)
