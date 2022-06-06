@@ -30,9 +30,17 @@
 
 ### 2.1.3 双因子验证登录
 
-平台为管理员账号提供免费的基于 TOTP（Time-Based One-Time Password Algorithm）登录二次认证服务，开通本服务后，管理员每次登录控制台均需通过授权认证。为降低账号密码泄漏造成的风险，建议您开通账号登录，开通步骤如下：
+平台为管理员账号提供免费的基于 TOTP（Time-Based One-Time Password Algorithm）登录二次认证服务，开通本服务后，管理员每次登录控制台均需通过授权认证。支持国密硬件版和普通软件版，用户可根据需要通过部署进行配置，为降低账号密码泄漏造成的风险，建议您开通账号登录，开通步骤如下：
 
 1. 登录控制台并进入账号控制台，可通过 “账号和组织管理” - “我的账号” 中的 “账号安全” - “登录保护” 入口进行操作，如下图所示：
+
+   ![loginprotect](../images/adminguide/login.png)
+
+   点击下一步，国密硬件版操作如下图，输入硬件SN，不可为空：
+
+   ![loginprotect](../images/adminguide/login01.png)
+
+   普通软件版操作如下：
 
    ![loginprotect](../images/adminguide/loginprotect.png)
 
