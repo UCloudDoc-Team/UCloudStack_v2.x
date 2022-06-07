@@ -20,7 +20,7 @@
 
 3. **租户添加物理机**
 
-   由【平台租户】通过控制台物理机功能，根据需求自主添加物理机，包括服务器的名称、IPMI IP、IPMI User、IPMI PassWord、机架位置及标签，支持批量导入物理机信息，并且支持 H3C-R4900 G2/G3机型。
+   由【平台租户】通过控制台物理机功能，根据需求自主添加物理机，包括服务器的名称、IPMI IP、IPMI User、IPMI PassWord、机架位置及标签，支持批量导入物理机信息，支持机型SA5212M4、ThinkSystem SR650、ThinkSystem SR658、R4900 G2、UniServer R4900 G3。
 
 4. **物理机纳管管理**
 
