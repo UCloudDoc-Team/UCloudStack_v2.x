@@ -16,5 +16,6 @@
  * [12 监控大屏](UCloudStack_v2.x/adminguide/screen.md)
  * [13 一键巡检](UCloudStack_v2.x/adminguide/inspection.md)
  * [14 资源用量](UCloudStack_v2.x/adminguide/ru.md)
+ * [15 管理员](UCloudStack_v2.x/adminguide/admin.md) 
  * [返回主页](UCloudStack_v2.x/README.md)
 
