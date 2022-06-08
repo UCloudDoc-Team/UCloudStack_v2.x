@@ -40,7 +40,7 @@
 通过内网或者外网访问终端检测响应平台EDR，EDR页面访问地址:https://[ip]
 
 * 管理页面访问地址： https://[ip]
-* 默认账号: admin 密码： admin 二次验证密码: admin
+* 默认账号: admin 密码： admin 
 * 机器默认锁定22远程登录端口，开放需登录EDR控制页面进行设置
 
 ![useEDR](../images/userguide/useEDR.png)
