@@ -57,6 +57,22 @@
 
 ![nodeinstance](../images/adminguide/usb.png)
 
+**（5）GPU管理**
+
+支持管理员通过宿主机页面，查看宿主机中GPU设备列表及信息，包括设备名、规格信息、设备地址、类型、状态、操作，如下图所示：
+
+![nodeinstance](../images/adminguide/GPU.png)
+
+支持管理员对宿主机中GPU设备进行虚拟机化切割，并在vGPU中展示设备信息，包括设备名、规格信息、物理GPU、云主机、状态，如下图所示：
+
+![nodeinstance](../images/adminguide/sliceGPU.png)
+
+![nodeinstance](../images/adminguide/vGPU.png)
+
+支持管理员对宿主机中已虚拟机化切割的GPU设备进行虚拟机化还原，如下图所示：
+
+![nodeinstance](../images/adminguide/reGPU.png)
+
 ### 5.1.3 锁定宿主机
 
 宿主机被锁定后，新建计算实例不会被调度至计算节点，不影响节点内已有计算实例，可配合宿主机进入维护模式功能，以实现宿主机维护、升级等操作。
@@ -153,7 +169,7 @@
 
 * 租户邮箱：添加物理机的租户邮箱。
 * 名称：指物理机在平台的名称标识，添加时必须指定。
-* IPMI IP：指物理机的 IPMI IP 地址，添加时必须指定，IP 地址必须从平台可达
+* IPMI IP：指物理机的 IPMI IP 地址，添加时必须指定，IP 地址必须从平台可达。
 * IPMI User：物理机的 IPMI 用户名，添加时必须指定。
 * IPMI PassWord：物理机的 IPMI 密码，添加时必须指定。
 * 机架位置：物理机所处的机架位置，添加时必须指定。
