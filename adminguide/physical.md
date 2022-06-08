@@ -63,13 +63,13 @@
 
 ![nodeinstance](../images/adminguide/GPU.png)
 
-支持管理员对宿主机中GPU设备进行虚拟机化切割，并在vGPU中展示设备信息，包括设备名、规格信息、物理GPU、云主机、状态，如下图所示：
+支持管理员对宿主机中GPU设备进行虚拟化切割，并在vGPU中展示设备信息，包括设备名、规格信息、物理GPU、云主机、状态，如下图所示：
 
 ![nodeinstance](../images/adminguide/sliceGPU.png)
 
 ![nodeinstance](../images/adminguide/vGPU.png)
 
-支持管理员对宿主机中已虚拟机化切割的GPU设备进行虚拟机化还原，如下图所示：
+支持管理员对宿主机中已虚拟化切割的GPU设备进行虚拟化还原，如下图所示：
 
 ![nodeinstance](../images/adminguide/reGPU.png)
 
