@@ -17,14 +17,14 @@
 
 |检查结果|说明 |
 |:---|:--- |
-|参数取值有 m|执行[步骤二](#CheckVirtioForInitramfs) 检查返回为 m 的 返回结果 |
-|参数取值都为 y|表示操作系统中已经包含了Virtio驱动，请根据 [导入镜像流程](https://docs.ucloud.cn/UCloudStack/customimage/README?id=_3-导入镜像流程)  继续操作 |
-|没有这三个参数|表示没有安装virtio相关驱动，不能直接导入云平台。需要编译安装virtio驱动。具体请参见[步骤四](#DownloadKernel) |
+|参数取值有 m|执行[步骤二](#步骤二检查临时文件系统是否包含virtio驱动) 检查返回为 m 的 返回结果 |
+|参数取值都为 y|表示操作系统中已经包含了Virtio驱动，请根据 [导入镜像流程](/UCloudStack_v2.x/customimage/README.md#导入镜像流程)  继续操作 |
+|没有这三个参数|表示没有安装virtio相关驱动，不能直接导入云平台。需要编译安装virtio驱动。具体请参见[步骤四](#步骤四下载和内核安装包) |
 
 <span id = "CheckVirtioForInitramfs"></span>
 
 ### 步骤二.检查临时文件系统是否包含Virtio驱动
-如果 [步骤一](#CheckVirtio)的执行结果参数取值为 m，则需要进一步检查，确认临时文件系统 initramfs 或者 initrd 是否包含 virtio 驱动。请根据操作系统的不同，执行相应命令：
+如果 [步骤一](#步骤一检查内核是否安装virtio驱动)的执行结果参数取值为 m，则需要进一步检查，确认临时文件系统 initramfs 或者 initrd 是否包含 virtio 驱动。请根据操作系统的不同，执行相应命令：
 * CentOS 操作系统：
 ```
 lsinitrd /boot/initramfs-$(uname -r).img | grep virtio
@@ -37,15 +37,15 @@ lsinitramfs /boot/initrd.img-$(uname -r) | grep virtio
 返回类似如下结果：
 ![virtio](../images/customimage/virtio_check_02.png)
 
-> - 如上图表明 initramfs已经包含了virtio_blk.ko以及virtio_net.ko，可以根据[导入镜像流程](https://docs.ucloud.cn/UCloudStack/customimage/README?id=_3-导入镜像流程) 继续操作。
-> - 如果临时文件系统initramfs没有包含virtio驱动，则需要修复临时文件系统。具体请参见[步骤三](#ReconfigureInitramfs)
+> - 如上图表明 initramfs已经包含了virtio_blk.ko以及virtio_net.ko，可以根据[导入镜像流程](/UCloudStack_v2.x/customimage/README.md#导入镜像流程) 继续操作。
+> - 如果临时文件系统initramfs没有包含virtio驱动，则需要修复临时文件系统。具体请参见[步骤三](#步骤三修复临时文件系统)
 
 
 
 <span id = "ReconfigureInitramfs"></span>
 
 ### 步骤三.修复临时文件系统
-如果 [步骤二](#CheckVirtioForInitramfs) 的执行结果显示临时文件系统 initramfs 或者 initrd 没有包含 virtio 驱动，则需要重新配置临时文件系统，使其包含 virtio 驱动。请根据操作系统的不同，选择相应操作：
+如果 [步骤二](#步骤二检查临时文件系统是否包含virtio驱动) 的执行结果显示临时文件系统 initramfs 或者 initrd 没有包含 virtio 驱动，则需要重新配置临时文件系统，使其包含 virtio 驱动。请根据操作系统的不同，选择相应操作：
 * CentOS 操作系统：
 ```
 cp /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r).img.bak
@@ -57,7 +57,7 @@ mkinitrd -f --with=virtio_blk --with=virtio_pci /boot/initramfs-$(uname -r).img 
 echo -e "virtio_pci\nvirtio_blk" >> /etc/initramfs-tools/modules
 update-initramfs  -u
 ```
-> 安装完成后，可以根据[导入镜像流程](https://docs.ucloud.cn/UCloudStack/customimage/README?id=_3-导入镜像流程) 继续操作。
+> 安装完成后，可以根据[导入镜像流程](/UCloudStack_v2.x/customimage/README.md#导入镜像流程) 继续操作。
 
 <span id = "DownloadKernel"></span>
 
@@ -100,7 +100,7 @@ make menuconfig
 * 返回至进入 `Device Drivers`--> `Network device support` 详情界面，确认是否勾选了 `Virtio network driver` 。如下图所示：
 ![kernel_06](../images/customimage/kernel_06.png)
 * 按`ESc` 退出内核配置界面，并根据弹窗提示，选择`YES`, 保存`.config` 文件。
-* 参考 [步骤一](#CheckVirtio)，验证Virito驱动是否已经正确配置。
+* 参考 [步骤一](#步骤一检查内核是否安装virtio驱动)，验证Virito驱动是否已经正确配置。
 * 运行一下命令查看virtio驱动的安装情况
 ```
 find /lib/modules/"$(uname -r)"/ -name "virtio.*" | grep -E "virtio.*"
@@ -108,4 +108,4 @@ grep -E "virtio.*" < /lib/modules/"$(uname -r)"/modules.builtin
 ```
 如果任一命令输出virtio_blk、virtio_pci等文件列表，表明您已经正确安装了virtio驱动。
 
-> 安装完成后，可以根据 [导入镜像流程](https://docs.ucloud.cn/UCloudStack_v2.x/customimage/README?id=_3-导入镜像流程) 继续操作。
+> 安装完成后，可以根据 [导入镜像流程](/UCloudStack_v2.x/customimage/README.md#导入镜像流程) 继续操作。

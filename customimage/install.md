@@ -201,7 +201,7 @@ reset repo                                                 [OK]
 
 <!-- tabs:end -->
 
-!> 如果仍有 `error` 或`Failed` 出现，请参照 [手动检测项和安装方式](#check_install_manual) 中的说明进行相对应检查项的安装。
+!> 如果仍有 `error` 或`Failed` 出现，请参照 [手动检测项和安装方式](#手动检测项和安装方式) 中的说明进行相对应检查项的安装。
 
 
 <span id = "check_install_manual"></span>
@@ -211,7 +211,7 @@ reset repo                                                 [OK]
 ### ** Linux **
 |检查项           |检查项影响   |检查项目原因  |  达成项目方式 |
 |:----------------|:------------|:-------------|:--------------|
-|driver  |创建虚拟机无法启动 | UCloudStack 后台使用virtio 驱动存储和网卡, virtio驱动效率会高一些 | 参见[安装Linux virtio驱动](UCloudStack/customimage/linuxvirtio.md) 
+|driver  |创建虚拟机无法启动 | UCloudStack 后台使用virtio 驱动存储和网卡, virtio驱动效率会高一些 | 参见[安装Linux virtio驱动](/UCloudStack_v2.x/customimage/linuxvirtio.md) 
 |SElinux |创建虚拟机无法正常使用 |selinux是为了最小权限,或影响虚拟机启动功能设置 | 文件: /etc/selinux/config 修改: SELINUX=disabled |
 |ssh     |远程ssh连接慢 | 默认 UseDNS/GSSAPIAuthentication 是开启的| 文件: /etc/ssh/sshd_config  关闭: UseDNS no/ GSSAPIAuthentication no|
 |console |物理机后台登录有问题|方便后台登录排查原因|参见 [各版本操作系统console开启](#virt_console)|

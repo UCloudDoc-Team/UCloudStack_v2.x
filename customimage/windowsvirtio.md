@@ -1,7 +1,7 @@
 # windows virtio驱动安装说明
 
 ## 操作场景
-镜像必须安装虚拟化平台 KVM 的 Virtio 驱动。Windows系统默认未安装 Virtio 驱动，用户需要下载并安装 Windows Virtio 驱动后再根据 根据 [导入镜像流程](https://docs.ucloud.cn/UCloudStack_v2.x/customimage/README?id=_3-导入镜像流程) 继续操作。
+镜像必须安装虚拟化平台 KVM 的 Virtio 驱动。Windows系统默认未安装 Virtio 驱动，用户需要下载并安装 Windows Virtio 驱动后再根据 根据 [导入镜像流程](/UCloudStack_v2.x/customimage/README.md#导入镜像流程) 继续操作。
 
 ## 操作步骤
 
@@ -23,4 +23,4 @@
 * 按照相同的方式运行并安装 `balloon/NetKVM/viostor` 这几项。
 
 
-> 安装完成后，可以根据 [导入镜像流程](https://docs.ucloud.cn/UCloudStack_v2.x/customimage/README?id=_3-导入镜像流程) 继续操作。
+> 安装完成后，可以根据 [导入镜像流程](/UCloudStack_v2.x/customimage/README.md#导入镜像流程) 继续操作。
