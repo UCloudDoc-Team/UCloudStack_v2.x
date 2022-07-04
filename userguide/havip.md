@@ -57,7 +57,9 @@ HaVIP作为一个不绑定特定设备的浮动IP，通常和高可用软件（k
 ![updateVIP1](../images/userguide/updateVIP1.png)
 ![updateVIP2](../images/userguide/updateVIP2.png)
 
-## 15.5 更新高可用VIP
+## 15.5 删除高可用VIP
+
 支持用户删除高可用VIP资源，可支持删除【可用】【失败】状态的高可用VIP。删除弹性网卡后，会自动解绑与之关联的虚拟机。用户可通过VIP列表进行高可用VIP的删除操作，支持批量删除。
 
 ![deleteVIP](../images/userguide/deleteVIP.png)
+

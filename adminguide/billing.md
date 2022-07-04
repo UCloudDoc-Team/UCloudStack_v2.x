@@ -216,3 +216,4 @@
 平台支持管理员从账单周期、所属产品、订单类型、计费模式、所属租户、所属地域、所属项目七个维度筛选账单明细，并导出到本地 Excel 文件，为便平台运营管理和报表统计，如下图所示：
 
 ![exportingbilldetails](../images/adminguide/exportingbilldetails.png)
+

@@ -29,4 +29,6 @@
 * [25 文件存储](UCloudStack_v2.x/userguide/fs.md)
 * [26 对象存储](UCloudStack_v2.x/userguide/oss.md)
 * [27 虚拟机模板](UCloudStack_v2.x/userguide/vmtemplate.md)
+* [28 隔离组](UCloudStack_v2.x/userguide/isolation.md)
+* [29 组播](UCloudStack_v2.x/userguide/multicast.md)
 * [返回主页](UCloudStack_v2.x/README.md)

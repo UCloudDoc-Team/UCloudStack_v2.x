@@ -70,7 +70,7 @@
 
 ### 24.2.6 使用数据库审计UDAS
 
-通过内网或者外网访问数据库审计UDAS，UDAS页面访问地址:https://[ip]
+通过内网或者外网访问数据库审计UDAS，UDAS页面访问地址: https://[ip]
 
 * 管理页面访问地址： https://[ip]
 * 默认系统管理员账号： sysadmin 密码： 3edc$RFV
@@ -78,3 +78,4 @@
 * 默认审计管理员账号： auditadmin 密码：3edc$RFV
 
 ![useUDAS](../images/userguide/useUDAS.png)
+
