@@ -4,7 +4,7 @@
 
 ![moniterscreen](../images/adminguide/moniterscreen.png)
 
-通知和告警：展示最近 5 条平台告警信息
+通知和告警：展示最近 5 条平台告警信息。
 
 物理机 TOP5：展示CPU使用率、硬盘读吞吐、硬盘写吞吐、内存使用率在前 5 名的物理节点 IP 。
 

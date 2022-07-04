@@ -1,4 +1,4 @@
-<div class="sidebar_title icon-product__UCloudStack_v2.x">管理员手册 v2.2版本</div>
+<div class="sidebar_title icon-product__UCloudStack_v2.x">管理员手册 v2.3版本</div>
 
  * [概览](UCloudStack_v2.x/adminguide/README.md)
  * [版权声明](UCloudStack_v2.x/adminguide/copyright.md)

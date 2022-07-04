@@ -92,3 +92,6 @@
 支持用户删除巡检报告，可支持删除【完成】状态的巡检报告。用户可通过巡检列表进行巡检报告的删除操作，支持批量删除。
 
 ![deleteinspection](../images/adminguide/deleteinspection.png)
+
+
+

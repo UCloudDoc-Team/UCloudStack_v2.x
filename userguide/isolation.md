@@ -88,3 +88,6 @@
 支持用户操作删除隔离组，隔离组状态为空闲时，可操作删除。隔离组状态为调度中/调度完成，需先操作禁用隔离组，然后操作删除。如下图所示：
 
 ![deleteisolation](../images/userguide/deleteisolation.png)
+
+
+
