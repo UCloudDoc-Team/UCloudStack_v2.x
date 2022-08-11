@@ -27,7 +27,8 @@ HaVIP作为一个不绑定特定设备的浮动IP，通常和高可用软件（k
 ![createVIP](../images/userguide/createVIP2.png)
 
 * 名称/备注：申请高可用VIP 的名称和备注，申请时必须指定名称。
-* 所属网络：高可用VIP的所属网络，创建时必须指定。
+* VIP类型：内网和外网
+* 网络设置：高可用VIP的所属网络，创建时必须指定。
 * IP 地址：用户手动指定 IP 地址申请HAVIP，指定的 IP 地址必须在所选网段的 IP 范围内。
 * 关联虚拟机：用户可以选择所属vpc下的虚拟机，并绑定HAVIP。
   * 单VIP可绑定虚拟机不超过3台
@@ -62,4 +63,63 @@ HaVIP作为一个不绑定特定设备的浮动IP，通常和高可用软件（k
 支持用户删除高可用VIP资源，可支持删除【可用】【失败】状态的高可用VIP。删除弹性网卡后，会自动解绑与之关联的虚拟机。用户可通过VIP列表进行高可用VIP的删除操作，支持批量删除。
 
 ![deleteVIP](../images/userguide/deleteVIP.png)
+
+## 15.6 使用外网VIP
+1、查看 keepalived 软件包版本号是否符合要求。
+
+```
+yum list keepalived
+```
+
+2、使用 yum 方式安装软件包。
+
+```
+yum install -y keepalived
+```
+
+3、配置 keepalived，绑定高可用 VIP 到主备云服务器，登录主节点云服务器 HAVIP-01，执行 `vim /etc/keepalived/keepalived.conf` ，修改相关配置。
+```
+! Configuration File for keepalived
+global_defs {
+   router_id LVS_DEVEL
+   vrrp_skip_check_adv_addr
+   vrrp_garp_interval 0
+   vrrp_gna_interval 0
+}
+vrrp_script checkhaproxy
+{
+    script "/etc/keepalived/do_sth.sh"
+     interval 5
+}
+vrrp_instance VI_1 {
+# 注意主备参数选择
+state BACKUP            # 设置初始状态均为“备“
+    interface eth0          # 设置绑定 VIP 的网卡 例如 eth0
+    virtual_router_id 51    # 配置集群 virtual_router_id 值
+    nopreempt               # 设置非抢占模式
+    priority 100            # 两设备是相同值的等权重节点
+    advert_int 5
+    authentication {
+        auth_type PASS
+        auth_pass 1111
+    }
+    unicast_src_ip 10.0.240.14  # 设置本机内网 IP 地址
+    unicast_peer {
+        10.0.240.15             # 对端设备的 IP 地址
+        10.0.240.16
+    }
+    virtual_ipaddress {
+        192.168.177.204/24 dev eth1    # 设置高可用虚拟 VIP
+    }
+    virtual_routes {
+        0.0.0.0/0 via 192.168.177.1 dev eth1  自定义路由规则
+    }
+}
+```
+
+4、退出编辑状态，输入`:wq!`保存并退出，重启 keepalived 进程使配置生效。
+```
+systemctl restart keepalived
+```
+
 
