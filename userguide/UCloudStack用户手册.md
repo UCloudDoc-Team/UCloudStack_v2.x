@@ -20,13 +20,13 @@
 
 
 <center>
-<B><font size=5>产品版本：V2.2.0 </font></B>
+<B><font size=5>产品版本：V2.4 </font></B>
 </center>
 
 
 
 <center>
-<B><font size=4>文档版本：202206 </font></B>
+<B><font size=4>文档版本：202207 </font></B>
 </center>
 
 
@@ -109,7 +109,7 @@ UCloudStack 商标和 UCloud 商标为优刻得科技股份有限公司所有。
 
 由于产品版本升级或其它原因，本文档内容会不定期更新，除非另有约定，本文档仅作为使用指导，本文档中的所有陈述、信息和建议不构成任何明示或暗示的担保。
 
-本文档描述 UCloudStack （v2.2.0）云平台的功能说明和操作指南，适用于需深入了解平台并使用控制台管理资源的租户，开发者可参考 UCloudStack API 开发者文档。
+本文档描述 UCloudStack （v2.4）云平台的功能说明和操作指南，适用于需深入了解平台并使用控制台管理资源的租户，开发者可参考 UCloudStack API 开发者文档。
 
 
 
