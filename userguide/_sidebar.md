@@ -33,4 +33,7 @@
 * [29 组播](UCloudStack_v2.x/userguide/multicast.md)
 * [30 通知组](UCloudStack_v2.x/userguide/contactgroup.md)
 * [31 资源事件](UCloudStack_v2.x/userguide/event.md)
+* [32 MySQL](UCloudStack_v2.x/userguide/mysql.md)
+* [33 Redis](UCloudStack_v2.x/userguide/redis.md)
+* [34 数据库备份服务](UCloudStack_v2.x/userguide/dbs.md)
 * [返回主页](UCloudStack_v2.x/README.md)
