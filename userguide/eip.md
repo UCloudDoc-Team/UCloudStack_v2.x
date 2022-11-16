@@ -220,3 +220,16 @@ EIP 为浮动 IP ，可随故障虚拟机恢复漂移至健康节点，继续为
 
 外网 IP 续费时会按照续费时长收取费用，续费时长与资源的计费方式相匹配，当外网 IP 的计费方式为【小时】，则续费时长指定为 1 小时；当外网 IP 的计费方式为【按月】，则续费时长可选择 1 至 11 月；当外网 IP 的计费方式为【按年】，则续费时长为 1 至 5 年。
 
+## 9.11 NAT-EIP
+
+创建VPC时，开启VPC网关后支持NAT模式EIP功能，将会消耗2核2G资源，如图所示：
+
+![vpc-nat](../images/userguide/vpc-nat.png)
+
+申请NAT-EIP与直通模式外网IP相同，在开启VPC网关下创建的虚拟机支持绑定NAT-EIP，如图所示：
+
+![nat-eip](../images/userguide/nat-eip.png)
+
+其中已经创建的VPC资源，当无需使用NAT-EIP时，可通过禁用VPC网关关闭NAT-EIP功能；对于已经创建的VPC网关，也可通过启用VPC网关使用NAT-EIP，虚拟机可同时绑定直通模式外网IP和NAT模式外网IP，如图所示：
+
+![vm-eip](../images/userguide/vm-eip.png)
