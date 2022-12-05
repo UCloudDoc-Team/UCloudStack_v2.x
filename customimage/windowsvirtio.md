@@ -18,7 +18,7 @@
 *  以管理员身份运行 `Windows PowerShell` ，切换至上一步的文件夹目录， 如
 `C:\virtio-win-0.1.204\vioserial\2k16\amd64` （此处以安装vioser为例）, 运行 `PnPutil.exe -i -a .\vioser.inf` 进行安装，且安装过程无报错；
 *  安装后在 “设备管理器--系统设备” 列表下出现 `VirtIO Serial Driver` 条目则表示安装成功。如图所示：
-    ![virtio](../images/customimage/virtio.png)
+    ![](../images/customimage/virtio.png)
 
 * 按照相同的方式运行并安装 `balloon/NetKVM/viostor` 这几项。
 

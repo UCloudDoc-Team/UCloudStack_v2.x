@@ -12,7 +12,7 @@
 
 用户可通过控制台左侧导航栏进入“**运维与管理**”模块，切换至“**通知组**”页面通过通知组管理页面的“**创建通知组**”按钮进入通知组的创建向导页面，如下图所示指定通知组名称及通知方式进行创建操作：
 
-![createnotice](../images/userguide/createnotice.png)
+![](../images/userguide/createnotice.png)
 
 - 通知组名称：当前需要创建的通知组名称及标识；
 
@@ -26,7 +26,7 @@
 
 通知组列表页面可查看当前账号下已拥有的通知组列表，列表信息包括 名称、ID及对单个通知组的操作项，如下图所示：
 
-![noticelist](../images/userguide/noticelist.png)
+![](../images/userguide/noticelist.png)
 
 - 名称/ID ：通知组的名称标识及全局唯一标识符；
 - 通知方式：当前通知组的通知方式；
@@ -36,13 +36,13 @@
 
 通过通知组列表的 `ID` 进入通知组详情页面，可查看当前基础通知的基本信息，并可通过通知人管理进行通知联系人的管理，如下图所示：
 
-![noticedetails](../images/userguide/noticedetails.png)
+![](../images/userguide/noticedetails.png)
 
 - 基础通知信息：包括通知人名称、通知人邮箱、手机号以及创建、更新、删除操作；
 
 选择Webhook按键进入webhook通知人详情页面，可查看当前webhook通知的基本信息，并可通过通知人管理进行通知联系人的管理，如下图所示：
 
-![noticewebhook](../images/userguide/noticewebhook.png)
+![](../images/userguide/noticewebhook.png)
 
 - Webhook通知信息：包括通知人名称、请求方法、请求地址、创建时间、更新时间以及创建、更新、删除操作；
 - 通知人管理：当前通知组的通知联系人管理，包括通知人的创建、查看、更新及删除，详见[通知人管理](#通知人管理) 。
@@ -55,7 +55,7 @@
 
 删除通知组前需确认通知组未被绑定至任何一个告警规则中，若已被添加至一个告警规则，则无法删除。被成功删除的通知组即被销毁，需用户确认才可成功删除。用户可通过通知组控制台列表操作项中的“删除”进行通知组删除，如下图所示：
 
-![noticerm](../images/userguide/noticerm.png)
+![](../images/userguide/noticerm.png)
 
 ### 30.5 通知人管理
 
@@ -67,7 +67,7 @@
 
 基础通知创建示意
 
-![contact](../images/userguide/contact.png)
+![](../images/userguide/contact.png)
 
 - 通知人名称：指当前需要创建的联系人姓名或昵称；
 - 通知人邮箱：指当前需要创建的联系人邮箱地址；
@@ -75,7 +75,7 @@
 
 webhook通知创建示意
 
-![contactwebhook](../images/userguide/contactwebhook.png)
+![](../images/userguide/contactwebhook.png)
 
 - 通知人名称：指当前需要创建的联系人姓名或昵称；
 - 请求方式：发送的警告信息请求方式，可选get和post(钉钉不支持get的请求方式)

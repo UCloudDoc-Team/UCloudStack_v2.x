@@ -12,7 +12,7 @@
 
 可通过导航栏进入【文件存储】资源控制台，通过 “**创建**” 进入向导页面，如下图所示：
 
-![createFS](../images/userguide/createFS.png)
+![](../images/userguide/createFS.png)
 
 1. 选择并配置文件存储的基础配置、网络设置及管理配置信息：
 
@@ -54,7 +54,7 @@ mount -t nfs4 192.168.179.179:/ /datanfs
 
 文件存储列表可查看当前账户下所有文件存储资源的列表信息，包括名称、资源 ID、状态、存储容量、挂载地址、VPC、子网、计费方式、项目组、创建时间、过期时间及操作项，如下图所示：
 
-![FSlist](../images/userguide/FSlist.png)
+![](../images/userguide/FSlist.png)
 
 - 名称：文件存储资源的名称；
 - 资源 ID：文件存储的资源ID作为全局唯一标识符；
@@ -72,7 +72,7 @@ mount -t nfs4 192.168.179.179:/ /datanfs
 用户可通过点击列表的名称进入文件存储详情页，查看基本信息和监控信息，基本信息包括资源ID、文件存储名称、状态、存储容量、挂载地址、VPC、子网、安全组、计费类型
 创建时间及过期时间，监控信息包括CPU使用率、内存使用率、存储容量、当前存储量、存储容量使用率、存储总写吞吐及存储总读吞吐，如下图所示：
 
-![FSdetails](../images/userguide/FSdetails.png)
+![](../images/userguide/FSdetails.png)
 
 ## 25.5 文件存储扩容
 
@@ -82,7 +82,7 @@ mount -t nfs4 192.168.179.179:/ /datanfs
 
 扩容文件存储容量会对费用产生影响，按小时付费的硬盘，扩容容量下个付费周期按新配置扣费；按年按月付费的硬盘，扩容容量即时生效，并按比例自动补差价。用户可点击文件存储控制台操作中的 “**扩容**” 进行容量扩容操作，如下图所示：
 
-![FSstorageup](../images/userguide/FSstorageup.png)
+![](../images/userguide/FSstorageup.png)
 
 如图所示，**更改容量**，即文件存储需要扩容的容量。平台已展示当前文件存储的容量大小，由于不支持缩容，扩容时更改容量必须大于当前容量大小。用户可通过文件存储列表查看新容量。
 
@@ -92,7 +92,7 @@ mount -t nfs4 192.168.179.179:/ /datanfs
 
 用户可通过文件存储资源列表操作项的 “**绑定**” 进入外网 IP 绑定向导页面，进行资源绑定操作，如下图所示：
 
-![FSlinkeip](../images/userguide/FSlinkeip.png)
+![](../images/userguide/FSlinkeip.png)
 
 绑定时需选择被绑定的弹性IP，绑定成功后，文件存储列表的挂载地址会新增外网挂载地址。
 
@@ -100,7 +100,7 @@ mount -t nfs4 192.168.179.179:/ /datanfs
 
 解绑外网 IP 是指将 EIP 地址从一个文件存储资源上分离出来，并可重新绑定至其它虚拟资源。仅支持解绑已绑定文件存储的外网 IP 资源，用户可通过文件存储资源列表操作项的 “**解绑**” 进入外网 IP 解绑向导页面，进行资源解绑操作，如下图所示：
 
-![FSunlinkeip](../images/userguide/FSunlinkeip.png)
+![](../images/userguide/FSunlinkeip.png)
 
 ## 25.8 文件存储续费
 
@@ -110,28 +110,28 @@ mount -t nfs4 192.168.179.179:/ /datanfs
 
 文件存储续费时会按照续费时长收取费用，续费时长与资源的计费方式相匹配，当文件存储的计费方式为【小时】，则续费时长可指定为 1 小时；当文件存储的计费方式为【按月】，则续费时长可选择 1 至 11 月；当文件存储的计费方式为【按年】，则续费时长为 1 至 5 年。可通过文件存储列表操作项中的 “**续费**” 进行操作，如下图所示：
 
-![FSrenew](../images/userguide/FSrenew.png)
+![](../images/userguide/FSrenew.png)
 
 ## 25.9 修改文件存储告警模板
 
 用户可在控制台修改文件存储的告警模板。可通过文件存储列表操作项中的 “**修改告警模板**” 按钮进行操作，如下图所示：
 
-![FSmodifyTemplate](../images/userguide/FSmodifyTemplate.png)
+![](../images/userguide/FSmodifyTemplate.png)
 
 ## 25.10 搜索文件存储
 
 用户可通过搜索框对文件存储列表进行搜索和筛选，支持从名称、备注、资源ID、挂载地址进行模糊搜索，如下图所示：
 
-![searchFS](../images/userguide/searchFS.png)
+![](../images/userguide/searchFS.png)
 
 ## 25.11 修改文件存储名称与备注
 
 修改文件存储的名称和备注。可通过点击文件存储列表名称右侧的 “编辑” 按钮进行修改，如下图所示：
 
-![modifyFSname](../images/userguide/modifyFSname.png)
+![](../images/userguide/modifyFSname.png)
 
 ## 25.12 删除文件存储
 
 用户可在控制台删除账户内文件存储，支持对文件存储进行批量删除操作。可通过文件存储列表操作项中的 “**删除**” 进行操作，如下图所示：
 
-![FSrm](../images/userguide/FSrm.png)
+![](../images/userguide/FSrm.png)

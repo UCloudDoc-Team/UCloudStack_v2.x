@@ -86,10 +86,10 @@ check qga enable                                           [FAILED]
 
 ### ** Windows **
 * 使用管理员身份运行工具，进行检测。
-![windows_check_01](../images/customimage/win_check_01.png)
+![](../images/customimage/win_check_01.png)
 
  * 依次检测，等待工具的返回信息
- ![windows_check_02](../images/customimage/win_check_02.png)
+ ![](../images/customimage/win_check_02.png)
 
 <!-- tabs:end -->
 
@@ -180,10 +180,10 @@ reset repo                                                 [OK]
 ### ** Windows **
 
 * 使用管理员身份运行工具，点击 “repair” 进行安装。
- ![windows_repair_01](../images/customimage/win_repair_01.png)
+ ![](../images/customimage/win_repair_01.png)
 
 * 依次进行安装，等待工具的返回信息
- ![windows_repair_02](../images/customimage/win_repair_02.png)
+ ![](../images/customimage/win_repair_02.png)
 
 
 > - 如果检测过程中，出现 `virtio` 的检测结果为失败，参照如下步骤进行安装。
@@ -191,12 +191,12 @@ reset repo                                                 [OK]
 
 * 使用管理员身份运行工具，进行安装。
 
-![windows_virtio_01](../images/customimage/win_virtio_01.png)
+![](../images/customimage/win_virtio_01.png)
  
  * 点击 **安装Virtio驱动程序** 进行相应的安装
  
  在安装这个设备软件时，选择始终信任来自"Red Hat, Inc." 的软件，并选择“安装”
- ![windows_virtio_02](../images/customimage/win_virtio_02.png)
+ ![](../images/customimage/win_virtio_02.png)
  * 安装完后，再次运行检测工具，进行检测，直至所有的检查项都为 `success` 为止。
 
 <!-- tabs:end -->
@@ -325,13 +325,13 @@ reset repo                                                 [OK]
 
 ### ** Windows **
 
-|检查项           |检查项影响   |检查项目原因  |  达成项目方式 |
-|:----------------|:------------|:-------------|:--------------|
-|PasswordComplexity|创建机器时设置额密码无法使用|N/A| 参见[密码复杂度设置](#set_passwd_complex)|
-|Firewall|可能导致机器无法启动|UCloudStack平台已经提供安全组因此可以关闭机器中防火墙|参见[关闭系统防火墙](#win_disable_firewall)|
-|Remote Desktop|无法通过远程连接工具连接虚拟机|如果需要远程连接,需要打开远程连接功能|参见[开启远程桌面连接](#enable_remote_desktop)|
-|qemu-guest-agent   |无法正常启动机器| 虚拟机网络配置,改密码等都依赖qga| 参见[qga安装](#install_qga)|
-|exporter   |监控信息无法显示| guest os 监控信息收集| 参见[wmi_exporter安装](#install_wmi_exporter)|
+| 检查项             | 检查项影响                     | 检查项目原因                                          | 达成项目方式                                   |
+|:-------------------|:--------------------------|:------------------------------------------------------|:-------------------------------------------|
+| PasswordComplexity | 创建机器时设置额密码无法使用   | N/A                                                   | 参见[密码复杂度设置](#set_passwd_complex)      |
+| Firewall           | 可能导致机器无法启动           | UCloudStack平台已经提供安全组因此可以关闭机器中防火墙 | 参见[关闭系统防火墙](#win_disable_firewall)    |
+| Remote Desktop     | 无法通过远程连接工具连接虚拟机 | 如果需要远程连接,需要打开远程连接功能                 | 参见[开启远程桌面连接](#enable_remote_desktop) |
+| qemu-guest-agent   | 无法正常启动机器               | 虚拟机网络配置,改密码等都依赖qga                      | 参见[qga安装](#install_qga)                    |
+| exporter           | 监控信息无法显示               | guest os 监控信息收集                                 | 参见[wmi_exporter安装](#install_wmi_exporter)  |
 
 
 

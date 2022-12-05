@@ -32,7 +32,7 @@
 
 在平台已提供裸金属服务时，租户的主账号和子账号可在平台上直接单独添加或批量导入裸金属进行管理。用户可登录控制台，通过控制台导航栏【裸金属】中的添加裸金属操作进入向导页面，如下图所示：
 
-![applybms](../images/userguide/applybms.png)
+![](../images/userguide/applybms.png)
 
 * 租户邮箱：裸金属仅可通过租户管理员添加，指定所需用户。
 * 名称：指裸金属在平台的名称标识，添加时必须指定。
@@ -48,7 +48,7 @@
 
 租户的管理员可通过裸金属列表及详情查看账号下已添加的裸金属信息及当前状态，如下图所示：
 
-![bmslist](../images/userguide/bmslist.png)
+![](../images/userguide/bmslist.png)
 
 * 名称/资源 ID：裸金属的名称和全局资源唯一标识符。
 * SN：裸金属的整机序列号。
@@ -71,13 +71,13 @@
 
 租户管理员可对已上架裸金属进行分配操作，如下图所示：
 
-![bmslist](../images/userguide/pm1.png)
+![](../images/userguide/pm1.png)
 
 ## 17.5 裸金属装机
 
 租户管理员可对已上架裸金属进行装机操作，如下图所示：
 
-![bmslist](../images/userguide/pm2.png)
+![](../images/userguide/pm2.png)
 
 ## 17.5 裸金属开机/关机
 

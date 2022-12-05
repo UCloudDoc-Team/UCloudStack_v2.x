@@ -6,7 +6,7 @@
 
 2. 在kvm环境中，执行 `qemu-img info 镜像名称` 查看虚拟机磁盘信息；
 
-   ![image](../images/customimage/customize_03.png)
+   ![](../images/customimage/customize_03.png)
 
    > 不同镜像可能文件格式不同，本指南以 QCOW2 格式镜像为例。
 

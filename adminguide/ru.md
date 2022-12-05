@@ -10,7 +10,7 @@
 
 可通过导航栏进入【资源用量】资源控制台，通过 “**创建**” 进入向导页面，如下图所示：
 
-![createRU](../images/adminguide/createRU.png)
+![](../images/adminguide/createRU.png)
 
 * 名称：资源用量报告的名称，创建时必须指定名称；
 * 资源用量周期：范围为 1 小时 ~ 6 个月，可选择1天/3天/7天/14天/30天/自定义，自定义可将开始时间和结束时间精确到小时；
@@ -24,7 +24,7 @@
 
 资源用量列表可查看平台上已创建的所有资源用量报告信息，包括名称、资源 ID、状态、租户 ID、项目组信息、资源类型、创建时间、开始时间、结束时间及操作项，如下图所示：
 
-![RUlist](../images/adminguide/RUlist.png)
+![](../images/adminguide/RUlist.png)
 
 - 名称：资源用量报告的名称；
 - 资源 ID：资源用量报告的ID作为全局唯一标识符；
@@ -41,7 +41,7 @@
 
 只有资源类型包含虚拟机的报告才能查看。资源使用情况分布图包括虚拟机CPU使用率分布和虚拟机内存使用率分布，以使用率为横轴，虚拟机数量为纵轴进行统计。管理员可点击资源用量控制台操作中的 “**查看**” 进行查看详情操作，如下图所示：
 
-![RUdetails](../images/adminguide/RUdetails.png)
+![](../images/adminguide/RUdetails.png)
 
 ## 14.5 下载资源用量报告
 
@@ -49,27 +49,27 @@
 
 * 计算集群
 
-![RUcomputercluster](../images/adminguide/RUcomputercluster.png)
+![](../images/adminguide/RUcomputercluster.png)
 
 * 存储集群
 
-![RUstoragecluster](../images/adminguide/RUstoragecluster.png)
+![](../images/adminguide/RUstoragecluster.png)
 
 * 虚拟机
 
-![RUvm](../images/adminguide/RUvm.png)
+![](../images/adminguide/RUvm.png)
 
 * 虚拟机CPU使用率分布
 
-![RUcpu](../images/adminguide/RUcpu.png)
+![](../images/adminguide/RUcpu.png)
 
 * 虚拟机内存使用率分布
 
-![RUmem](../images/adminguide/RUmem.png)
+![](../images/adminguide/RUmem.png)
 
 ## 14.6 删除资源用量报告
 
 支持管理员删除资源用量报告，可点击资源用量控制台操作中的 “**删除**” 进行删除资源用量报告操作，如下图所示：
 
-![RUrm](../images/adminguide/RUrm.png)
+![](../images/adminguide/RUrm.png)
 

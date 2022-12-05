@@ -6,7 +6,7 @@
 
 **组织架构**
 
-![organazation](../images/adminguide/organazation.png)
+![](../images/adminguide/organazation.png)
 
 **概念解释**
 
@@ -37,7 +37,7 @@
 
 管理员可创建租户，创建租户时需要添加一个主账号作为租户的初始管理人员。可同步设置账号登陆安全策略，首次登陆强制修改密码。同时支持对租户进行管理设置，包括是否开启资源审批，自动审批，以及设置租户开通使用的地域。
 
-![addacc](../images/adminguide/addacc.png)
+![](../images/adminguide/addacc.png)
 
 - 账号名称：租户和主账户的名称标识。
 
@@ -53,7 +53,7 @@
 
 管理员可查看平台所有的租户列表，并对租户进行相关管理操作。
 
-![acclist](../images/adminguide/acclist.png)
+![](../images/adminguide/acclist.png)
 
 - 租户 ID：租户的 ID 。
 - 状态：租户的状态信息，包括未激活、使用中、冻结中等。
@@ -70,7 +70,7 @@
 
 管理员可通过租户列表对每个租户进行管理和操作，包括冻结、解冻、登录限制及编辑审批流程、地域授权管理、删除等操作，同时可通过详情按钮进入租户的详情，对租户的账号及配置进行全局管理，同时支持修改租户的主账号名称，如下图所示：
 
-![upaccname](../images/adminguide/upaccname.png)
+![](../images/adminguide/upaccname.png)
 
 租户概览页面主要展示租户的基本信息，其中基本信息包括租户ID、主账号名称、主账号邮箱、外部充值余额、平台充值余额、创建时间。
 
@@ -78,7 +78,7 @@
 
 冻结账户是指将一个租户进行锁定，被成功冻结的租户，主/子账号将无法登录云平台，不影响租户内已创建的资源及业务的正常运行。仅支持状态为【使用中】的租户进行冻结操作，管理员可通过租户列表的冻结进入冻结租户的向导页面，如下图所示：
 
-![lockacc](../images/adminguide/lockacc.png)
+![](../images/adminguide/lockacc.png)
 
 租户被冻结后，租户内的主/子账号均会被冻结，即所有的账号均无法使用，需要对租户进行解冻，租户内的所有账号才可使用。
 
@@ -86,7 +86,7 @@
 
 当租户被冻结后，租户的状态为冻结中，支持管理员通过租户管理解冻一个租户，如下图所示：
 
-![unlockacc](../images/adminguide/unlockacc.png)
+![](../images/adminguide/unlockacc.png)
 
 租户解冻后，默认租户中的所有账号均会被解冻，并可正常登录控制台。若冻结租户前，有子账号为冻结中，解冻租户后，之前被冻结的子账号依然保持为冻结中，需要到租户中单独解冻被冻结的子账号，适用于租户的子账号有冻结的场景。
 
@@ -98,19 +98,19 @@
 
 管理员可通过租户列表操作项中的“登录访问限制”功能对租户的登录策略进行配置，如下图所示，默认为空代表全网无限制。
 
-![LoginWhitelist](../images/adminguide/LoginWhitelist.png)
+![](../images/adminguide/LoginWhitelist.png)
 
 ## 7.7 编辑审批流程
 
 管理员可通过编辑审批流程管理租户下的审批流程设置，以开启或关闭一个租户下所有账号变更资源的审批流程方式，包括开启/关闭资源审批及开启/关闭自动审批。
 
-![editapprove](../images/adminguide/editapprove.png)
+![](../images/adminguide/editapprove.png)
 
 ## 7.8 地域授权管理
 
 通过地域授权管理可管理一个租户在地域下的授权情况。只有在授权地域下，租户下的账号才可在该地域正常使用服务。企业可以根据云平台实际运营情况管理租户在对应地域的开通情况。
 
-![enaregion](../images/adminguide/enaregion.png)
+![](../images/adminguide/enaregion.png)
 
 ## 7.9 租户成员管理
 
@@ -120,7 +120,7 @@
 
 成员列表主要展示租户下的主账号和子账号信息，包括账号 ID、状态、类型、账号名称、邮箱及操作项，同时支持对主/子账号进行搜索操作。管理员可通过租户列表中租户的 ID 进入租户详情的概览页面，查看成员的列表信息，如下图所示：
 
-![acclist1](../images/adminguide/acclist1.png)
+![](../images/adminguide/acclist1.png)
 
 - 账号 ID：主账号/子账号在平台的唯一标识符。
 - 状态：账户的状态，包括冻结中、使用中。
@@ -137,7 +137,7 @@
 
 支持管理员单独冻结一个租户内的主账号或子账号。冻结成功的主账号，将不允许登录控制台，不影响其它子账号；冻结成功的子账号，将不允许登录控制台，不影响其它子账号及主账号。
 
-![lockmasteracc](../images/adminguide/lockmasteracc.png)
+![](../images/adminguide/lockmasteracc.png)
 
 * 若账号被冻结时，管理员将账号所属租户冻结，则账号为冻结中状态。
 * 管理员将租户解冻时，不影响以前就冻结的账号，即租户解冻，该账号依然为冻结中。
@@ -147,19 +147,19 @@
 
 支持管理员单独解冻一个租户内的主账号或子账号，解冻成功的将允许登录控制台。如一个账号因多次输入密码错误导致账号被冻结，可在租户成员管理页面单独解冻账号。
 
-![unlockmasteracc](../images/adminguide/unlockmasteracc.png)
+![](../images/adminguide/unlockmasteracc.png)
 
 ## 7.10 租户订单管理
 
 通过租户下的订单管理可以查看租户下的订单记录，同时可通过自定义地域和查询时间查看租户在一定时间周期内产生的订单，并支持管理员下载订单管理信息为本地 Excel 文件，如下图所示：
 
-![accorder](../images/adminguide/accorder.png)
+![](../images/adminguide/accorder.png)
 
 ## 7.11 租户交易管理
 
 通过租户管理，管理员可查看所属租户的交易信息，同时可通过自定义查询时间查看租户在一定时间周期内产生的交易记录，并支持管理员下载交易管理信息为本地 Excel 文件，如下图所示：
 
-![acctran](../images/adminguide/acctran.png)
+![](../images/adminguide/acctran.png)
 
 ## 7.12 租户资金管理
 
@@ -172,7 +172,7 @@
 * 外部渠道充值来源分为银行转账、支付宝支付、微信支付、新浪支付四种。
 * 平台内部充值是平台为租户赠送的余额。
 
-![recharge](../images/adminguide/recharge.png)
+![](../images/adminguide/recharge.png)
 
 单次充值最小金额为 100 ，最大为 500000 。
 
@@ -180,19 +180,19 @@
 
 管理员通过充值管理，查看一定时间段内的充值记录信息，包括充值单号、充值渠道、充值金额及创建时间等，并支持管理员下载充值记录信息为本地 Excel 文件，如下图所示：
 
-![rechargelist](../images/adminguide/rechargelist.png)
+![](../images/adminguide/rechargelist.png)
 
 ### 7.12.3 提现管理
 
 管理员可通过租户详情页面进入租户提现管理标签页面为租户进行提现操作，提现账户分为平台账户和外部账户两种，管理员可按照使用需求，为租户进行提现，如下图所示：
 
-![recharge](../images/adminguide/withdraw.png)
+![](../images/adminguide/withdraw.png)
 
 ### 7.12.4 查询提现信息
 
 管理员通过提现管理，自定义表头查看一定时间段内的提现记录信息，包括提现单号、源账户类型、提现金额及创建时间，并支持管理员下载提现记录信息为本地 Excel 文件，如下图所示：
 
-![recharge](../images/adminguide/withdraw1.png)
+![](../images/adminguide/withdraw1.png)
 
 ## 7.13 管理租户配额
 
@@ -200,7 +200,7 @@
 
 通过租户管理，选择所需查看的所属地域，管理员可查询当前租户对平台资源的配额设置，同时支持管理员修改租户下每个产品的配额信息，页面信息包括产品类型、资源类型、配额因子、配额及操作。
 
-![accquota](../images/adminguide/accquota.png)
+![](../images/adminguide/accquota.png)
 
 通过操作项，管理员可针对每个产品修改在该地域中的配额值。
 
@@ -208,7 +208,7 @@
 
 平台支持配置租户配额的产品包括虚拟机、镜像、VPC、VIP、硬盘、网卡、外网 IP、负载均衡、安全组、NAT 网关及 VPN 网关等，可根据每个产品针对每个地域及全部地域进行配额配置。
 
-![upaccquota](../images/adminguide/upaccquota.png)
+![](../images/adminguide/upaccquota.png)
 
 租户的配额默认继承平台全局的配额设置，管理员可自定义每个租户的产品配额。
 
@@ -218,7 +218,7 @@
 
 通过租户管理，管理员可查询当前租户在平台上计费资源的价格信息，包括计费因子、所属地域、属性、计费类型、计费规则、价格、折扣、折扣价格、更新时间及操作项。
 
-![setaccprice](../images/adminguide/setaccprice.png)
+![](../images/adminguide/setaccprice.png)
 
 通过操作项，管理员可针对每个产品修改在地域及不同集群的价格，计费因子包括 CPU、内存、磁盘、外网IP、GPU及租户创建虚拟资源时，通过计费因子的费用合计按照付费方式进行扣费。
 
@@ -233,7 +233,7 @@
 
 租户在平台的资源价格默认继承平台全局的价格配置，管理员可自定义每个租户的产品价格折扣，设置单个资源针对租户在不同集群的价格，如下图以修改 CPU 在集群 `ComputeSetPre01` 的按月付费折扣为例：
 
-![UpdateDiscount](../images/adminguide/UpdateDiscount.png)
+![](../images/adminguide/UpdateDiscount.png)
 
 其中折扣为百分数，如 90 为基准价格的 9 折，即将租户 CPU 按月付费的价格打 9 折。修改后即会生效，租户已创建的资源不受影响，新创建的 CPU 资源将按照新的价格进行扣费。
 
@@ -243,7 +243,7 @@
 
 通过租户管理，管理员可查看所属租户的资源概览信息，包括资源使用率及资源配额使用情况，如下图所示：
 
-![accoverview](../images/adminguide/accoverview.png)
+![](../images/adminguide/accoverview.png)
 
 * 资源使用率：指租户在平台中的所有资源的平均使用率，包括 CPU 平均使用率、内存平均使用率、硬盘平均使用率及带宽平均使用率。
 * 资源配额使用情况：指租户在平台中所有资源的配额占用情况，包括虚拟机、镜像、硬盘、弹性网卡、VPC、弹性 IP、安全组、负载均衡、NAT 网关、VPN 网关及隧道等总配额以及已使用的配额情况。

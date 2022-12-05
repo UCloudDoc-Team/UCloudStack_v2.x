@@ -10,7 +10,7 @@
 
 HaVIP作为一个不绑定特定设备的浮动IP，通常和高可用软件（keepalived、heartbeat、Failover Cluster）配合使用，用于搭建高可用主备集群，比如HA负载均衡、主备版数据库。这里以keepalived为例介绍下HaVIP的工作原理
 
-![havip](../images/userguide/havip.png)
+![](../images/userguide/havip.png)
 
 * master和slave均安装 keepalived，配置 从控制台申请出来的HaVIP 为 VRRP VIP，分别设置优先级（priority值）；
 * Keepalived 中的 VRRP 协议通过对比两台虚拟机的初始优先级大小，选举出 Master 服务器；
@@ -23,8 +23,8 @@ HaVIP作为一个不绑定特定设备的浮动IP，通常和高可用软件（k
 
 云平台用户可通过 API 接口或控制台创建高可用VIP，用于服务的高可用，创建高可用VIP前需保证账户至少拥有一个 VPC 网络和子网。通过导航栏进入虚拟机控制台，切换至【VIP】管理页面，点击“新建”按钮进入高可用VIP创建向导弹窗，如下是创建高可用VIP的示意图:
 
-![createVIP](../images/userguide/createVIP1.png)
-![createVIP](../images/userguide/createVIP2.png)
+![](../images/userguide/createVIP1.png)
+![](../images/userguide/createVIP2.png)
 
 * 名称/备注：申请高可用VIP 的名称和备注，申请时必须指定名称。
 * VIP类型：内网和外网
@@ -38,7 +38,7 @@ HaVIP作为一个不绑定特定设备的浮动IP，通常和高可用软件（k
 ## 15.3 查看高可用VIP 
 通过导航栏进入虚拟机控制台，切换至VIP管理页面可查看高可用VIP资源的列表及相关信息，包括高可用VIP的名称备注、资源 ID、状态、vpc子网、IP 地址、关联资源、项目组、创建时间及操作项，如下图所示：
 
-![VIPList](../images/userguide/VIPList.png)
+![](../images/userguide/VIPList.png)
 
 * 名称/备注：申请高可用VIP 的名称和描述。
 * 资源ID：高可用VIP的全局唯一标识符。
@@ -55,14 +55,14 @@ HaVIP作为一个不绑定特定设备的浮动IP，通常和高可用软件（k
 ## 15.4 更新高可用VIP 
 修改HAVIP的名称和备注，在任何状态下均可进行操作。可通过VIP列表页面每个HAVIP名称右侧的“编辑”按钮进行修改；更新关联虚拟机，可以替换、删除、新增虚拟机，关联虚拟机数量不可超过3台，如图所示：
 
-![updateVIP1](../images/userguide/updateVIP1.png)
-![updateVIP2](../images/userguide/updateVIP2.png)
+![](../images/userguide/updateVIP1.png)
+![](../images/userguide/updateVIP2.png)
 
 ## 15.5 删除高可用VIP
 
 支持用户删除高可用VIP资源，可支持删除【可用】【失败】状态的高可用VIP。删除弹性网卡后，会自动解绑与之关联的虚拟机。用户可通过VIP列表进行高可用VIP的删除操作，支持批量删除。
 
-![deleteVIP](../images/userguide/deleteVIP.png)
+![](../images/userguide/deleteVIP.png)
 
 ## 15.6 使用外网VIP
 1、查看 keepalived 软件包版本号是否符合要求。

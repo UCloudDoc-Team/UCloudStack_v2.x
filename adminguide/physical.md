@@ -10,7 +10,7 @@
 
 管理员可在物理资源管理/节点页面查看地域下所有节点列表及相关信息，包括资源ID、IP地址、CPU型号、CPU总量、内存总量、序列号、状态、架构、节点类型、地域、操作项，如下图所示：
 
-![computenode](../images/adminguide/computenode.png)
+![](../images/adminguide/computenode.png)
 
 - 资源 ID：计算节点在平台的唯一标识符。
 - 节点 IP：计算节点的 IP 地址。
@@ -33,7 +33,7 @@
 
 管理员可在节点列表中，通过目标节点名称进入节点详情页面，查看节点的基本信息及监控信息，同时可查询计算节点已运行的计算实例，如下图所示：
 
-![computenodeinfo](../images/adminguide/computenodeinfo.png)
+![](../images/adminguide/computenodeinfo.png)
 
 **（1）概览基本信息**
 
@@ -47,7 +47,7 @@
 
 支持管理员通过节点详情页面，查看节点中的计算实例列表及信息，包括名称、计算实例 ID、资源 ID、所属租户、节点 IP、镜像 ID、GPU、CPU、内存、状态、创建时间及更新时间，并支持对计算实例进行搜索，支持模糊搜索，如下图所示：
 
-![nodeinstance](../images/adminguide/nodeinstance.png)
+![](../images/adminguide/nodeinstance.png)
 
 计算实例包括虚拟机的实例，同时也包括平台网关及 PaaS 产品的实例，可通过实例名称及资源 ID 进行区分。
 
@@ -55,7 +55,7 @@
 
 支持管理员通过节点页面，查看节点中USB设备列表及信息，包括设备名、设备ID、状态、厂商、类型、序列号、虚拟机、USB版本、所属租户，并支持对USB进行分配，如下图所示：
 
-![nodeinstance](../images/adminguide/usb.png)
+![](../images/adminguide/usb.png)
 
 **（5）基本信息**
 
@@ -77,23 +77,23 @@
 
 支持管理员通过宿主机页面，查看宿主机中GPU设备列表及信息，包括设备名、规格信息、设备地址、类型、状态、操作，如下图所示：
 
-![nodeinstance](../images/adminguide/GPU.png)
+![](../images/adminguide/GPU.png)
 
 支持管理员对宿主机中GPU设备进行虚拟化切割，并在vGPU中展示设备信息，包括设备名、规格信息、物理GPU、云主机、状态，如下图所示：
 
-![nodeinstance](../images/adminguide/sliceGPU.png)
+![](../images/adminguide/sliceGPU.png)
 
-![nodeinstance](../images/adminguide/vGPU.png)
+![](../images/adminguide/vGPU.png)
 
 支持管理员对宿主机中已虚拟化切割的GPU设备进行虚拟化还原，如下图所示：
 
-![nodeinstance](../images/adminguide/reGPU.png) -->
+![](../images/adminguide/reGPU.png) -->
 
 ### 5.1.3 锁定节点
 
 节点被锁定后，新建计算实例不会被调度至计算节点，不影响节点内已有计算实例，可配合节点进入维护模式功能，以实现节点维护、升级等操作。
 
-![lock](../images/adminguide/lock.png)
+![](../images/adminguide/lock.png)
 
 仅支持节点在【可用】状态下进行锁定操作，锁定节点后，节点的状态即流转为【已锁定】，在已锁定状态下新的虚拟机实例不会被创建至节点，同时可在已锁定状态下使计算节点进入维护模式。
 
@@ -103,7 +103,7 @@
 
 管理员将锁定的节点进行解锁，可对外提供计算服务，计算实例可被调度并部署至节点。
 
-![unlock](../images/adminguide/unlock.png)
+![](../images/adminguide/unlock.png)
 
 仅支持节点在【已锁定】状态下进行解锁操作，解锁后节点的状态即流转为【可用】，在可用状态下计算实例会被调度并创建至节点。
 
@@ -113,7 +113,7 @@
 
 节点进入维护模式前必须保证节点状态为已锁定，即需要将节点进行锁定，才可进行【进入维护模式】的操作，如下图所示：
 
-![maintenance](../images/adminguide/maintenance.png)
+![](../images/adminguide/maintenance.png)
 
 管理员将节点锁定并进入维护模式前，需请执行以下检查：
 
@@ -127,7 +127,7 @@
 
 2. 点击“进入维护模式”按钮，将节点进入到维护模式，节点将自动流转为“进入维护模式中”状态，如下图所示：
 
-   ![inmaintain](../images/adminguide/inmaintain.png)
+   ![](../images/adminguide/inmaintain.png)
 
 3. 系统会自动执行在线迁移功能，将此节点上的资源随机迁移至本计算集群中其他合适的节点，关机状态的计算实例在下次启动后会自动调度至其它节点。
 
@@ -141,7 +141,7 @@
 
 平台管理员可通过节点列表操作项中的【退出维护模式】按钮进行操作，如下图所示：
 
-![outmaintain](../images/adminguide/outmaintain.png)
+![](../images/adminguide/outmaintain.png)
 
 退出维护模式后，节点的状态会自动流转为【已锁定】状态，需通过解锁操作使节点可正常提供服务。
 
@@ -180,7 +180,7 @@
 
 在平台已提供裸金属服务时，管理员可在平台上为租户添加裸金属进行管理，如下图所示：
 
-![createbms](../images/adminguide/applybms.png)
+![](../images/adminguide/applybms.png)
 
 * 租户邮箱：添加物理机的租户邮箱。
 * 名称：指物理机在平台的名称标识，添加时必须指定。
@@ -196,11 +196,11 @@
 
 为方便运维人员快捷添加裸金属，平台提供批量导入裸金属的能力，可根据平台规范上传 CSV 格式的表格文件，批量导入一批裸金属，如下图所示：
 
-![importbms](../images/adminguide/importbms.png)
+![](../images/adminguide/importbms.png)
 
 仅支持 CSV 格式且按照平台规范的文件，可参考【裸金属列表示例】文件进行表格制作，表格中的信息包括 Name、IPMIIP、IPMIUsername、IPMIPassword、RackLocation、Label及 DriveType ，分别代表物理机名称、IPMI IP 地址、IPMI 用户名、IPMI 密码、机架位置、标签及驱动类型，如下图所示：
 
-![bmcsr](../images/adminguide/bmcsr.png)
+![](../images/adminguide/bmcsr.png)
 
 批量导入的裸金属和手动添加的裸金属一致，均会进行初始化准备工作，并将裸金属最终置为【已就绪】状态，若裸金属一直在准备中，需要登录 IPMI 系统查看裸金属的网络及相关配置是否准确。
 
@@ -208,7 +208,7 @@
 
 裸金属添加后，管理员可通过裸金属列表查看裸金属的相关信息，包括名称、资源 ID、状态、SN、IPMI IP、所属租户、机型、机架位置、电源、KVM状态、创建时间及操作项，如下图所示：
 
-![bmslist](../images/adminguide/bmslist.png)
+![](../images/adminguide/bmslist.png)
 
 * 资源 ID/名称： 为裸金属添加至平台后的唯一标识符和名称。
 * 所属租户：代表申请该台裸金属的租户。
@@ -243,7 +243,7 @@
 
 在基础镜像列表可查看平台所有基础镜像及镜像信息，包括名称、资源 ID、系统类型、操作系统、特性支持、状态、创建时间及操作项，如下图所示：
 
-![baseimagelist](../images/adminguide/baseimagelist.png)
+![](../images/adminguide/baseimagelist.png)
 
 - 镜像名称：镜像的标识名称，创建虚拟机时展示在镜像列表中的标识。
 - 资源 ID：镜像文件在平台的唯一标识符。
@@ -262,7 +262,7 @@
 
 可以通过删除基础镜像下线平台不需要使用的基础镜像，仅支持删除可用状态的基础镜像，如下图所示：
 
-![rmbaseimage](../images/adminguide/rmbaseimage.png)
+![](../images/adminguide/rmbaseimage.png)
 
 **如果平台存在通过此基础镜像创建的虚拟机，则基础镜像无法被删除。**
 
@@ -270,7 +270,7 @@
 
 管理员可以对每一个基础镜像的使用权限进行修改，可选所有租户和指定租户，指定租户支持搜索。如下图所示：
 
-![rmbaseimagepower](../images/adminguide/rmbaseimagepower.png)
+![](../images/adminguide/rmbaseimagepower.png)
 
 #### 5.3.1.4 修改名称和备注
 
@@ -290,7 +290,7 @@
 
 在自制镜像列表可查看平台所有租户在一个地域内的自制镜像列表信息，包括镜像名称、资源 ID、所属租户、系统类型、操作系统、特性支持、状态及操作项，如下图所示：
 
-![customeimage](../images/adminguide/customeimage.png)
+![](../images/adminguide/customeimage.png)
 
 - 镜像名称：自制镜像的标识名称。
 
@@ -323,7 +323,7 @@
 
 制作好自定义镜像后，可通过镜像管理控制台资源列表上方的【导入镜像】功能，进入导入镜像向导页面：
 
-![upimage](../images/adminguide/upimage.png)
+![](../images/adminguide/upimage.png)
 
 - 租户邮箱：通过租户主账号邮箱选定自制镜像归属的租户。
 - 镜像名称/备注：镜像的名称及相关备注信息。
@@ -364,7 +364,7 @@
 
 若平台需要其它基础镜像系统，可先上传为自制镜像，再通过“复制为基础镜像”的功能转化为平台基础镜像。可通过目标自制镜像右侧“复制为自制镜像”操作，如下图所示：
 
-![cloneimage](../images/adminguide/cloneimage.png)
+![](../images/adminguide/cloneimage.png)
 
 输入目标基础镜像名称，即可触发复制为基础镜像的操作，自制镜像复制过程中会在基础镜像列表生成一条状态为【制作中】的基础镜像信息，待状态转换为【可用】时，代表复制成功，平台上的所有租户可使用此镜像创建虚拟机，进行业务部署。
 
@@ -374,11 +374,11 @@
 
 管理员如果需要下载镜像至本地时，可通过自制镜像列表操作项中的【下载】进入镜像下载向导页面，如下图：
 
-![downloadimage](../images/adminguide/downloadimage.png)
+![](../images/adminguide/downloadimage.png)
 
 点击生成下载地址后，平台会跳转至下载地址展示向导页面，通过向导页面，用户通过复制下载地址链接，通过 HTTP、FTP 及相关下载工具下载镜像。
 
-![downloadimage1](../images/adminguide/downloadimage1.png)
+![](../images/adminguide/downloadimage1.png)
 
 > 镜像下载地址有效期为 24 小时，需在 24 小时内进行镜像下载。若镜像下载地址过期，则无法进行下载，需到平台重新生成镜像下载地址。
 
@@ -386,7 +386,7 @@
 
 管理员可对自制镜像进行删除操作，被删除的自制镜像会自动进入所属租户的“**回收站**”，可通过回收站进行还原和销毁操作。管理员可通过自制镜像管理控制台的“删除”功能进行自制镜像的删除，删除后可到回收站中查看已删除的自制镜像，如下图所示：
 
-![rmimage](../images/adminguide/rmimage.png)
+![](../images/adminguide/rmimage.png)
 
 仅支持删除状态为可用或导入失败的的自制镜像；若已通过自制镜像创建虚拟机，则不可删除自制镜像，需要将虚拟机删除，才可进行自制镜像的删除。
 
@@ -421,7 +421,7 @@
 
 管理员可通过外网网段控制台的列表查看已创建的外网网段的列表信息，包括网段 ID、名称、IP 版本、网段、网关、网卡、Vlan、标签、租户权限、状态、更新时间以及操作（支持批量删除、创建外网网络、修改外网网络权限），如下图所示：
 
-![image](../images/adminguide/image.png)
+![](../images/adminguide/image.png)
 
 租户权限中或指定所有租户展示为【所有租户】，若指定的为部分租户，则展示有权限的租户邮箱地址信息。
 
@@ -429,7 +429,7 @@
 
 当需要将一段外网网段独享给部分租户时，管理员可修改外网网段的租户权限，如下图所示：
 
-![upnetauth](../images/adminguide/upnetauth.png)
+![](../images/adminguide/upnetauth.png)
 
 修改外网网络的租户权限后，无权限的租户即无法查看并使用外网网段的 IP 地址，但不影响已申请外网 IP 地址的使用，若租户释放了外网 IP ，则无法再申请该网段的  IP 地址。
 
@@ -437,22 +437,22 @@
 
 管理员可创建自定义的外网网络配置，需提前设置好平台的物理网络配置。具体设置如下图所示：
 
-![admincreateeip](../images/adminguide/admincreateeip.png)
+![](../images/adminguide/admincreateeip.png)
 
 ### 5.4.4 创建外网路由
 
 管理员在外网网络详情界面可创建与修改网络路由，支持配置目的地址、下一跳，支持一次批量添加，同时支持修改外网网络路由。如下图所示：
 
-![admincreatesubeip](../images/adminguide/admincreatesubeip.png)
+![](../images/adminguide/admincreatesubeip.png)
 
 ### 5.4.5 删除外网路由
 
 外网路由支持修改，批量删除
 
-![admindeletesubeip](../images/adminguide/admindeletesubeip.png)
+![](../images/adminguide/admindeletesubeip.png)
 
 ### 5.4.6 删除外网网络
 
 管理员在  nb//外网网络删除时，如果还有资源正在使用该网络下ip资源，该外网将无法删除。删除外网界面如下图所示：
 
-![admindeleteeip](../images/adminguide/admindeleteeip.png)
+![](../images/adminguide/admindeleteeip.png)

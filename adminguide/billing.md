@@ -32,7 +32,7 @@
 
 租户可在订单管理页面，可通过自定义所属地域和查询时间查看云平台在一定时间周期内产生的订单，如下图所示：
 
-![order](../images/adminguide/order.png)
+![](../images/adminguide/order.png)
 
 - 订单号：订单在云平台的唯一标识符。
 - 订单类型：包括升级和新购两种。
@@ -48,7 +48,7 @@
 
 租户可在交易管理页面，可通过自定义所属地域和查询时间查看云平台在一定时间周期内产生的交易信息，如下图所示：
 
-![tran](../images/adminguide/tran.png)
+![](../images/adminguide/tran.png)
 
 - 交易单号：交易记录在云平台的唯一标识。
 - 交易类型：账户充值和扣费均会生成一次交易记录，因此交易类型包括账户余额充值、免费账户充值及扣费。
@@ -69,7 +69,7 @@
 
 平台管理员可在资金管理的充值管理页面，通过自定义查询时间查看云平台在一定时间周期内产生的充值记录信息，如下图所示：
 
-![recharge1](../images/adminguide/recharge1.png)
+![](../images/adminguide/recharge1.png)
 
 - 充值单号：充值记录在云平台的唯一标识。
 - 充值租户 ID：充值的租户 ID。
@@ -86,7 +86,7 @@
 
 平台管理员可在资金管理的提现管理页面，通过自定义查询时间查看云平台在一定时间周期内产生的提现记录信息，如下图所示：
 
-![recharge1](../images/adminguide/recharge2.png)
+![](../images/adminguide/recharge2.png)
 
 - 提现单号：提现记录在云平台的唯一标识。
 - 提现租户 ID：提现的租户 ID。
@@ -118,7 +118,7 @@
 
 支持管理员通过价格配置控制台查看当前平台上每个地域下所有产品（计费资源）的价格信息，包括计费因子、属性、计费类型、计费规则、价格、单位、创建时间更新时间及操作项。
 
-![price](../images/adminguide/price.png)
+![](../images/adminguide/price.png)
 
 ### 9.5.3 修改全局基准价
 
@@ -129,11 +129,11 @@
 
 管理员可在全局价格配置列表上对计费资源项进行价格更新，支持设置单个资源项针对不同集群的基准价，如下图以修改 CPU 在集群 `ComputeSetAAAA` 的按小时付费基准价为例：
 
-![upcpuprice](../images/adminguide/upcpuprice.png)
+![](../images/adminguide/upcpuprice.png)
 
 管理员可为每个计费资源项修改基准价格，上图以虚拟机 CPU 为例，可设置单核 vCPU 的每小时价格为 0.2431 元，表示单核 vCPU 的小时单价为 0.2431元。同时平台针对外网 IP 的网段，支持按梯度区间定价，如下图所示：
 
-![bgpprice](../images/adminguide/bgpprice.png)
+![](../images/adminguide/bgpprice.png)
 
 管理员可针对外网网段（如图上 Bgp 网段） IP 带宽进行梯度区间定价，如 `0M~5M` 的全局基准价格为 1 元，5M~99999999M 的全局基准价格为 10 元，提升平台计费的可维护性。
 
@@ -151,7 +151,7 @@
 
 管理员可在账单总览页面查看费用趋势，可通过自定义所属租户和费用类型查看云平台在近六个月内产生的交易信息，如下图所示：
 
-![costtrend](../images/adminguide/costtrend.png)
+![](../images/adminguide/costtrend.png)
 
 ### 9.6.4 本月账单汇总
 
@@ -159,33 +159,33 @@
 
 * 按产品汇总
 
-![productsum](../images/adminguide/productsum.png)
+![](../images/adminguide/productsum.png)
 
 * 按租户汇总
 
-![usersum](../images/adminguide/usersum.png)
+![](../images/adminguide/usersum.png)
 
 * 按地域汇总
 
-![regionsum](../images/adminguide/regionsum.png)
+![](../images/adminguide/regionsum.png)
 
 * 按项目组汇总
 
-![projectsum](../images/adminguide/projectsum.png)
+![](../images/adminguide/projectsum.png)
 
 * 按订单类型
 
-![ordersum](../images/adminguide/ordersum.png)
+![](../images/adminguide/ordersum.png)
 
 * 按计费模式汇总
 
-![billtypesum](../images/adminguide/billtypesum.png)
+![](../images/adminguide/billtypesum.png)
 
 ### 9.6.5 资源账单
 
 管理员可从账单周期/所属产品/计费模式/所属租户/所属地域/所属项目六个维度查看云平台的资源账单信息，列表包括资源ID、地域、租户ID、主账号名称、主账号邮箱、所属产品、所属项目、计费模式、总费用、平台账户、外部账户及交易时间，如下图所示：
 
-![resourcebill](../images/adminguide/resourcebill.png)
+![](../images/adminguide/resourcebill.png)
 
 - 资源ID：账单的全局唯一标识符
 - 地域：资源所在的地域信息
@@ -204,13 +204,13 @@
 
 平台支持管理员从账单周期、所属产品、计费模式、所属租户、所属地域、所属项目六个维度筛选资源账单，并导出到本地 Excel 文件，为便平台运营管理和报表统计，如下图所示：
 
-![exportingresbill](../images/adminguide/exportingresbill.png)
+![](../images/adminguide/exportingresbill.png)
 
 ### 9.6.7 账单明细
 
 管理员可从账单周期/所属产品/订单类型/计费模式/所属租户/所属地域/所属项目七个维度查看云平台的账单明细，列表包括资源ID、交易单号、交易类型、订单号、订单类型、地域、租户ID、主账号名称、主账号邮箱、所属产品、所属项目、计费模式、总费用、平台账户、外部账户及交易时间，如下图所示：
 
-![billdetails](../images/adminguide/billdetails.png)
+![](../images/adminguide/billdetails.png)
 
 - 资源ID：账单的全局唯一标识符
 - 交易单号：交易记录在云平台的唯一标识
@@ -233,5 +233,5 @@
 
 平台支持管理员从账单周期、所属产品、订单类型、计费模式、所属租户、所属地域、所属项目七个维度筛选账单明细，并导出到本地 Excel 文件，为便平台运营管理和报表统计，如下图所示：
 
-![exportingbilldetails](../images/adminguide/exportingbilldetails.png)
+![](../images/adminguide/exportingbilldetails.png)
 

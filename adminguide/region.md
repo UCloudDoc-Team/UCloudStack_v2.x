@@ -11,7 +11,7 @@
 通过管理员控制台左侧导致栏的【地域管理】即可进入地域列表页，可查看当前已有的地域列表，包括地域ID、地域名称、城市、详细地址、CPU核数用量、内存用量、存储用量、物理机GPU核数、GPU用量、状态、
 EndPoints、创建时间，同时也可通过“自定义列表”按钮，自定义列表所需信息，如下图所示：
 
-![regionmanage](../images/adminguide/regionmanage.png)
+![](../images/adminguide/regionmanage.png)
 
 - 地域 ID：地域在平台的唯一标识符，如 `cn` ，通常也作为 API 接口的请求参数值。
 - 地域名称：地域的名称，可通过独立的命名区分不同地域，比如北京数据中心一号机房。
@@ -30,7 +30,7 @@ EndPoints、创建时间，同时也可通过“自定义列表”按钮，自�
 
 用户可在地域列表中点击地域名称，或者点击目标地域列表右侧的“管理”按钮进入当前地域的概览页面，查看地域的基本信息及监控信息，如下图所示：
 
-![regiondetails](../images/adminguide/regiondetails.png)
+![](../images/adminguide/regiondetails.png)
 
 概览页面展示基本信息和地域核心资源使用趋势的监控图表。
 
@@ -41,5 +41,5 @@ EndPoints、创建时间，同时也可通过“自定义列表”按钮，自�
 
 支持管理员修改地域的名称，城市，详细地址以及备注等信息。名称即显示在租户控制台的地域筛选中的名称，城市和详细地址以及备注信息可以用以补充关于此数据中心的更多信息内容。在管理平台地域管理列表，点击对应地域右侧的【修改】按钮进行操作，如下图所示：
 
-![editregion](../images/adminguide/editregion.png)
+![](../images/adminguide/editregion.png)
 

@@ -10,7 +10,7 @@
 
 1. 选择地域（数据中心）后，在左侧导航栏选择虚拟机模板，进入虚拟机模板控制台，点击“创建” ，弹出虚拟机模板创建向导；
 
-   ![tbase_1](../images/userguide/tbase_1.png)
+   ![](../images/userguide/tbase_1.png)
 
 2. 选择虚拟机模板的机型，并确定虚拟机模板的操作系统镜像；
 
@@ -36,7 +36,7 @@
 
 5. 配置网络相关设置，包括 VPC 网络、子网、内网 IP 地址、内网安全组、外网 IP 及外网安全组等选项：
 
-  ![tbase_2](../images/userguide/tbase_2.png)
+  ![](../images/userguide/tbase_2.png)
 
   * VPC 网络是一个属于用户的、逻辑隔离的二层网络广播域环境。在一个 VPC 网络内，用户可以构建并管理多个三层网络，即子网（ Subnet ），VPC 私有网络是子网的容器，不同 VPC 间网络绝对隔离；
       * 创建虚拟机模板时必须选择 VPC 网络和所属子网；
@@ -47,7 +47,7 @@
 
 6. 选择并配置虚拟机模板基础管理配置，包括登录方式、登录密码（可选择随机生成）和项目组信息等。
 
-  ![tbase_3](../images/userguide/tbase_3.png)
+  ![](../images/userguide/tbase_3.png)
 
   * 管理员名称：CentOS 的管理员为 `root` ，Ubuntu 的管理员为 `ubuntu` ，Windows 系统的管理员名称为  `administrator` ；
   * 登录方式：为虚拟机模板设置登录凭证，即登录虚拟机的密码，可选择随机生成； 
@@ -56,7 +56,7 @@
 
 7. 选择购买数量和付费方式，如下图所示确认订单并点击“立即购买” 进行虚拟机创建操作。
 
-  ![tbase_4](../images/userguide/tbase_4.png)
+  ![](../images/userguide/tbase_4.png)
 
   * 购买数量：固定为1；
   * 付费方式：选择虚拟机的计费方式，支持按时、按年、按月三种方式，可根据需求选择适合的付费方式；
@@ -71,7 +71,7 @@
 
    虚拟机模板列表页可查看当前账户下已有的虚拟机模板，包括名称、资源 ID、VPC、子网、集群、配置、关联资源、计费方式、集群与特性、项目组及操作等，同时也可通过“自定义列表”按钮，自定义列表所需信息。
 
-   ![tlist](../images/userguide/tlist.png)
+   ![](../images/userguide/tlist.png)
 
    * 名称：虚拟机模板名称
    * 资源ID：虚拟机模板ID
@@ -91,7 +91,7 @@
 
   #### 27.2.2.1 基本信息
 
-  ![tdetail_1](../images/userguide/tdetail_1.png)
+  ![](../images/userguide/tdetail_1.png)
 
   * 资源ID：虚拟机模板ID
   * 资源名称：虚拟机模板名称
@@ -100,21 +100,21 @@
 
   #### 27.2.2.2 虚拟机配置
 
-  ![tdetail_2](../images/userguide/tdetail_2.png)
+  ![](../images/userguide/tdetail_2.png)
 
   #### 27.2.2.3 网络配置
 
-  ![tdetail_3](../images/userguide/tdetail_3.png)
+  ![](../images/userguide/tdetail_3.png)
 
   #### 27.2.2.4 存储配置
 
-  ![tdetail_4](../images/userguide/tdetail_4.png)
+  ![](../images/userguide/tdetail_4.png)
 
   ## 27.3 从模板创建虚拟机
 
   虚拟机模板支持一键创建与模板相同配置信息的虚拟机实例。可从模板列表中创建虚拟机按钮或详情中创建虚拟机按钮创建虚拟机实例。
 
-  ![tcreate](../images/userguide/tcreate.png)
+  ![](../images/userguide/tcreate.png)
 
   * 虚拟机模板：虚拟机模板ID
   * 虚拟机名称：默认虚拟机模板名称，可修改
@@ -127,5 +127,5 @@
 
   平台用户可在控制台删除虚拟机模板，虚拟机模板已关联资源时不可删除，删除虚拟机模板后对通过虚拟机模板创建的虚拟机实例无影响。
 
-  ![tdelete](../images/userguide/tdelete.png)
+  ![](../images/userguide/tdelete.png)
 

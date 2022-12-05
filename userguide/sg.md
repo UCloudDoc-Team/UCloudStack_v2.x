@@ -10,7 +10,7 @@
 
 安全组仅可作用于**同一个数据中心** 内具有相同安全需求的虚拟机、弹性网卡、负载均衡及 NAT 网关，工作原理如下图所示：
 
-![Secrity_group](../images/userguide/Secrity_group.png)
+![](../images/userguide/Secrity_group.png)
 
 安全组具有独立的生命周期，可以将安全组与虚拟机、弹性网卡、负载均衡、NAT 网关绑定在一起，提供安全访问控制，与之绑定的虚拟资源销毁后，安全组将自动解绑。
 
@@ -63,7 +63,7 @@
 
 用户可通过导航栏进入【安全组】资源控制台，通过“**创建安全组**”可进入安全组创建向导页面，如下图所示：
 
-![createsg](../images/userguide/createsg.png)
+![](../images/userguide/createsg.png)
 
 可根据向导页面的提示，选择并配置安全组名称，并根据需求配置安全组规则，包括协议类型、端口、地址、动作、优先级、方向及描述等。
 
@@ -86,7 +86,7 @@
 
 安全组列表页面可查看当前账户下安全组资源列表及相关信息，包括名称、ID、规则数量、绑定资源数量、创建时间、状态及操作项等，如下图所示：
 
-![sglist](../images/userguide/sglist.png)
+![](../images/userguide/sglist.png)
 
 - 名称/ID ：安全组的名称及全局唯一标识符；
 - 规则数量：安全组已添加的安全组规则数量，以数字表示；
@@ -100,7 +100,7 @@
 
 在安全组资源列表上，点击安全组名称可查看当前安全组的详情及安全组规则信息，同时可切换至资源页面查看当前安全组已绑定的资源信息，如下图概览页所示：
 
-![sgdetails](../images/userguide/sgdetails.png)
+![](../images/userguide/sgdetails.png)
 
 - 基本信息：当前安全组的基本信息，包括名称、ID、规则数量、已绑定资源数量及创建时间等信息。
 - 安全组规则管理：当前安全组的访问控制规则管理，包括添加、查看、编辑、删除等，详见[安全组规则管理](#_103-安全组规则管理)。
@@ -110,7 +110,7 @@
 
 已绑定资源指安全组已绑定资源的列表信息，可通过列表信息查看当前安全组已经绑定或关联的虚拟资源信息。用户可通过安全组详情页面进入“**资源**”子页面，查看已绑定的资源信息。
 
-![sgresource](../images/userguide/sgresource.png)
+![](../images/userguide/sgresource.png)
 
 如上图列表图所示，已绑定资源的列表信息包括资源名称、资源类型、资源ID等信息，其中资源类型包括虚拟机、弹性网卡、NAT 网关、负载均衡等。
 
@@ -120,7 +120,7 @@
 
 * 支持虚拟机绑定内网和外网安全组，如下图所示：
 
-![vm_bindsg](../images/userguide/vm_bindsg.png)
+![](../images/userguide/vm_bindsg.png)
 
 - 资源 ID：安全组的全局唯一标识符；
 - 资源名称：安全组的名称；
@@ -130,7 +130,7 @@
 
 * 支持负载均衡绑定安全组，如下图所示：
 
-![lb_bindsg](../images/userguide/lb_bindsg.png)
+![](../images/userguide/lb_bindsg.png)
 
 - 资源 ID：安全组的全局唯一标识符；
 - 资源名称：安全组的名称；
@@ -139,7 +139,7 @@
 
 * 支持nat网关绑定安全组，如下图所示：
 
-![natgw_bindsg](../images/userguide/natgw_bindsg.png)
+![](../images/userguide/natgw_bindsg.png)
 
 - 资源 ID：安全组的全局唯一标识符；
 - 资源名称：安全组的名称；
@@ -148,7 +148,7 @@
 
 * 支持网卡绑定安全组，如下图所示：
 
-![nic_bindsg](../images/userguide/nic_bindsg.png)
+![](../images/userguide/nic_bindsg.png)
 
 - 资源 ID：安全组的全局唯一标识符；
 - 资源名称：安全组的名称；
@@ -157,7 +157,7 @@
 
 * 支持对象存储绑定安全组，如下图所示：
 
-![oss_bindsg](../images/userguide/oss_bindsg.png)
+![](../images/userguide/oss_bindsg.png)
 
 - 资源 ID：安全组的全局唯一标识符；
 - 资源名称：安全组的名称；
@@ -166,7 +166,7 @@
 
 * 支持文件存储绑定安全组，如下图所示：
 
-![fs_bindsg](../images/userguide/fs_bindsg.png)
+![](../images/userguide/fs_bindsg.png)
 
 - 资源 ID：安全组的全局唯一标识符；
 - 资源名称：安全组的名称；
@@ -177,7 +177,7 @@
 
 支持用户批量解绑安全组，可通过安全组列表操作栏的“**解绑**”按钮进入解绑安全组向导页，如下图所示：
 
-![unbindsg](../images/userguide/unbindsg.png)
+![](../images/userguide/unbindsg.png)
 
 - 资源 ID：安全组的全局唯一标识符；
 - 资源名称：安全组的名称；
@@ -191,7 +191,7 @@
 
 支持用户删除未被任何资源绑定的安全组资源。安全组删除后，会被彻底销毁，删除前需保证安全组未被任何资源绑定或关联。可通过安全组列表页面操作项中的“删除”进行安全组的删除，如下图所示：
 
-![sgrm](../images/userguide/sgrm.png)
+![](../images/userguide/sgrm.png)
 
 ## 10.3 安全组规则管理
 
@@ -205,7 +205,7 @@
 
 通过安全组详情页面的规则列表可查看当前安全组已生成的规则信息，并可通过列表的操作项对已有规则进行编辑和删除等操作。规则列表信息包括协议类型、端口、地址、动作、优先级、方向、描述、创建时间及操作项等，如下图所示：
 
-![rulelist](../images/userguide/rulelist.png)
+![](../images/userguide/rulelist.png)
 
 ### 10.3.3 编辑规则
 
@@ -228,7 +228,7 @@
 
 其中 IP 组名称指当前需要创建的 IP 组的名称标识， IP 地址可增加多条，如下图所示：
 
-![createipgroup](../images/userguide/createipgroup.png)
+![](../images/userguide/createipgroup.png)
 
 - IP 组名称：IP组的名称；
 - IP 地址：地址栏支持批量输入多个 IP 地址，多个 IP 地址换行输入，IP 支持以下格式:
@@ -244,7 +244,7 @@
 
 用户查看已创建的 IP 组信息，包括名称、资源 ID 、IP/网段、绑定资源数量、项目组、创建时间及操作项，如下图所示：
 
-![ipgrouplist](../images/userguide/ipgrouplist.png)
+![](../images/userguide/ipgrouplist.png)
 
 - 名称：IP 组的名称；
 - 资源 ID ：IP 组的全局唯一标识符；
@@ -260,13 +260,13 @@
 
 支持用户编辑 IP 组的 IP 地址，IP 组名称不可修改，可通过点击 IP 组列表操作栏的 “**编辑**” 按钮进行修改，如下图所示：
 
-![updateipgroup](../images/userguide/updateipgroup.png)
+![](../images/userguide/updateipgroup.png)
 
 ### 10.4.4 删除IP组
 
 用户可在控制台删除账户内 IP 组，支持对 IP 组进行批量删除操作。可通过 IP 组列表操作项的 “**删除**” 进行操作，如下图所示：
 
-![ipgrouprm](../images/userguide/ipgrouprm.png)
+![](../images/userguide/ipgrouprm.png)
 
 ## 10.5 端口组
 
@@ -276,7 +276,7 @@
 
 其中端口组名称指当前需要创建的端口组的名称标识，协议端口可增加多条，如下图所示：
 
-![createportgroup](../images/userguide/createportgroup.png)
+![](../images/userguide/createportgroup.png)
 
 - 端口组名称：IP组的名称；
 - 协议端口：支持换行输入多个协议端口，端口支持以下格式:
@@ -291,7 +291,7 @@
 
 用户查看已创建的端口组信息，包括名称、资源 ID 、端口、绑定资源数量、项目组、创建时间及操作项，如下图所示：
 
-![portgrouplist](../images/userguide/portgrouplist.png)
+![](../images/userguide/portgrouplist.png)
 
 - 名称：端口组的名称；
 - 资源 ID：端口组的全局唯一标识符；
@@ -307,11 +307,11 @@
 
 支持用户编辑端口组的协议端口，端口组名称不可修改，可通过点击端口组列表操作栏的 “**编辑**” 按钮进行修改，如下图所示：
 
-![updateportgroup](../images/userguide/updateportgroup.png)
+![](../images/userguide/updateportgroup.png)
 
 ### 10.5.4 删除端口组
 
 用户可在控制台删除账户内端口组，支持对端口组进行批量删除操作。可通过端口组列表操作项的 “**删除**” 进行操作，如下图所示：
 
-![portgrouprm](../images/userguide/portgrouprm.png)
+![](../images/userguide/portgrouprm.png)
 

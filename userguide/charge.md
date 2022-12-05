@@ -20,7 +20,7 @@
 
 资源计价器为用户提供资源付费方式的选择，并展示付费模式下所有资源的费用信息及资源的"**购买**"确认按钮，如下图示例所示：
 
-![buy](../images/userguide/buy.png)
+![](../images/userguide/buy.png)
 
 - 计价器中付费方式支持用户选择时、月、年，分别代表按时计费、按月计费、按年计费，其中选择月和年时，可以选择购买的月份数量和年份数量。
   - 月份可选择 1 ~ 11 ，分别代表 1 个月或 11 个月；
@@ -33,7 +33,7 @@
 
 订单管理是平台为用户提供的订单查询及统计服务，通过订单管理可以查看平台账号及子账号所有订单记录，支持查看某个地域、 1 天、3天、 7 天、14 天、30 天及自定义时间的历史订单记录。对资源进行创建、续费、变更配置或删除时，会分别产生新购、续费、升级、降级及退单等类型订单，如下图所示：
 
-![orderlist](../images/userguide/orderlist.png)
+![](../images/userguide/orderlist.png)
 
 - 订单号：指当前订单的全局唯一标识符；
 - 订单类型：当前订单的类型，包括新购、续费、升级、降级及退单五种类型；
@@ -54,7 +54,7 @@
 
 交易管理是平台为用户提供的账号金额相关的收支明细，包括扣费、充值、退费及统计服务。通过交易管理可查看平台账号及子账号所有交易流水记录，支持查看某个地域、 1 天、3天、 7 天、14 天、30 天及自定义时间的历史交易记录，如下图：
 
-![translist](../images/userguide/translist.png)
+![](../images/userguide/translist.png)
 
 - 交易单号：当前交易记录在全局唯一的 ID 标识符，以 `trade` 作为开头；
 - 交易类型：当前交易记录的类型，根据平台对资源的不同操作，分别包括充值、扣费和退费：
@@ -83,7 +83,7 @@
 
 租户可在帐号总览页面查看费用趋势，可通过自定义费用类型查看云平台在近六个月内产生的交易信息，如下图所示：
 
-![usercosttrend](../images/userguide/usercosttrend.png)
+![](../images/userguide/usercosttrend.png)
 
 ### 23.4.4 本月账单汇总
 
@@ -91,33 +91,33 @@
 
 * 按产品汇总
 
-![userproductsum](../images/userguide/userproductsum.png)
+![](../images/userguide/userproductsum.png)
 
 * 按租户汇总
 
-![userusersum](../images/userguide/userusersum.png)
+![](../images/userguide/userusersum.png)
 
 * 按地域汇总
 
-![userregionsum](../images/userguide/userregionsum.png)
+![](../images/userguide/userregionsum.png)
 
 * 按项目组汇总
 
-![userprojectsum](../images/userguide/userprojectsum.png)
+![](../images/userguide/userprojectsum.png)
 
 * 按订单类型
 
-![userordersum](../images/userguide/userordersum.png)
+![](../images/userguide/userordersum.png)
 
 * 按计费模式汇总
 
-![userbilltypesum](../images/userguide/userbilltypesum.png)
+![](../images/userguide/userbilltypesum.png)
 
 ### 23.4.5 资源账单
 
 租户可从账单周期/所属产品/计费模式/所属地域/所属项目五个维度查看云平台的资源账单信息，列表包括资源ID、地域、租户ID、主账号名称、主账号邮箱、所属产品、所属项目、计费模式、总费用、平台账户、外部账户及交易时间，如下图所示：
 
-![userresourcebill](../images/userguide/userresourcebill.png)
+![](../images/userguide/userresourcebill.png)
 
 - 资源ID：账单的全局唯一标识符
 - 地域：资源所在的地域信息
@@ -136,13 +136,13 @@
 
 平台支持租户从账单周期、所属产品、计费模式、所属地域、所属项目五个维度筛选资源账单，并导出到本地 Excel 文件，为便平台运营管理和报表统计，如下图所示：
 
-![userexportingresbill](../images/userguide/userexportingresbill.png)
+![](../images/userguide/userexportingresbill.png)
 
 ### 23.4.7 账单明细
 
 租户可从账单周期/所属产品/订单类型/计费模式/所属地域/所属项目六个维度查看云平台的账单明细，列表包括资源ID、交易单号、交易类型、订单号、订单类型、地域、租户ID、主账号名称、主账号邮箱、所属产品、所属项目、计费模式、总费用、平台账户、外部账户及交易时间，如下图所示：
 
-![userbilldetails](../images/userguide/userbilldetails.png)
+![](../images/userguide/userbilldetails.png)
 
 - 资源ID：账单的全局唯一标识符
 - 交易单号：交易记录在云平台的唯一标识
@@ -165,4 +165,4 @@
 
 平台支持租户从账单周期、所属产品、订单类型、计费模式、所属地域、所属项目六个维度筛选账单明细，并导出到本地 Excel 文件，为便平台运营管理和报表统计，如下图所示：
 
-![userexportingbilldetails](../images/userguide/userexportingbilldetails.png)
+![](../images/userguide/userexportingbilldetails.png)

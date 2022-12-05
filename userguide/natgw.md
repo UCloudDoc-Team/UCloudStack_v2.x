@@ -27,7 +27,7 @@ NAT 网关（ NAT Gateway ）是一种类似 [NAT](https://zh.wikipedia.org/wiki
 
 在产品层面，租户通过申请一个 NAT 网关，指定 NAT 网关可允许通信的 VPC 网络，通过绑定【外网 IP】使多子网下虚拟机与互联网或 IDC 数据中心物理网进行通信，具体逻辑架构图如下：
 
-![natgw](../images/userguide/natgw.png)
+![](../images/userguide/natgw.png)
 
 - 平台支持同 VPC 多子网虚拟机使用 NAT 网关访问互联网或 IDC 数据中心网络。
 - 当多个子网中未绑定外网 IP 的虚拟机关联 NAT 网关时，平台将自动在虚拟机中下发访问外网的路由。
@@ -135,7 +135,7 @@ NAT 网关的网络访问控制可以关联安全组给予安全保障，通过�
 
 用户可通过导航栏进入【NAT 网关】资源控制台，通过“创建 NAT 网关”进入创建向导页面，如下图所示：
 
-![createnat](../images/userguide/createnat.png)
+![](../images/userguide/createnat.png)
 
 1. 选择并配置 NAT 网关基础配置及网络设置信息：
 
@@ -164,7 +164,7 @@ NAT 网关的网络访问控制可以关联安全组给予安全保障，通过�
 
 NAT 网关列表可查看当前账户下所有 NAT 网关的资源信息，包括名称、资源 ID、VPC、子网、安全组、外网 IP、创建时间、过期时间、计费方式、状态及操作项，如下图所示：
 
-![natlist](../images/userguide/natlist.png)
+![](../images/userguide/natlist.png)
 
 - 名称/ID：NAT 网关的名称及全局唯一标识符。
 - 外网 IP：NAT 网关所绑定的外网 IP 地址。
@@ -182,7 +182,7 @@ NAT 网关列表可查看当前账户下所有 NAT 网关的资源信息，包�
 
 在 NAT 网关资源列表上，点击“**名称**” 可进入概览页面查看当前 NAT 网关实例的详细信息，同时可切换至 SNAT 规则、DNAT 规则、外网 IP 管理页面，分别管理当前 NAT 网关的 SNAT 规则、DNAT 规则及绑定的外网 IP 管理，如概览页所示：
 
-![natdetails](../images/userguide/natdetails.png)
+![](../images/userguide/natdetails.png)
 
 **（1）基本信息**
 
@@ -214,7 +214,7 @@ NAT 网关的外网 IP 管理，即已绑定至 NAT 网关的外网 IP 地址管
 
 用户可通过控制台或 API 的方式删除不需要的 NAT 网关实例，删除时会自动解绑已绑定的外网 IP 地址，并清除NAT 网关已添加的 SNAT/DNAT 规则及路由策略。
 
-![rmnatgw](../images/userguide/rmnatgw.png)
+![](../images/userguide/rmnatgw.png)
 
 NAT 网关被删除后即直接销毁，请在删除前确保 NAT 网关无业务流量访问外网，否则可能影响业务访问。
 
@@ -226,7 +226,7 @@ NAT 网关被删除后即直接销毁，请在删除前确保 NAT 网关无业�
 
 绑定至 NAT 网关的安全组策略作用于 NAT 网关出口的外网 IP ，用于限制通过 NAT 网关出口流量。支持修改 NAT 网关的安全组，用户可通过 NAT 网关列表操作项中的“**修改安全组**”进行修改操作，如下图所示：
 
-![natgwbindsg](../images/userguide/natgwbindsg.png)
+![](../images/userguide/natgwbindsg.png)
 
 一个 NAT 网关仅支持绑定一个安全组，修改成功安全组即时生效，平台会以新的安全组策略对进出 NAT 网关的流量进行限制，用户可通过 NAT 网关列表及详细信息查看已修改的安全组信息。
 
@@ -234,7 +234,7 @@ NAT 网关被删除后即直接销毁，请在删除前确保 NAT 网关无业�
 
 支持用户手动对 NAT 网关进行续费，续费操作只针对资源本身，不对资源额外关联的资源进行续费，如绑定的外网 IP 资源。额外关联的资源到期后，会自动从 NAT 网关进行解绑，为保证业务正常使用，需及时对相关资源进行续费操作。
 
-![renewnatgw](../images/userguide/renewnatgw.png)
+![](../images/userguide/renewnatgw.png)
 
 NAT 网关续费时支持更改续费方式，只可由短周期改为长周期，例如按月的续费方式可更改为按月、按年。
 
@@ -252,7 +252,7 @@ SNAT 规则仅支持 SNAT 能力，不对 DNAT 端口转发能力进行限制，
 
 用户创建一条 SNAT 规则，为指定虚拟资源指定访问外网的 IP 地址，规则内的源地址资源必须与 NAT 网关处于相同的 VPC 网络。用户可通过 NAT 网关详情页面 “SNAT规则” 控制台中的“创建SNAT规则”进入规则添加向导页面，如下图所示：
 
-![addsnat](../images/userguide/addsnat.png)
+![](../images/userguide/addsnat.png)
 
 在向导页面，用户需指定 SNAT 规则的源地址类型、子网、虚拟机及外网 IP ，源地址是需要通过 NAT 网关访问外网的资源类型；子网是指通过 NAT 网关访问外网的子网 CIDR ；虚拟机指通过 NAT 网关访问外网的虚拟机 IP 地址；外网 IP 是指资源访问外网时的出口 IP 地址。
 
@@ -276,7 +276,7 @@ SNAT 规则仅支持 SNAT 能力，不对 DNAT 端口转发能力进行限制，
 
 用户通过 NAT 网关详情页面的“SNAT 规则” 可查看已添加至当前网关的 SNAT 规则列表及信息，包括资源 ID、源地址类型、源地址、外网 IP、状态、创建时间及操作项，如下图所示：
 
-![snatlist](../images/userguide/snatlist.png)
+![](../images/userguide/snatlist.png)
 
 - 资源ID ：已添加 SNAT 规则 的全局唯一标识符。
 - 源地址类型：指当前 SNAT 规则的源地址类型，如子网级别、虚拟机级别。
@@ -294,7 +294,7 @@ SNAT 规则仅支持 SNAT 能力，不对 DNAT 端口转发能力进行限制，
 
 用户修改一条 SNAT 规则的外网 IP 地址，规则修改后即时生效，当前规则的源地址资源访问外网会使用新外网 IP 地址作为出口。如下图所示：
 
-![updatesnat](../images/userguide/updatesnat.png)
+![](../images/userguide/updatesnat.png)
 
 修改 SNAT 规则的外网 IP 时，仅支持选择已绑定至 NAT 网关的外网 IP 地址。
 
@@ -302,7 +302,7 @@ SNAT 规则仅支持 SNAT 能力，不对 DNAT 端口转发能力进行限制，
 
 支持用户删除 SNAT 规则，规则删除后将会立即销毁，规则关联的 SNAT 能力即时失效。可在控制台 SNAT 规则列表上删除 SNAT 规则，并支持批量删除，如下图所示：
 
-![rmsnat](../images/userguide/rmsnat.png)
+![](../images/userguide/rmsnat.png)
 
 删除过程中，SNAT 规则的状态为【删除中】，待列表上 SNAT 规则被清除即代表删除成功。删除 SNAT 规则不影响虚拟机本身的正常运行，自动下发的路由将被清除，即不可通过 NAT 网关访问外网，可通过重新添加 SNAT 规则或绑定外网 IP 地址访问外网。
 
@@ -318,7 +318,7 @@ DNAT 规则是 NAT 网关提供 DNAT 服务的入口，支持 TCP 和 UDP 两种
 
 添加转发规则需用户指定 NAT 网关名称、协议、源 IP 、源端口、目标 IP 、目标端口及多端口，可通过 NAT 网关详情的【DNAT 规则】列表添加 DNAT 规则，如下图所示：
 
-![adddnat](../images/userguide/adddnat.png)
+![](../images/userguide/adddnat.png)
 
 * 协议：指 DNAT 端口转发规则的转发协议，支持 TCP 和 UDP ，创建时必须指定，默认为 TCP 。
 * 源 IP：DNAT 端口转发规则的源 IP 地址，即 NAT 网关的所绑定的外网 IP ，一条规则仅支持一个外网 IP 。
@@ -341,7 +341,7 @@ DNAT 规则是 NAT 网关提供 DNAT 服务的入口，支持 TCP 和 UDP 两种
 
 用户查看已添加的端口转发规则列表信息，包括转发规则协议、源 IP、源端口、目的IP、目的端口、状态及操作项，如下图所示：
 
-![dnatlist](../images/userguide/dnatlist.png)
+![](../images/userguide/dnatlist.png)
 
 * 协议：当前 DNAT 规则的协议，如 TCP 或 UDP 。
 * 源 IP：当前 DNAT 规则的源 IP 地址，即当前规则所指定的外网 IP 。
@@ -356,7 +356,7 @@ DNAT 规则是 NAT 网关提供 DNAT 服务的入口，支持 TCP 和 UDP 两种
 
 用户修改已添加 DNAT 规则，包括协议、源 IP 、源端口、目的 IP、目的端口，如下图所示：
 
-![updatedant](../images/userguide/updatednat.png)
+![](../images/userguide/updatednat.png)
 
 用户修改源 IP 必须为 NAT 网关中已绑定的外网 IP 地址，修改后即时生效。
 
@@ -364,7 +364,7 @@ DNAT 规则是 NAT 网关提供 DNAT 服务的入口，支持 TCP 和 UDP 两种
 
 用户可删除一条或多条 DNAT 转发规则，删除后即时生效，不可通过 DNAT 规则指定的外网 IP 地址访问目标 IP 地址的业务服务。如下图所示：
 
-![rmdnat](../images/userguide/rmdnat.png)
+![](../images/userguide/rmdnat.png)
 
 支持批量删除多条转发规则，规则被删除后即被销毁，删除前需谨慎操作。
 
@@ -378,7 +378,7 @@ NAT 网关支持绑定 50 个默认路由类型的 IPv4 外网 IP 地址，为 N
 
 用户可通过 NAT 网关详情【外网 IP 管理】标签页查看已绑定至 NAT 网关的外网 IP 地址列表及信息，包括资源 ID、IP、带宽、状态及操作项等，如下图所示：
 
-![nateiplist](../images/userguide/nateiplist.png)
+![](../images/userguide/nateiplist.png)
 
 * 资源 ID ：当前已绑定至 NAT 网关的 EIP  全局唯一标识符。
 * IP 地址： 外网 IP 地址。
@@ -391,7 +391,7 @@ NAT 网关支持绑定 50 个默认路由类型的 IPv4 外网 IP 地址，为 N
 
 支持用户为 NAT 网关绑定 50 个默认路由类型的 IPv4 外网 IP 地址，为 NAT 网关的指定的虚拟资源提供共享外网 IP 池，提供灵活便捷的 SNAT 及 DNAT 能力。具体绑定操作如下图所示：
 
-![natbondeip](../images/userguide/natbondeip.png)
+![](../images/userguide/natbondeip.png)
 
 绑定成功后，用户添加 SNAT 和 DNAT 规则时，即可选择绑定的 IP 地址为 SNAT 的外网 IP 或 DNAT 的源 IP 地址。**注：不支持绑定 IPv6 及非默认路由类型的 IPv4 外网 IP 地址。**
 
@@ -402,7 +402,7 @@ NAT 网关支持绑定 50 个默认路由类型的 IPv4 外网 IP 地址，为 N
 - 解绑后，外网 IP 会自动从 SNAT 规则的外网 IP 池中清除。
 - 解绑后，外网 IP 会自动从 DNAT 规则的源 IP 中清除。
 
-![natunbondeip](../images/userguide/natunbondeip.png)
+![](../images/userguide/natunbondeip.png)
 
 用户可通过修改 SNAT 和 DNAT 规则，分别设置新的出口 IP 及入口源 IP 地址。
 

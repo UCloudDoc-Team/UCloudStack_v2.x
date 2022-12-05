@@ -8,7 +8,7 @@
 
 在平台控制台上，用户可通过指定名称、集群、策略对象及是否强制执行创建隔离组,隔离组默认启用，如下图所示：
 
-![createisolation](../images/userguide/createisolation.png)
+![](../images/userguide/createisolation.png)
 
 - 名称：隔离组的名称。
 - 备注：隔离组的备注信息。
@@ -23,7 +23,7 @@
 
 通过导航栏进入隔离组页面可查看当前账户下隔离组资源的列表及相关详细信息，包括隔离组名称、资源 ID、计算集群ID、状态、主机数、策略对象、策略、是否强制执行、是否启用、创建时间及操作项，如下图所示：
 
-![isolationlist](../images/userguide/isolationlist.png)
+![](../images/userguide/isolationlist.png)
 
 - 隔离组名称：当前隔离组名称。
 - 资源ID：隔离组唯一ID标识。
@@ -41,7 +41,7 @@
 
 通过隔离组名称进入隔离组详情页面可查看当前隔离组下的基本信息和实例信息，如下图所示：
 
-![isolationdetail](../images/userguide/isolationdetail.png)
+![](../images/userguide/isolationdetail.png)
 
 **（1）基本信息**
 
@@ -55,7 +55,7 @@
 
 支持将关机/断电状态下且与隔离组所属计算集群一致的的虚拟机加入隔离组，如下图所示：
 
-![addinstance](../images/userguide/addinstance.png)
+![](../images/userguide/addinstance.png)
 
 - 隔离组：隔离组名称和ID。
 - 实例：可加入的实例。
@@ -64,7 +64,7 @@
 
 支持将隔离组下的实例移除，如下图所示：
 
-![deleteinstance](../images/userguide/deleteinstance.png)
+![](../images/userguide/deleteinstance.png)
 
 - 名称：实例名称。
 - 状态：实例电源状态。
@@ -81,13 +81,13 @@
 
 隔离组状态为禁用时，可操作修改隔离组内容。支持修改策略对象和是否强制执行，如下图所示：
 
-![updateisolation](../images/userguide/updateisolation.png)
+![](../images/userguide/updateisolation.png)
 
 ## 28.9 删除隔离组
 
 支持用户操作删除隔离组，隔离组状态为空闲时，可操作删除。隔离组状态为调度中/调度完成，需先操作禁用隔离组，然后操作删除。如下图所示：
 
-![deleteisolation](../images/userguide/deleteisolation.png)
+![](../images/userguide/deleteisolation.png)
 
 
 

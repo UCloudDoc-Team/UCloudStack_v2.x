@@ -14,7 +14,7 @@
 
 管理员对平台的信息进行采集可点击【**信息采集**】按钮供运营平台使用，运营平台确定用户的需求生成授权证书再上传至平台可点击【**上传授权**】按钮使用，如下图所示：
 
-![order](../images/adminguide/license.png)
+![](../images/adminguide/license.png)
 
 ### 11.2.1 查看基础拓展许可
 
@@ -22,7 +22,7 @@
 
 拓展许可：支持云套件功能拓展、高级网络扩展、裸金属服务、USB 透传服务、GPU 服务、弹性伸缩服务、商用存储服务、文件存储服务、对象存储服务、MySQL 5.7 服务、Redis 4.0 服务和异构平台迁移软件服务的授权，如下图所示：
 
-![order](../images/adminguide/license.png)
+![](../images/adminguide/license.png)
 
 - 授权名称：授权产品名称；
 - 授权ID：授权唯一标识；
@@ -36,7 +36,7 @@
 
 服务许可：支持云计算基础实施管理系统 + 增值服务5 * 8维保服务、云计算基础实施管理系统 + 增值服务7 * 24维保服务和金牌VIP维保服务，如下图所示：
 
-![order](../images/adminguide/service.png)
+![](../images/adminguide/service.png)
 
 
 
@@ -44,7 +44,7 @@
 
 授权管理支持查看产品授权细节，如下图所示：
 
-![order](../images/adminguide/licensedetail.png)
+![](../images/adminguide/licensedetail.png)
 
 - 名称：授权的产品名称；
 - 内容：具体授权信息；
@@ -53,7 +53,7 @@
 
 用户可通过节点管理页面查看节点 IP 地址、序列号、角色、授权状态、CPU 型号、CPU 总量、内存总量和架构，如下图所示：
 
-![order](../images/adminguide/nodeset.png)
+![](../images/adminguide/nodeset.png)
 
 - 名称：命名方式为平台节点对应的IP地址；
 - 序列号：节点的序列号信息；
@@ -67,7 +67,7 @@
 
 节点管理支持通过节点名称访问节点基本信息、CPU信息和Memory信息，如下图所示：
 
-![order](../images/adminguide/node.png)
+![](../images/adminguide/node.png)
 
 
 

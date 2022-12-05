@@ -20,15 +20,15 @@
 
 云平台用户可通过控制台查看终端检测响应平台EDR的产品概述，产品亮点，终端系统支持的硬件信息，推荐配置，使用场景，默认访问信息等。
 
-![EDR1](../images/userguide/EDR1.png)
-![EDR2](../images/userguide/EDR2.png)
+![](../images/userguide/EDR1.png)
+![](../images/userguide/EDR2.png)
 
 ### 24.2.2 安装终端检测响应平台EDR
 
 云平台用户可通过 API 接口或控制台安装终端检测响应平台EDR，快速搭建终端安全系统，安装终端检测响应平台EDR前需保证账户至少拥有一个 VPC 网络和子网。通过导航栏进入应用商店控制台管理页面，点击“终端检测响应平台EDR”产品进入安装终端检测响应平台EDR页面，安装完EDR会跳到虚拟机页面显示机器信息，如下是安装终端检测响应平台EDR的示意图:
 
-![createEDR1](../images/userguide/createEDR1.png)
-![createEDR2](../images/userguide/createEDR2.png)
+![](../images/userguide/createEDR1.png)
+![](../images/userguide/createEDR2.png)
 
 * 实例名称/备注: 安装终端检测响应平台EDR 的名称和备注，安装时必须指定名称。
 * 计算集群: EDR实例所在节点的集群类型，由平台管理员自定义，如 x86 机型和 ARM 机型。
@@ -47,21 +47,21 @@
 * 默认账号: admin 密码： admin 
 * 机器默认锁定22远程登录端口，开放需登录EDR控制页面进行设置
 
-![useEDR](../images/userguide/useEDR.png)
+![](../images/userguide/useEDR.png)
 
 ### 24.2.4 查看数据库审计UDAS
 
 云平台用户可通过控制台查看数据库审计UDAS的产品概述、服务商信息、产品亮点、推荐配置、页面示例、默认信息等。
 
-![UDAS1](../images/userguide/UDAS1.png)
-![UDAS2](../images/userguide/UDAS2.png)
+![](../images/userguide/UDAS1.png)
+![](../images/userguide/UDAS2.png)
 
 ### 24.2.5 安装数据库审计UDAS
 
 云平台用户可通过 API 接口或控制台安装数据库审计UDAS，快速搭建数据库审计系统，安装数据库审计UDAS前需保证账户至少拥有一个 VPC 网络和子网。通过导航栏进入应用商店控制台管理页面，点击“数据库审计UDAS”产品进入安装数据库审计UDAS页面，安装完UDAS会跳到虚拟机页面显示机器信息，如下是安装数据库审计UDAS的示意图:
 
-![createUDAS1](../images/userguide/createUDAS1.png)
-![createUDAS2](../images/userguide/createUDAS2.png)
+![](../images/userguide/createUDAS1.png)
+![](../images/userguide/createUDAS2.png)
 
 * 实例名称/备注: 安装数据库审计UDAS 的名称和备注，安装时必须指定名称。
 * 计算集群: UDAS实例所在节点的集群类型，由平台管理员自定义，如 x86 机型和 ARM 机型。
@@ -81,19 +81,19 @@
 * 默认安全管理员账号： secadmin 密码： 3edc$RFV
 * 默认审计管理员账号： auditadmin 密码：3edc$RFV
 
-![useUDAS](../images/userguide/useUDAS.png)
+![](../images/userguide/useUDAS.png)
 
 ### 24.2.7 查看堡垒机
 
 云平台用户可通过控制台查看堡垒机的产品概述，产品亮点，终端系统支持的硬件信息，推荐配置，使用场景，默认访问信息等。
 
-![useUDAS](../images/userguide/appfindblj.png)
+![](../images/userguide/appfindblj.png)
 
 ### 24.2.7 创建堡垒机
 
 云平台用户可通过 API 接口或控制台安装堡垒机，快速搭建终端安全系统，安装堡垒机前需保证账户至少拥有一个 VPC 网络和子网。通过导航栏进入应用商店控制台管理页面，点击“堡垒机”产品进入安装页面，安装完会跳到虚拟机页面显示机器信息，如下是安装堡垒机的示意图:
 
-![useUDAS](../images/userguide/appcreateblj.png)
+![](../images/userguide/appcreateblj.png)
 
 * 实例名称/备注: 安装堡垒机 的名称和备注，安装时必须指定名称。
 * 计算集群: UDAS实例所在节点的集群类型，由平台管理员自定义，如 x86 机型和 ARM 机型。
@@ -109,4 +109,4 @@
 管理页面访问地址： https://[ip]
 默认系统管理员账号： admin 密码： admin
 
-![useUDAS](../images/userguide/appmakeblj.png)
+![](../images/userguide/appmakeblj.png)

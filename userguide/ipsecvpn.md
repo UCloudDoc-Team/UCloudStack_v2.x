@@ -20,7 +20,7 @@ IPsec VPN 是一种采用 IPsec 协议加密的隧道技术，由 Internet Engin
 
 VPN 网关 IPsecVPN 服务由 VPN 网关、对端网关及 VPN 隧道连接三部分组成。
 
-![ipsecvpnarch](../images/userguide/ipsecvpnarch.png)
+![](../images/userguide/ipsecvpnarch.png)
 
 - VPN 网关
 
@@ -36,7 +36,7 @@ VPN 网关 IPsecVPN 服务由 VPN 网关、对端网关及 VPN 隧道连接三�
 
 一个 VPN 网关有且必须关联 1 个 VPC 网络和 1 个外网 IP 地址，与对端网关相对应，通过 VPN 隧道进行连接。IPsecVPN 支持点到多点的连接特性，使得 VPN 网关与对端网关可以为一对一或一对多的连接关系，即一个 VPN 网关可以同时与多个对端网关建立隧道。VPN 隧道支持平台多个 VPC 子网与对端网络的多个网段通过隧道进行加密通信，平台 VPC 子网的网段与对端网络的网络不可重叠（本端与对端子网重叠会影响网络的正常通信）。
 
-![ipsecvpnsubnet](../images/userguide/ipsecvpnsubnet.png)
+![](../images/userguide/ipsecvpnsubnet.png)
 
 如上图案例所示，在云平台中的 VPC 网络已拥有 2 个子网，分别为 subnet1（`192.168.1.0/24`）和 subnet2（`192.168.2.0/24`）。在远端 IDC 数据中心下有 2 个内网网段，分别为 subnet3（`192.168.3.0/24`）和 subnet4（`192.168.4.0/24`）。
 
@@ -143,7 +143,7 @@ VPN 网关 IPsecVPN 服务是基于 Internet 的网络连接服务，通过 IPse
 
 创建 VPN 网关时需指定机型、VPC 网络、子网、外网 IP、安全组及 VPN 网关名称和备注信息，可通过导航栏 "IPSecVPN" 进入【 VPN 网关】资源控制台，通过“创建 VPN 网关”进入创建向导页面，如下图所示：
 
-![createvpngw](../images/userguide/createvpngw.png)
+![](../images/userguide/createvpngw.png)
 
 1. 选择并配置 VPN 网关基础配置及网络设置信息：
 
@@ -171,7 +171,7 @@ VPN 网关 IPsecVPN 服务是基于 Internet 的网络连接服务，通过 IPse
 
 VPN 网关列表可查看当前账户下所有 VPN 网关的资源信息，包括名称、资源 ID、VPC、子网、外网 IP、隧道数量、创建时间、过期时间、计费方式、状态及操作项，如下图所示：
 
-![vpngwlist](../images/userguide/vpngwlist.png)
+![](../images/userguide/vpngwlist.png)
 
 * 名称/ID：VPN 网关的名称及全局唯一标识符。
 * VPC 网络：VPN 网关所服务的 VPC 网络，即 VPN 网关仅为所选择的 VPC 内资源提供 IPSecVPN 通信服务，仅支持添加相同 VPC 网络的子网到关联隧道的本端网关。
@@ -188,7 +188,7 @@ VPN 网关列表可查看当前账户下所有 VPN 网关的资源信息，包�
 
 在 VPN 网关资源列表上，点击“**名称**” 可进入概览页面查看当前 VPN 网关实例的详细信息，如概览页所示：
 
-![vpngwinfos](../images/userguide/vpngwinfos.png)
+![](../images/userguide/vpngwinfos.png)
 
 **（1）基本信息**
 
@@ -212,7 +212,7 @@ VPN 网关实例相关的监控图表及信息，包括网卡入/出带宽、网
 
 用户可通过控制台或 API 的方式删除不需要的 VPN 网关实例，删除时会自动解绑已绑定的外网 IP 地址。仅支持删除未关联任何 VPN 隧道的网关，删除前需将 VPN 网关已关联的隧道连接进行删除。
 
-![rmvpngw](../images/userguide/rmvpngw.png)
+![](../images/userguide/rmvpngw.png)
 
 VPN 网关被删除后即直接销毁，请在删除前确保 VPN 网关无业务流量访问请求，否则可能影响业务访问。
 
@@ -220,7 +220,7 @@ VPN 网关被删除后即直接销毁，请在删除前确保 VPN 网关无业�
 
 支持用户手动对 VPN 网关进行续费，续费操作只针对资源本身，不对资源额外关联的资源进行续费，如绑定的外网 IP 资源。额外关联的资源到期后，会自动从 VPN 网关进行解绑，为保证业务正常使用，需及时对相关资源进行续费操作。
 
-![renewvpn](../images/userguide/renewvpn.png)
+![](../images/userguide/renewvpn.png)
 
 VPN 网关续费时支持更改续费方式，只可由短周期改为长周期，例如按月的续费方式可更改为按月、按年。
 
@@ -234,7 +234,7 @@ VPN 网关续费时会按照续费时长收取费用，续费时长与资源的�
 
 创建对端网关需指定对端网关的公网 IP 地址。由于 **IPSecVPN 服务是基于互联网的加密通信服务，在使用前需确认两端网关均有固定或 NAT 后的互联网 IP 地址。**用户在输入正确定的 IP 地址后即可创建对端网关，用于创建隧道连接。
 
-![createremotegw](../images/userguide/createremotegw.png)
+![](../images/userguide/createremotegw.png)
 
 若远端网络 VPN 网关使用的是内网地址，需提供内网地址被 SNAT 后的固定公网 IP 地址。**若远端网络 SNAT 后的地址为非固定公网 IP 地址，如 IP 地址池，则将对端网关录入为 `0.0.0.0` ，即代表和任意的对端网关 IP 地址建立隧道连接，在认证算法、密钥、本端子网和对端子网都一致的情况下，连接即可建立，使两端网络透传 NAT 进行 IPSecVPN 通信。**
 
@@ -242,7 +242,7 @@ VPN 网关续费时会按照续费时长收取费用，续费时长与资源的�
 
 在 VPN 网关资源控制台可切换至对端网关查看当前账户下所有对端网关的资源信息，包括名称、ID、公网 IP 地址、隧道数量、创建时间及操作项，如下图所示：
 
-![remotegwlist](../images/userguide/remotegwlist.png)
+![](../images/userguide/remotegwlist.png)
 
 * 公网 IP 地址：指对端网关的公网 IP 地址，指定对端网关创建的隧道将以该 IP 地址为对端 IP 地址发起 VPN 连接请求，需确保该 IP 地址为正确定的远端 VPN 网关 IP 地址。
 * 隧道数量：当前对端网关上已创建的隧道数量。
@@ -259,7 +259,7 @@ VPN 网关续费时会按照续费时长收取费用，续费时长与资源的�
 
 用户可通过控制台或 API 的方式删除不需要的对端网关实例，仅支持删除未关联任何 VPN 隧道的对端网关，删除前需将对端网关已关联的隧道连接进行删除。
 
-![rmremotegw](../images/userguide/rmremotegw.png)
+![](../images/userguide/rmremotegw.png)
 
 对端网关被删除后即直接销毁，请在删除前确保对端网关无业务流量访问请求，否则可能影响业务访问。
 
@@ -286,7 +286,7 @@ VPN 网关续费时会按照续费时长收取费用，续费时长与资源的�
 
 可通过 IPSecVPN 资源控制台进入 【VPN 隧道】标签页，进行 VPN 隧道的创建操作，创建隧道向导页面的基本配如下图所示：
 
-![createtunnel1](../images/userguide/createtunnel1.png)
+![](../images/userguide/createtunnel1.png)
 
 1. 选择亲配置 VPN 隧道的基本配置及预共享密钥信息：
 
@@ -301,7 +301,7 @@ VPN 网关续费时会按照续费时长收取费用，续费时长与资源的�
 
 2. 根据需求配置用于 VPN 隧道连接协商一阶段的 IKE 策略及二阶段的 IPSec 策略。**在建立连接时，需保证两端的 IKE 策略必须保持一致（本端和对端标识在对端配置相反）**。通常选择默认值即可创建隧道，只需要在对端建立隧道配置时，使用相同的配置参数即可将两条隧道通过两端网关进行连接。
 
-![createtunnel2](../images/userguide/createtunnel2.png)
+![](../images/userguide/createtunnel2.png)
 
 **IKE 策略：**
 
@@ -346,7 +346,7 @@ VPN 隧道创建成功后，用户可通过导航栏进入【VPN 网关】控制
 
 VPN 隧道列表可查看当前账户下所有隧道的资源列表信息，包括名称、资源 ID、VPN 网关、对端网关、创建时间、资源状态、连接状态及操作项，如下图所示：
 
-![tunnellist](../images/userguide/tunnellist.png)
+![](../images/userguide/tunnellist.png)
 
 * 名称/ID：VPN 隧道的名称及全局唯一标识符。
 * VPN 网关：VPN 隧道所关联的 VPN 网关名称及 IP 地址。
@@ -365,7 +365,7 @@ VPN 隧道列表可查看当前账户下所有隧道的资源列表信息，包�
 
 在 VPN 隧道资源列表上，点击“**名称**” 或 ID 可进入概览页面查看当前 VPN 隧道的详细配置信息和监控信息：
 
-![tunnelinfos](../images/userguide/tunnelinfos.png)
+![](../images/userguide/tunnelinfos.png)
 
 **（1）基本信息**
 
@@ -437,7 +437,7 @@ conn ipsvpn_tunnel-MQcK-cVMR
 
 用户可根据业务需求对隧道的网段策略进行修改，如增加本端网段或减少对端网段。通过隧道详情概览页面的网段信息可进行网段策略的修改，如下图所示：
 
-![updatetunnelsubnet](../images/userguide/updatetunnelsubnet.png)
+![](../images/userguide/updatetunnelsubnet.png)
 
 支持自定义修改本端网段和对端网段，本端网段和对端网段不允许重复且不允许重叠。
 
@@ -453,7 +453,7 @@ conn ipsvpn_tunnel-MQcK-cVMR
 
 当网络配置发生变更或隧道连接状态为阶段 1 失败时，可通过校验并修改 IKE 策略配置，重新进行连接。通过隧道详情概览页面的 IKE 可进行 IKE 策略的修改，如下图所示：
 
-![updatetunnelike](../images/userguide/updatetunnelike.png)
+![](../images/userguide/updatetunnelike.png)
 
 支持修改预共享密钥 及 IKE 策略的所有配置参数，两端隧道的预共享密钥 、IKE 版本、协商模式（IKEv1）、认证算法、加密算法、DH 组、本端标识、对端标识必须保持一致，生存周期可以不一致。
 
@@ -465,7 +465,7 @@ conn ipsvpn_tunnel-MQcK-cVMR
 
 当网络配置发生变更或隧道连接状态为阶段 2 失败时，可通过校验并修改 IPSec 策略配置，重新进行连接。通过隧道详情概览页面的 IPSec 可进行 IPSec 策略的修改，如下图所示：
 
-![updatetunnelipsec](../images/userguide/updatetunnelipsec.png)
+![](../images/userguide/updatetunnelipsec.png)
 
 支持修改 IPSec 策略的所有配置参数，两端隧道的安全传输协议、认证算法、加密算法及 PFS DH 组必须保持一致，生存周期可以不一致。
 
@@ -485,7 +485,7 @@ conn ipsvpn_tunnel-MQcK-cVMR
 
 用户可通过控制台或 API 的方式删除不需要的 VPN 隧道，删除后 VPN  隧道会自动中断，同时会清除已配置在本端子网虚拟机中的路由。
 
-![rmtunnel](../images/userguide/rmtunnel.png)
+![](../images/userguide/rmtunnel.png)
 
 VPN 隧道被删除后即直接销毁，请在删除前确保 VPN 隧道无业务流量访问请求，否则可能影响业务访问。
 
@@ -512,15 +512,15 @@ UCloud 公有云  IPSecVPN 目前仅支持 IKEv1 ，本文描述在私有云和 
 
 在建立 IPSecVPN 连接进行通信前，需确认两端要建立 IPSecVPN 连接的网络拓扑关系及配置参数信息。
 
-| 网络配置和配置参数   | UCloudStack 私有云              | UCloud 公有云                   |
-| -------------------- | ------------------------------- | ------------------------------- |
-| VPN 网关公网 IP 地址 | 106.75.234.78                   | 113.31.115.114                  |
-| VPC 网段             | 10.0.192.0/20                   | 10.23.0.0/16、10.25.0.0/16      |
-| 客户虚拟机 IP        | 10.0.192.32                     | 10.23.228.173                   |
-| 预共享密钥           | ucloud.1231                     | ucloud.1231                     |
-| IKE 版本             | V1——协商模式为主模式            | V1——协商模式为主模式            |
+| 网络配置和配置参数   | UCloudStack 私有云            | UCloud 公有云                 |
+|--------------------|-------------------------------|-------------------------------|
+| VPN 网关公网 IP 地址 | 106.75.234.78                 | 113.31.115.114                |
+| VPC 网段             | 10.0.192.0/20                 | 10.23.0.0/16、10.25.0.0/16     |
+| 客户虚拟机 IP        | 10.0.192.32                   | 10.23.228.173                 |
+| 预共享密钥           | ucloud.1231                   | ucloud.1231                   |
+| IKE 版本             | V1——协商模式为主模式          | V1——协商模式为主模式          |
 | IKE 策略             | 认证 SHA1、加密 AES128、DH 组 2 | 认证 SHA1、加密 AES128、DH 组 2 |
-| IPSec 安全传输协议   | ESP                             | ESP                             |
+| IPSec 安全传输协议   | ESP                           | ESP                           |
 | IPSec 策略           | 认证 SHA1、加密 AES128、PFSDH 2 | 认证 SHA1、加密 AES128、PFSDH 2 |
 
 > 本文假设已在 UCloudStack 私有云上部署 VPN 网关和对端网关，并已通过以上配置参数创建 VPN 隧道，等待 UCloud 公有云配置好 VPN 隧道后，即可进行 VPN 连接。
@@ -533,17 +533,17 @@ UCloud 公有云 IPSecVPN 服务与 UCloudStack VPN 服务的配置过程相同�
 
 1. 使用 113.31.115.114 外网 IP 地址创建 VPN 网关，如下图所示：
 
-   ![ucloudvpngw](../images/userguide/ucloudvpngw.png)
+   ![](../images/userguide/ucloudvpngw.png)
 
 2. 使用 UCloudStack 侧 VPN 网关的公网 IP 地址创建客户网关，本示例假设 UCloudStack 环境 VPN 网关的出口 IP 为固定公网 IP 地址，如下图所示：
 
-   ![ucloudremotegw](../images/userguide/ucloudremotegw.png)
+   ![](../images/userguide/ucloudremotegw.png)
 
    > 注意：如果 UCloudStack 侧 VPN 网关使用的公网 IP 地址为 SNAT 后的地址池，即 VPN 网关的出口非固定公网 IP ，则需要将对端网关创建为 0.0.0.0 ，使 UCloud 公有云可以通过任意地址连接 UCloudStack 侧的 VPN 网关并建立 VPN 连接。
 
 3. 使用已创建的 VPN 网关和客户网关，采用前提条件中的 IKE 和 IPSec 策略创建 VPN 隧道，如下图所示：
 
-   ![ucloudtunnelinfo](../images/userguide/ucloudtunnelinfo.png)
+   ![](../images/userguide/ucloudtunnelinfo.png)
 
    * 本端网段和对端网段与 UCloudStack 平台侧隧道正好相反，UCloudStack 平台侧隧道配置的本端网段为`10.0.192.0/20` ，对端网段为`10.23.0.0/16 ` 和 `10.25.0.0/16`  。
    * 本端 ID 和对端 ID 即对应 UCloudStack 平台侧的本端标识和对端标识，如图所示与 UCloudStack 侧的配置正好相反，UCloudStack 侧配置的本端标识为 `106.75.234.78` ，对端标识为 `113.31.115.114` 。
@@ -552,11 +552,11 @@ UCloud 公有云 IPSecVPN 服务与 UCloudStack VPN 服务的配置过程相同�
 
 4. 分别查看 UCloudStack 侧和 UCloud 公有云侧的 VPN 隧道连接状态，等待隧道自动连接。UCloudStack 侧可通过列表上连接状态直接查看隧道是否已连接，UCloud 公有云侧需进入隧道详情页面查看"VPN 隧道状态"的监控，如下图所示：
 
-   ![ucloudtunnelmonitor](../images/userguide/ucloudtunnelmonitor.png)
+   ![](../images/userguide/ucloudtunnelmonitor.png)
 
 5. 在 UCloud 公有云的隧道监控中查看 VPN 隧道状态已变为 1 ，代表 VPN 已连接，同时在 UCloudStack 中隧道的连接状态流转为“已连接” ，如下图所示：
 
-   ![tunnelstatus1](../images/userguide/tunnelstatus1.png)
+   ![](../images/userguide/tunnelstatus1.png)
 
 #### 13.6.1.3 配置验证
 
@@ -564,11 +564,11 @@ UCloud 公有云 IPSecVPN 服务与 UCloudStack VPN 服务的配置过程相同�
 
 如下图所示，本端虚拟机的 IP 地址为 `10.0.192.32` ，下发的路由为 `10.23.0.0/16`  及 `10.25.0.0/16` ，即代表虚拟机可与 UCloud 公有云侧的两个网段进行通信。
 
-![vpnvmroute](../images/userguide/vpnvmroute.png)
+![](../images/userguide/vpnvmroute.png)
 
 可通过 ping 命令检测与 UCloud 公有云虚拟机的网络连通性，如下图代表两端内网的虚拟机网络互通。
 
-![vpnucloudping](../images/userguide/vpnucloudping.png)
+![](../images/userguide/vpnucloudping.png)
 
 根据以上的配置过程，即可通过 IPSecVPN 的方式将 UCloudStack 和与 UCloud 公有云内网打通。
 
@@ -582,15 +582,15 @@ Cisco 防火墙支持 IKEv1 和 IKEv2 ，本文仅介绍私有云平台和 Cisco
 
 在建立 IPSecVPN 连接进行通信前，需确认两端要建立 IPSecVPN 连接的网络拓扑关系及配置参数信息。
 
-| 网络配置和配置参数   | UCloudStack 私有云              | Cisco 防火墙                    |
-| -------------------- | ------------------------------- | ------------------------------- |
-| VPN 网关公网 IP 地址 | 106.75.234.78                   | 1.1.1.1                         |
-| VPC 网段/本地网段    | 10.0.192.0/24                   | 192.168.1.0/24                  |
-| 客户虚拟机 IP        | 10.0.192.32                     | 192.168.1.2                     |
-| 预共享密钥           | ucloud.1231                     | ucloud.1231                     |
-| IKE 版本             | V2                              | V2                              |
+| 网络配置和配置参数   | UCloudStack 私有云            | Cisco 防火墙                  |
+|--------------------|-------------------------------|-------------------------------|
+| VPN 网关公网 IP 地址 | 106.75.234.78                 | 1.1.1.1                       |
+| VPC 网段/本地网段    | 10.0.192.0/24                 | 192.168.1.0/24                |
+| 客户虚拟机 IP        | 10.0.192.32                   | 192.168.1.2                   |
+| 预共享密钥           | ucloud.1231                   | ucloud.1231                   |
+| IKE 版本             | V2                            | V2                            |
 | IKE 策略             | 认证 SHA1、加密 AES128、DH 组 2 | 认证 SHA1、加密 AES128、DH 组 2 |
-| IPSec 安全传输协议   | ESP                             | ESP                             |
+| IPSec 安全传输协议   | ESP                           | ESP                           |
 | IPSec 策略           | 认证 SHA1、加密 AES128、PFSDH 2 | 认证 SHA1、加密 AES128、PFSDH 2 |
 
 > 本文假设已在 UCloudStack 私有云上部署 VPN 网关和对端网关，并已通过以上配置参数创建 VPN 隧道，等待数据中心的 Cisco 防火墙配置好 VPN 隧道后，即可进行 VPN 连接。
@@ -679,15 +679,15 @@ Cisco 防火墙支持 IKEv1 和 IKEv2 ，本文仅介绍私有云平台和 Cisco
 
 在建立 IPSecVPN 连接进行通信前，需确认两端要建立 IPSecVPN 连接的网络拓扑关系及配置参数信息。
 
-| 网络配置和配置参数   | UCloudStack 私有云              | IDC 侧 StrongSwan                   |
-| -------------------- | ------------------------------- | ----------------------------------- |
-| VPN 网关公网 IP 地址 | 106.75.234.78                   | 113.31.113.78（内网 10.23.228.173） |
-| VPC 网段/本地网段    | 10.0.192.0/20                   | 10.23.0.0/16                        |
-| 客户虚拟机 IP        | 10.0.192.32                     | 10.23.112.177                       |
-| 预共享密钥           | ucloud.1231                     | ucloud.1231                         |
-| IKE 版本             | V2                              | V2                                  |
+| 网络配置和配置参数   | UCloudStack 私有云            | IDC 侧 StrongSwan                 |
+|--------------------|-------------------------------|-----------------------------------|
+| VPN 网关公网 IP 地址 | 106.75.234.78                 | 113.31.113.78（内网 10.23.228.173） |
+| VPC 网段/本地网段    | 10.0.192.0/20                 | 10.23.0.0/16                      |
+| 客户虚拟机 IP        | 10.0.192.32                   | 10.23.112.177                     |
+| 预共享密钥           | ucloud.1231                   | ucloud.1231                       |
+| IKE 版本             | V2                            | V2                                |
 | IKE 策略             | 认证 SHA1、加密 AES128、DH 组 5 | 认证 SHA1、加密 AES128、DH 组 5     |
-| IPSec 安全传输协议   | ESP                             | ESP                                 |
+| IPSec 安全传输协议   | ESP                           | ESP                               |
 | IPSec 策略           | 认证 SHA1、加密 AES128、PFSDH 5 | 认证 SHA1、加密 AES128、PFSDH 5     |
 
 > 本文假设已在 UCloudStack 私有云上部署 VPN 网关和对端网关，并已通过以上配置参数创建 VPN 隧道，等待数据中心的 StrongSwan 配置好 VPN 隧道后，即可进行 VPN 连接。
@@ -796,7 +796,7 @@ Security Associations (1 up, 0 connecting):
 
 3. 通过 IDC 数据中心 StrongSwan下 `10.23.0.0/16` 网段的主机 `Ping` 云平台的虚拟机`10.0.192.32` ，测试连通性。
 
-   ![StrongSwanping](../images/userguide/StrongSwanping.png)
+   ![](../images/userguide/StrongSwanping.png)
 
 ### 13.6.4 VPC 到 VPC 的 VPN 连接
 
@@ -808,15 +808,15 @@ Security Associations (1 up, 0 connecting):
 
 本操作以同一个账号下的两个 VPC 网络为例，在建立 IPSecVPN 连接进行通信前，需确认两端要建立 IPSecVPN 连接的网络拓扑关系及配置参数信息。
 
-| 网络配置和配置参数   | UCloudStack 私有云 VPC1         | UCloudStack 私有云 VPC2         |
-| -------------------- | ------------------------------- | ------------------------------- |
-| VPN 网关公网 IP 地址 | 106.75.234.78                   | 106.75.234.74                   |
-| VPC 网段             | 10.0.192.0/20                   | 192.168.0.0/16                  |
-| 客户虚拟机 IP        | 10.0.192.32                     | 192.168.0.16                    |
-| 预共享密钥           | ucloud.1231                     | ucloud.1231                     |
-| IKE 版本             | V2                              | V2                              |
+| 网络配置和配置参数   | UCloudStack 私有云 VPC1       | UCloudStack 私有云 VPC2       |
+|--------------------|-------------------------------|-------------------------------|
+| VPN 网关公网 IP 地址 | 106.75.234.78                 | 106.75.234.74                 |
+| VPC 网段             | 10.0.192.0/20                 | 192.168.0.0/16                |
+| 客户虚拟机 IP        | 10.0.192.32                   | 192.168.0.16                  |
+| 预共享密钥           | ucloud.1231                   | ucloud.1231                   |
+| IKE 版本             | V2                            | V2                            |
 | IKE 策略             | 认证 SHA1、加密 AES128、DH 组 2 | 认证 SHA1、加密 AES128、DH 组 2 |
-| IPSec 安全传输协议   | ESP                             | ESP                             |
+| IPSec 安全传输协议   | ESP                           | ESP                           |
 | IPSec 策略           | 认证 SHA1、加密 AES128、PFSDH 2 | 认证 SHA1、加密 AES128、PFSDH 2 |
 
 #### 13.6.4.2 配置 VPN 网关和隧道
@@ -825,31 +825,31 @@ Security Associations (1 up, 0 connecting):
 
 1. 分别在 VPC1 和 VPC2 中创建 VPN 网关，并确认两个网关地址分别为 `106.75.234.78` 和 `106.75.234.74`，如下图所示；
 
-   ![vpngwlist2](../images/userguide/vpngwlist2.png)
+   ![](../images/userguide/vpngwlist2.png)
 
 2. 分别针对两个 VPN 网关创建对应的对端网关，VPN 网关-VPC1 的对端网关 IP 为  `106.75.234.74` ，VPN 网关-VPC2 的对端网关 IP 为  `106.75.234.78` ，如下图所示：
 
-   ![remotegwlist1](../images/userguide/remotegwlist1.png)
+   ![](../images/userguide/remotegwlist1.png)
 
 3. 使用 VPN 网关-VPC1 和 对端网关 1 结合前提条件中的网段信息及参数配置创建 VPN 隧道 1 ，如下图所示：
 
-   ![tunnel001](../images/userguide/tunnel001.png)
+   ![](../images/userguide/tunnel001.png)
 
 4. 使用 VPN 网关-VPC2 和 对端网关 2 结合前提条件中的网段信息及参数配置创建 VPN 隧道 2 ，需确保网段信息与 隧道1 匹配，同时保证 IKE 策略、IPSec 策略与隧道 1 保持一致才可正常建立连接，如下图所示：
 
-   ![tunnel002](../images/userguide/tunnel002.png)
+   ![](../images/userguide/tunnel002.png)
 
    如图所示，隧道 2 的对端网段为 隧道的本端网段，IKE 及 IPSec 策略配置均和 隧道 1 一致，均使用 IKEv2 版本，IKE 策略均为：认证 SHA1、加密 AES128、DH 组 2 ，IPSec 策略均为：认证 SHA1、加密 AES128、PFSDH 2。
 
 5. 查看两个隧道的连接状态，等待隧道连接成功后，即可进行连通性验证，如下图所示两个隧道均已连接，且已向所选择了子网的虚拟机中下发路由，如下图所示：
 
-   ![tunnelcon](../images/userguide/tunnelcon.png)
+   ![](../images/userguide/tunnelcon.png)
 
 #### 13.6.4.3 配置连接验证
 
 在已连接状态时，平台会分别对两个隧道所关联的本端子网虚拟机中下发对端网段为目标地址的路由，可登入个 VPC 的客户虚拟机中查看相关网络及路由配置信息：
 
-![vpcconvpc](../images/userguide/vpcconvpc.png)
+![](../images/userguide/vpcconvpc.png)
 
 * VPC1 的客户虚拟机 IP 地址为 `10.0.192.32` ，下发的目标路由为 `192.168.0.0/16` 
 

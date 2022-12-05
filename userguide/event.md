@@ -6,7 +6,7 @@
 
 租户通过资源事件控制台可查看整个平台的资源事件记录信息等，支持根据所属地域、资源类型、资源选择、事件周期进行查询资源事件的详细信息，具体包括资源ID、资源类型、事件类型、事件等级、事件内容、事件发生次数、开始事件及更新事件，如下图所示：
 
-![event](../images/userguide/event.png)
+![](../images/userguide/event.png)
 
 * 资源ID：指资源事件监控的资源ID。
 * 资源类型：当前资源事件记录所指定的资源类型。
@@ -27,7 +27,7 @@
 
 用户可通过资源事件的通知规则页面“创建”按钮创建通知规则，创建通知规则时需指定监控地域、通知组、监控模块及监控级别。如下图所示：
 
-![eventrule](../images/userguide/eventrule.png)
+![](../images/userguide/eventrule.png)
 
 * 监控地域：通知规则的地域信息。
 * 通知组：邮件通知的通知组信息，仅支持选择一个通知组。
@@ -38,19 +38,19 @@
 
 支持用户查看账号下的通知规则信息，包括监控地域、通知组、监控模块及监控级别，如下图所示：
 
-![eventrule1](../images/userguide/eventrule1.png)
+![](../images/userguide/eventrule1.png)
 
 ### 31.2.3 更新通知规则
 
 支持用户更新账号下的通知规则，包括监控地域、通知组、监控模块及监控级别。如下图所示：
 
-![eventrule2](../images/userguide/eventrule2.png)
+![](../images/userguide/eventrule2.png)
 
 ### 31.2.4 删除通知规则
 
 支持用户删除账号下的通知规则，规则删除后即直接销毁，如下图所示：
 
-![eventrule3](../images/userguide/eventrule3.png)
+![](../images/userguide/eventrule3.png)
 
 
 

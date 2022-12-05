@@ -10,7 +10,7 @@
 
 可通过导航栏进入【对象存储】资源控制台，通过 “**创建**” 进入向导页面，如下图所示：
 
-![createoss](../images/userguide/createoss.png)
+![](../images/userguide/createoss.png)
 
 1. 选择并配置对象存储的基础配置、网络设置及管理配置信息：
 
@@ -52,7 +52,7 @@ chmod +x mc
 
 对象存储列表可查看当前账户下所有对象存储资源的列表信息，包括名称、资源 ID、状态、存储容量、域名、VPC、子网、计费方式、项目组、创建时间、过期时间及操作项，如下图所示：
 
-![osslist](../images/userguide/osslist.png)
+![](../images/userguide/osslist.png)
 
 - 名称：对象存储资源的名称；
 - 资源 ID：对象存储的资源ID作为全局唯一标识符；
@@ -73,7 +73,7 @@ chmod +x mc
 
 扩容对象存储容量会对费用产生影响，按小时付费的硬盘，扩容容量下个付费周期按新配置扣费；按年按月付费的硬盘，扩容容量即时生效，并按比例自动补差价。用户可点击对象存储控制台操作中的 “**扩容**” 进行容量扩容操作，如下图所示：
 
-![ossStorageup](../images/userguide/ossStorageup.png)
+![](../images/userguide/ossStorageup.png)
 
 如图所示，**更改容量**，即对象存储需要扩容的容量。平台已展示当前对象存储的容量大小，由于不支持缩容，扩容时更改容量必须大于当前容量大小。用户可通过对象存储列表查看新容量。
 
@@ -83,7 +83,7 @@ chmod +x mc
 
 用户可通过对象存储资源列表操作项的 “**绑定**” 进入外网 IP 绑定向导页面，进行资源绑定操作，如下图所示：
 
-![osslinkeip](../images/userguide/osslinkeip.png)
+![](../images/userguide/osslinkeip.png)
 
 绑定时需选择被绑定的弹性IP，绑定成功后，对象存储列表的访问地址会新增外网访问地址。
 
@@ -91,7 +91,7 @@ chmod +x mc
 
 解绑外网 IP 是指将 EIP 地址从一个对象存储资源上分离出来，并可重新绑定至其它虚拟资源。仅支持解绑已绑定对象存储的外网 IP 资源，用户可通过对象存储资源列表操作项的 “**解绑**” 进入外网 IP 解绑向导页面，进行资源解绑操作，如下图所示：
 
-![ossunlinkeip](../images/userguide/ossunlinkeip.png)
+![](../images/userguide/ossunlinkeip.png)
 
 ## 26.7 对象存储续费
 
@@ -101,19 +101,19 @@ chmod +x mc
 
 对象存储续费时会按照续费时长收取费用，续费时长与资源的计费方式相匹配，当对象存储的计费方式为【小时】，则续费时长指定为 1 小时；当对象存储的计费方式为【按月】，则续费时长可选择 1 至 11 月；当对象存储的计费方式为【按年】，则续费时长为 1 至 5 年。可通过对象存储列表操作项中的 “**续费**” 进行操作，如下图所示：
 
-![ossrenew](../images/userguide/ossrenew.png)
+![](../images/userguide/ossrenew.png)
 
 ## 26.8 重置密码
 
 支持用户重置对象存储密码，可通过对象存储列表操作项中的 “**重置密码**” 操作，如下图所示：
 
-![ossreset](../images/userguide/ossreset.png)
+![](../images/userguide/ossreset.png)
 
 ## 26.9 删除对象存储
 
 用户可在控制台删除账户内对象存储，支持对对象存储进行批量删除操作。可通过对象存储列表操作项中的 “**删除**” 进行操作，如下图所示：
 
-![ossrm](../images/userguide/ossrm.png)
+![](../images/userguide/ossrm.png)
 
 用户可通过命令行工具在client端重新设置密码
 
@@ -125,26 +125,26 @@ chmod +x mc
 
 用户可通过搜索框对对象存储列表进行搜索和筛选，支持从名称、备注、资源ID、域名进行模糊搜索，如下图所示：
 
-![searchoss](../images/userguide/searchoss.png)
+![](../images/userguide/searchoss.png)
 
 ## 26.11 修改对象存储名称与备注
 
 修改对象存储的名称和备注。可通过点击对象存储列表名称右侧的 “编辑” 按钮进行修改，如下图所示：
 
-![modifyossname](../images/userguide/modifyossname.png)
+![](../images/userguide/modifyossname.png)
 
 ## 26.12 对象存储监控页面
 
 用户可通过点击对象存储列表操作项中的 “**名称**”，进入对象存储的监控页面，还可以通过操作项中的 “**修改告警模版**”，对监控数据进行告警
 
-![ossmonitor01](../images/userguide/ossmonitor01.png)
-![ossmonitor02](../images/userguide/ossmonitor02.png)
+![](../images/userguide/ossmonitor01.png)
+![](../images/userguide/ossmonitor02.png)
 
 ## 26.13 外网对象存储绑定解绑安全组
 
 用户可通过点击对象存储列表操作项中的 “**修改外网安全组**”对外网做网络安全策略
 
-![osssg](../images/userguide/osssg.png)
+![](../images/userguide/osssg.png)
 
 ## 26.14 MinIO Client常用命令
 ```

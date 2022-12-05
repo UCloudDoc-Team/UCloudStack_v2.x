@@ -4,7 +4,7 @@
 
 云硬盘是一种基于分布式存储系统为虚拟机和数据库服务提供持久化存储空间的块设备。具有独立的生命周期，支持随意绑定/解绑至多个虚拟机使用，并能够在存储空间不足时对云硬盘进行扩容，基于网络分布式访问，为云主机提供高安全、高可靠、高性能及可扩展的数据磁盘。
 
-![cbs](../images/userguide/cbs.png)
+![](../images/userguide/cbs.png)
 
 存储系统兼容并支持多种底层存储硬件，如通用服务器（计算存储超融合或独立通用存储服务器）和商业存储，并将底层存储硬件分别抽像不同类型集群的存储资源池，由分布式存储系统统一调度和管理。在实际应用场景中，可以将普通 SATA 接口的机械盘统一抽像为【SATA 存储集群】，将 SSD 全闪磁盘统一抽象为【SSD 存储集群】，分别由统一存储封装后提供平台用户使用。
 
@@ -35,7 +35,7 @@
 
 1、通过控制台进入硬盘资源控制台，通过“**创建硬盘**”按钮，即可进入云硬盘创建向导页面，如下图所示，根据需求选择并配置硬盘类型、硬盘容量、硬盘名称等参数。
 
-![createstorage](../images/userguide/createstorage.png)
+![](../images/userguide/createstorage.png)
 
 * 硬盘类型：即云硬盘类型，即存储集群类型，由平台管理员自定义，如 HDD 云盘或 SSD 高性能云盘；
 * 硬盘容量：云硬盘分配的逻辑容量，默认最小 10GB ，步长为 1GB ，最大支持 32000GB ，可由云平台管理员在控制台自定义容量规格；
@@ -43,7 +43,7 @@
 
 2、选择购买数量和付费方式，如下图所示确认订单并点击“立即购买” 进行云硬盘购买及创建操作：
 
-![vmorder](../images/userguide/vmorder.png)
+![](../images/userguide/vmorder.png)
 
 - 购买数量：选择需要创建的云硬盘数量，一次最多支持批量创建 10 块相同规格的云硬盘。
 - 付费方式：选择虚拟机的计费方式，支持按时、按年、按月三种方式，可根据需求选择适合的付费方式；
@@ -54,7 +54,7 @@
 
 通过导航栏进入虚拟机控制台，切换至硬盘管理页面可查看当前账户下云硬盘资源的列表及相关详细信息，包括名称、资源 ID、状态、集群类型、硬盘容量、绑定资源、计费方式、创建时间、过期时间、项目组及操作项，如下图所示：
 
-![storagelist](../images/userguide/storagelist.png)
+![](../images/userguide/storagelist.png)
 
 * 名称/ID：云硬盘的名称和全局唯一标识符；
 * 状态：云硬盘的当前状态，包括创建中、未绑定、绑定中、已绑定、解绑中、正在被克隆中	、及删除中等，其中正在被克隆中指当前硬盘正在克隆，快照中指当前硬盘正在快照备份中。
@@ -80,7 +80,7 @@
 
 可通过硬盘管理资源列表操作项的“**绑定**”功能，进行硬盘绑定操作，如下图所示：
 
-![storagelink](../images/userguide/storagelink.png)
+![](../images/userguide/storagelink.png)
 
 绑定时需选择绑定硬盘的虚拟机，绑定过程中硬盘的状态为“绑定中”，待状态变转换为“已绑定” 即代表绑定成功。用户可通过虚拟机的硬盘信息查看已绑定云盘资源及信息，包括容量、挂载等，同时用户也可登录虚拟机操作系统中查看是否已识别到新的磁盘设备，如 Linux 操作系统用户可输入 `fdisk -l`  查看新增块设备的信息。
 
@@ -92,7 +92,7 @@
 
 仅支持解绑已绑定状态的硬盘资源，用户可通过硬盘列表或已绑定虚拟机详情硬盘页面进行硬盘的解绑操作，如下图所示：
 
-![storageunlink](../images/userguide/storageunlink.png)
+![](../images/userguide/storageunlink.png)
 
 解绑时，虚拟机的状态必须处于关机或运行状态。解绑操作执行过程中，云硬盘的状态会转换为“解绑中”；状态转换为“未绑定”，即代表解绑成功，可将硬盘重新绑定至其它虚拟机。
 
@@ -111,7 +111,7 @@ Linux 虚拟机挂载的云硬盘设备名是由系统默认分配的，从 `/de
 1. 创建云硬盘，并挂载至一台 Linux 的虚拟机，并通过 SSH 远程连接并登录虚拟机；
 2. 使用 `fdisk -l ` 命令查看虚拟机上的云硬盘，检测是否挂载成功，如下图所示挂载的数据盘为 100GB `/dev/vdb` 设备；
 
-![fdisk](../images/userguide/fdisk.png)
+![](../images/userguide/fdisk.png)
 
 3. 创建文件系统，使用 `mkfs.ext4 /dev/vdb` 命令进行格式化并新建一个文件系统，分区格式化可选择`ext3`、`ext4   `等文件系统的格式，示例采用 `ext4 ` 格式；
 
@@ -167,15 +167,15 @@ Windwos 虚拟机挂载云硬盘后，需要进行初始化和格式化分区操
 1. 创建云硬盘，并挂载至一台 windows 的虚拟机，通过 VNC 或远程桌面远程连接并登录虚拟机；
 2. 点击【开始】—【管理工具】—【计算机管理】—【磁盘管理】，打开“磁盘管理” 界面，查看已挂载的云硬盘，如下图所示的磁盘 1 ：
 
-![windows](../images/userguide/windows.png)
+![](../images/userguide/windows.png)
 
 3. 在磁盘 1 上右键单击，选择【联机】，如下图所示：
 
-![onlinewindows](../images/userguide/onlinewindows.png)
+![](../images/userguide/onlinewindows.png)
 
 4. 在磁盘 1 上右键单击，选择【初始化磁盘】，进入磁盘初始化向导界面，如下图所示：
 
-![init](../images/userguide/init.png)
+![](../images/userguide/init.png)
 
 5. 根据分区形式的不同，选择【GPT】或【MBR】，单击【确定】按钮；
 
@@ -184,23 +184,23 @@ Windwos 虚拟机挂载云硬盘后，需要进行初始化和格式化分区操
 
 6. 磁盘分区，右键点击磁盘 1 右侧【未分配】的区域，选择【新建简单卷】，进入新建简单卷向导，如下图：
 
-![newvolume](../images/userguide/newvolume.png)
+![](../images/userguide/newvolume.png)
 
 7. 点击下一步，输入分区所需的磁盘大小，若只需一个分区，使用默认值，单击下一步；
 
-![newvolume1](../images/userguide/newvolume1.png)
+![](../images/userguide/newvolume1.png)
 
 8. 分配驱动器号和路径，选择一个驱动器号（即盘符），如本示例中选择 D，单击 **下一步**；
 
-![newvolume2](../images/userguide/newvolume2.png)
+![](../images/userguide/newvolume2.png)
 
 9. 格式化分区，选择格式化设置，包括文件系统、分配单元大小和卷标，确认是否 **执行快速格式化** 和 **启用文件和文件夹压缩**，这里使用默认设置，单击 **下一步**；
 
-![newvolume3](../images/userguide/newvolume3.png)
+![](../images/userguide/newvolume3.png)
 
 10. 点击完成，开始创建新简单卷，返回磁盘管理工具，磁盘 1 的状态良好，如下图所示：
 
-![newvolume4](../images/userguide/newvolume4.png)
+![](../images/userguide/newvolume4.png)
 
 ## 6.7 扩容云硬盘
 
@@ -215,7 +215,7 @@ Windwos 虚拟机挂载云硬盘后，需要进行初始化和格式化分区操
 
 扩容硬盘容量会对虚拟机费用产生影响，按小时付费的硬盘，扩容容量下个付费周期按新配置扣费；按年按月付费的硬盘，扩容容量即时生效，并按比例自动补差价。用户可点击云硬盘控制台操作中的“**扩容**” 进行硬盘容量扩容操作，如下图所示：
 
-![storageup.png](../images/userguide/storageup.png)
+![](../images/userguide/storageup.png)
 
 如图所示，**扩容硬盘需指定更改容量的大小**，即硬盘需要扩容的容量。平台已展示当前硬盘的容量大小，由于不支持缩容，扩容时更改容量必须大于当前容量大小。
 
@@ -247,19 +247,19 @@ Windwos 虚拟机挂载云硬盘后，需要进行初始化和格式化分区操
 
 * 查看当前磁盘的信息，包括挂载点、文件系统类型及分区情况。
 
-  ![df-h](../images/userguide/df-h.png)
+  ![](../images/userguide/df-h.png)
 
   注：结果显示 vdb 磁盘为 ext4 分区且磁盘下无分区，为裸磁盘，可按照本文档所述方案扩容；若 vdb 下有分区，需参考单分区扩容或多分区扩容章节内容。
 
 * 通过控制台或 API 对硬盘进行容量扩容操作，并在操作系统中查看磁盘的容量，如下图所示，扩容至50GB；
 
-  ![fdiskvdb](../images/userguide/fdiskvdb.png)
+  ![](../images/userguide/fdiskvdb.png)
 
 * umount 磁盘，进行文件系统扩容操作，不同的文件系统扩容命令操作不同，本文分别以 ext4 及 xfs 文件系统为例进行扩容操作；
 
 * ext4 文件系统扩容，执行 `resize2fs /dev/vdb`  进行系统磁盘扩容操作，最后重新 mount 挂载磁盘即可；
 
-  ![resize2fs](../images/userguide/resize2fs.png)
+  ![](../images/userguide/resize2fs.png)
 
   如上图所示，扩容并挂载磁盘后，`/data` 目录所显示的容量为扩容后的 50GB 。
 
@@ -277,7 +277,7 @@ Windwos 虚拟机挂载云硬盘后，需要进行初始化和格式化分区操
 
 * 通过 `lsblk` 查看当前磁盘的信息，包括挂载点、文件系统类型及分区情况；
 
-  ![onelsblk](../images/userguide/onelsblk.png)
+  ![](../images/userguide/onelsblk.png)
 
   注：结果显示 vdb 下只有一个 10GB 的分区，分区格式为 ext4 ，挂载至 `/mnt` 目录 。
 
@@ -285,7 +285,7 @@ Windwos 虚拟机挂载云硬盘后，需要进行初始化和格式化分区操
 
 * 在操作系统中 umount 磁盘，使用 `fdisk /dev/vdb` 命令删除原来的分区并创建新分区；
 
-  ![fdisk10](../images/userguide/fdisk10.png)
+  ![](../images/userguide/fdisk10.png)
 
   > 注：删除分区不会造成磁盘内数据丢失。
 
@@ -293,13 +293,13 @@ Windwos 虚拟机挂载云硬盘后，需要进行初始化和格式化分区操
 
 * ext4 文件系统扩容，执行 `e2fsck -f /dev/vdb1` 和  `resize2fs /dev/vdb1` 进行检查和扩容操作；
 
-  ![resize2fs10](../images/userguide/resize2fs10.png)
+  ![](../images/userguide/resize2fs10.png)
 
   如上图所示，扩容分区扩容成功后，重新 mount 分区，并查看分区大小及相关信息。
 
 * 若磁盘为 xfs 文件系统，则先执行 `xfs_repair /dev/vdb1` 检查文件系统，如下图所示：
 
-  ![xfs_repair](../images/userguide/xfs_repair.png)
+  ![](../images/userguide/xfs_repair.png)
 
   最后使用 mount 重新挂载磁盘，并执行 `xfs_growfs /mnt` 对磁盘分区进行扩容操作。
 
@@ -313,27 +313,27 @@ Windwos 虚拟机挂载云硬盘后，需要进行初始化和格式化分区操
 
 * 查看当前磁盘的分区及挂载信息，确认磁盘是当前需要扩容的磁盘，如下图所示：
 
-  ![windisk](../images/userguide/windisk.png)
+  ![](../images/userguide/windisk.png)
 
 * 在操作系统中对磁盘进行脱机操作，并通过控制台及 API 对当前磁盘进行容量扩容操作，并通过操作系统磁盘管理工具查看扩容后的磁盘大小，如下图所示：
 
-  ![windisk10](../images/userguide/windisk10.png)
+  ![](../images/userguide/windisk10.png)
 
 * 右键单击新分区 D 空白处，选择扩展卷（Extend Volume），并在弹出的对话框中，对磁盘分区进行扩展操作，如以下图示：
 
-  ![windisk](../images/userguide/windisk11.png)
+  ![](../images/userguide/windisk11.png)
 
-  ![windisk](../images/userguide/windisk12.png)
+  ![](../images/userguide/windisk12.png)
 
-  ![windisk](../images/userguide/windisk13.png)
+  ![](../images/userguide/windisk13.png)
 
-  ![windisk](../images/userguide/windisk14.png)
+  ![](../images/userguide/windisk14.png)
 
   
 
 * 分区扩展成功后，查看扩容后分区信息，如下图所示：
 
-  ![windisk](../images/userguide/windisk15.png)
+  ![](../images/userguide/windisk15.png)
 
 #### 6.7.2.4 多分区扩容（Linux）
 
@@ -345,7 +345,7 @@ Windwos 虚拟机挂载云硬盘后，需要进行初始化和格式化分区操
 
 * 通过 `lsblk` 及 `df` 查看当前磁盘的信息，包括挂载点、文件系统类型及分区情况；
 
-  ![lsblk20](../images/userguide/lsblk20.png)
+  ![](../images/userguide/lsblk20.png)
 
   结果显示 vdb 下有两个 10GB 的分区（vdb1 和 vdb2），且分别挂载至 /mnt 及 /data 目录下，扩容操作仅可对 vdb2 分区进行扩容操作，即将 vdb2 扩容为 20GB 。
 
@@ -353,7 +353,7 @@ Windwos 虚拟机挂载云硬盘后，需要进行初始化和格式化分区操
 
 * 在操作系统中 umount 磁盘，使用 `fdisk /dev/vdb` 命令删除最后一个分区（vdb2）并创建新分区；
 
-  ![fdiskvdb30](../images/userguide/fdiskvdb30.png)
+  ![](../images/userguide/fdiskvdb30.png)
 
   > 注：删除分区不会造成磁盘内数据丢失，以上示例为删除 vdb2 ，即磁盘的最后一个分区。
 
@@ -373,21 +373,21 @@ Windwos 虚拟机挂载云硬盘后，需要进行初始化和格式化分区操
 
 * 查看当前磁盘的分区及挂载信息，确认磁盘是当前需要扩容的磁盘，如下图所示：
 
-  ![windisk20.png](../images/userguide/windisk20.png)
+  ![](../images/userguide/windisk20.png)
 
 * 在操作系统中对磁盘进行脱机操作，并通过控制台及 API 对当前磁盘进行容量扩容操作，并通过操作系统磁盘管理工具查看扩容后的磁盘大小，如下图所示：
 
-  ![windisk21](../images/userguide/windisk21.png)
+  ![](../images/userguide/windisk21.png)
 
 * 右键点击新分区 E （最后一个分区）空白处，选择扩展卷（Extend Volume），对分区进行扩容；
 
-  ![windisk22](../images/userguide/windisk22.png)
+  ![](../images/userguide/windisk22.png)
 
   通过点击下一步及相关配置，完成新分区的容量扩容；
 
 * 完成扩容后，查看扩容后分区情况，如下图所示：
 
-  ![windisk23](../images/userguide/windisk23.png)
+  ![](../images/userguide/windisk23.png)
 
   如结果显示，E 盘被扩展为 15GB ，即在原来的基础之上扩容 10GB 的容量。
 
@@ -401,15 +401,15 @@ Windwos 虚拟机挂载云硬盘后，需要进行初始化和格式化分区操
 
 * 通过输入 `parted /dev/vdb` 进行分区操作，其中 `mklabel gpt` 是将磁盘分区设置为 GPT 格式；
 
-  ![parted2t](../images/userguide/parted2t.png)
+  ![](../images/userguide/parted2t.png)
 
 * 分区后，可通过 lsblk 查看磁盘分区是否成功，并通过 mkfs.ext4  /dev/vdb1 将分区进行格式化并进行挂载才可正常使用，如下图所示：
 
-  ![parted31](../images/userguide/parted31.png)
+  ![](../images/userguide/parted31.png)
 
 * 格式化成功后，通过挂载并查看磁盘的信息，如下图所示 `/dev/vdb1` 被挂载至 `/mnt` ，容量为 2TB 。
 
-  ![parted32](../images/userguide/parted32.png)
+  ![](../images/userguide/parted32.png)
 
 （2）扩容大于 2TB 磁盘的具体操作如下：
 
@@ -417,21 +417,21 @@ Windwos 虚拟机挂载云硬盘后，需要进行初始化和格式化分区操
 
 * 通过控制台或 API 对硬盘进行容量扩容操作，并在操作系统中通过 fdisk 或 lsblk 查看扩容后的磁盘容量，本示例中将磁盘扩容为 2.1TB ，即 2100GB ，如下图所示：
 
-  ![parted33](../images/userguide/parted33.png)
+  ![](../images/userguide/parted33.png)
 
 * 在操作系统中 umount 磁盘，使用 `parted /dev/vdb` 命令删除原来分区并创建新分区，同时使用 `lsblk` 命令查看 vdb1 分区信息。若为多分区则删除最后一个分区并创建新分区；
 
-  ![parted34](../images/userguide/parted34.png)
+  ![](../images/userguide/parted34.png)
 
   如图所示，其中`unit s 代表将显示和操纵单位变成 sector ` ；`rm 1` 是删除当前分区；` mkpart test 2048s 100% ` 是创建一个名称为 test ，起始扇区为 2048s ，使用磁盘全部空间的新分区 。注：删除当前分区不会造成磁盘内数据丢失。
 
 * 执行`e2fsck -f /dev/vdb1`命令检查文件系统，并使用 `resize2fs /dev/vdb1` 对分区进行扩容操作；
 
-  ![parted35](../images/userguide/parted35.png)
+  ![](../images/userguide/parted35.png)
 
 * 重新 mount  磁盘并查看磁盘情况，检查扩容是否成功
 
-  ![parted36](../images/userguide/parted36.png)
+  ![](../images/userguide/parted36.png)
 
 #### 6.7.2.7 2TB 磁盘分区扩容（Windows）
 
@@ -443,45 +443,45 @@ Windwos 虚拟机挂载云硬盘后，需要进行初始化和格式化分区操
 
 * 当在控制台创建一台 2T 的硬盘挂载至 Windows 虚拟机后，在磁盘管理工具会出现类似 磁盘1 或 Disk1 的磁盘，并且磁盘的状态为脱机；
 
-  ![windisk01](../images/userguide/windisk01.png)
+  ![](../images/userguide/windisk01.png)
 
 * 如上图所示，右键点击磁盘1 右边空白处，单击联机，将磁盘置为联机状态；
 
 * 磁盘联机后，磁盘状态为 “没有初始化” ，可点击磁盘空白处，点击初始化磁盘；
 
-  ![windisk03](../images/userguide/windisk03.png)
+  ![](../images/userguide/windisk03.png)
 
 * 在初始化磁盘界面，选择 “GPT（GUID分区表）” 选项，进行磁盘初始化操作；
 
-  ![windisk02](../images/userguide/windisk02.png)
+  ![](../images/userguide/windisk02.png)
 
 * 磁盘初始化成功后，右键点击磁盘1 未分配区域，点击单建简单卷进行分区及格式化操作；
 
-  ![windisk04](../images/userguide/windisk04.png)
+  ![](../images/userguide/windisk04.png)
 
 * 在新建简单卷导向中，选择卷大小、驱动器号及格式化选项后，成功创建新的分区，如下图所示：
 
-  ![windisk05](../images/userguide/windisk05.png)
+  ![](../images/userguide/windisk05.png)
 
 （1）若要扩容 Windows 上 2T 的磁盘，可按如下操作进行扩容：
 
 * 通过控制台或 API 对磁盘 1 进行扩容，扩容后可通过 Windows 操作系统的磁盘管理工具"重新扫描磁盘"查看新扩容磁盘信息，如下图所示磁盘1多出来 100GB 的未分配空间；
 
-  ![windisk06](../images/userguide/windisk06.png)]
+  ![](../images/userguide/windisk06.png)]
 
 * Windows 扩容分区，可将多余的 100GB 单独划分一个分区，也支持将 100GB 空间扩容至已有分区中，本示例演示将 100GB 未分配的容量扩容至已有分区 D 盘中；
 
 * 右键点击已有分区的空白处（本示例为 D 盘），单击扩展卷，通过扩展卷向导将未分配容量扩展至 D 盘中；
 
-  ![windisk07](../images/userguide/windisk07.png)
+  ![](../images/userguide/windisk07.png)
 
 * 在扩展卷向导中，选择磁盘1，并输需扩展的容量，通常系统已默认选择所有未分配容量，并确认扩展卷操作
 
-  ![windisk08](../images/userguide/windisk08.png)
+  ![](../images/userguide/windisk08.png)
 
 * 扩展成功后，未分配容量已成功扩容至已有分区 D 盘中，如上图所示，磁盘总容量为 2.1T ；
 
-  ![windisk09](../images/userguide/windisk09.png)
+  ![](../images/userguide/windisk09.png)
 
 ## 6.8 硬盘克隆
 
@@ -489,7 +489,7 @@ Windwos 虚拟机挂载云硬盘后，需要进行初始化和格式化分区操
 
 用户可通过云硬盘硬盘资源列表上的“**克隆**”功能，进行云硬盘克隆操作，如下图所示：
 
-![diskclone](../images/userguide/diskclone.png)
+![](../images/userguide/diskclone.png)
 
 * 源硬盘名称/ID：需要进行克隆的硬盘名称和 ID ；
 * 源硬盘容量：需要进行克隆操作硬盘的容量，即源硬盘容量；
@@ -510,7 +510,7 @@ Windwos 虚拟机挂载云硬盘后，需要进行初始化和格式化分区操
 
 用户可通过云硬盘管理控制台的“删除”功能删除云硬盘，删除后可在回收站查看已删除的云硬盘资源。如图所示：
 
-![diskrm](../images/userguide/diskrm.png)
+![](../images/userguide/diskrm.png)
 
 ## 6.10 修改名称和备注
 
@@ -520,7 +520,7 @@ Windwos 虚拟机挂载云硬盘后，需要进行初始化和格式化分区操
 
 支持用户手动对云硬盘进行续费，续费操作只针对资源本身，不对资源额外关联的虚拟机资源进行续费。额外关联的资源到期后，会自动解绑，为保证业务正常使用，需及时对相关资源进行续费操作。
 
-![Renewdisk](../images/userguide/Renewdisk2.png)
+![](../images/userguide/Renewdisk2.png)
 
 云硬盘续费时支持更改续费方式，只可由短周期改为长周期，例如按月的续费方式可更改为按月、按年。
 
@@ -551,7 +551,7 @@ Windwos 虚拟机挂载云硬盘后，需要进行初始化和格式化分区操
 
 在实际操作中，可通过云硬盘列表页或虚拟机详情磁盘列表操作项中的“**快照**”为云硬盘创建快照。如创建快照向导页面所示，用户可通过核验所需创建的硬盘信息，并输入快照名称，进行快照创建操作。
 
-![createsnapshot](../images/userguide/createsnapshot.png)
+![](../images/userguide/createsnapshot.png)
 
 一个硬盘同时一时间仅支持创建一个快照，快照创建过程中快照的状态为“创建中”，待状态转换为“正常”即代表快照创建成功，用户可通过快照列表页面查看已创建的快照状态及相关信息。
 
@@ -559,7 +559,7 @@ Windwos 虚拟机挂载云硬盘后，需要进行初始化和格式化分区操
 
 快照创建成功后，用户可通过虚拟机控制台，切换至快照页面查看快照资源列表信息及相关信息，包括名称、资源 ID、磁盘、磁盘类型、状态、创建时间及操作项，如下图所示：
 
-![snapshostlist](../images/userguide/snapshostlist.png)
+![](../images/userguide/snapshostlist.png)
 
 * 资源名称/ID ：代表当前快照的名称及全局唯一标识符；
 * 磁盘：代表当前快照对应的磁盘，即代表该快照是由该磁盘创建；
@@ -578,11 +578,11 @@ Windwos 虚拟机挂载云硬盘后，需要进行初始化和格式化分区操
 
 用户可通过快照资源列表操作项中的 “**回滚**” 对快照进行回滚操作，仅支持回滚快照至所属硬盘，如下图所示：
 
-![snapshotroll](../images/userguide/snapshotroll.png)
+![](../images/userguide/snapshotroll.png)
 
 点击确认后，即返回快照列表页面，快照及所属硬盘均转换为 “恢复中” 状态，待回滚成功后，硬盘转换为 “未绑定” 状态，快照转换为 “正常” 状态。快照回滚成功后，所属父硬盘上回滚操作前的数据将被清除，由快照中的数据覆盖，即父硬盘中的数据与当前快照上捕获的数据一致。
 
-![snapshotrol2](../images/userguide/snapshotrol2.png)
+![](../images/userguide/snapshotrol2.png)
 
 若快照所属硬盘处于挂载状态且挂载的虚拟机为开机状态，则无法进行数据回滚操作，如下图所示，需先关闭虚拟机或解绑硬盘。
 
@@ -595,7 +595,7 @@ Windwos 虚拟机挂载云硬盘后，需要进行初始化和格式化分区操
 * 如用户删除第 1 个快照，则系统会将第 1 个快照中的数据合并至第 2 个快照中，保证通过第 2 个快照回滚的数据准确性；
 * 如用户只删除了第 2 个快照，则系统会只会删除快照 2 中未被快照 3 引用的数据块，被 3 引用的数据块会被自动记录至快照 3 中，保证快照 3 快照回滚数据的准确性。
 
-![snapshotrm](../images/userguide/snapshotrm.png)
+![](../images/userguide/snapshotrm.png)
 
 仅支持删除正常状态的快照，如上图所示，用户可通过控制台快照列表页面对某个快照进行删除操作，快照删除后将彻底销毁。
 
@@ -608,5 +608,5 @@ Windwos 虚拟机挂载云硬盘后，需要进行初始化和格式化分区操
 支持从快照创建云硬盘，创建的硬盘大小与快照的原始硬盘大小相等，从快照创建云硬盘，该云硬盘只能与快照所对应的原始云硬盘归属同一存储集群，可以用系统盘快照创建的云硬盘创建虚拟机。
 
 在实际操作中，可通过快照列表页或云硬盘详情快照列表操作项中的“**创建云硬盘**”从快照创建云硬盘。如创建云硬盘向导页面所示，用户可通过核验所需创建的关联硬盘信息，快照信息，并输入云硬盘名称，进行云硬盘创建操作。
-![creatediskfromsnapshot](../images/userguide/creatediskfromsnapshot.png)
+![](../images/userguide/creatediskfromsnapshot.png)
 

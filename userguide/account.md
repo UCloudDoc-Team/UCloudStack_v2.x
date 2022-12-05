@@ -50,15 +50,15 @@
 
 （3）推荐使用 FortiToken 。
 
-![openfortitoken](../images/userguide/fortitoken.png)
+![](../images/userguide/fortitoken.png)
 
 点击下一步，国密硬件版需输入SN信息，不可为空：
 
-![openfortitoken](../images/userguide/fortitoken01.png)
+![](../images/userguide/fortitoken01.png)
 
 普通软件版显示如下：
 
-![openfortitoken](../images/userguide/openfortitoken.png)
+![](../images/userguide/openfortitoken.png)
 
 > 为了降低用户账号密码泄漏造成的风险，建议您开通账号登录二次认证
 
@@ -202,7 +202,7 @@ A：若使用的是 FortiToken 身份认证方式，可以用基于 TOTP 算法�
 支持对项目组进行资源管理，通过转入转出资源来管理项目组下的资源。转入资源到项目组时，可以选择不在当前项目组下的所有资源，可以在资源列表处查看到资源所属项目组。
 
 转出资源到其他项目组时，只能够指定当前项目组下的资源，且转出到的项目组只能够时其他项目组。资源被转出到其他项目组后，有该项目组授权的用户将无法再查看和管理此资源。
-![transferresource1](../images/userguide/transferresource1.png)
+![](../images/userguide/transferresource1.png)
 
 > 资源转入/转出时以产品类型为维度，一次可以转入/转出同一产品类型下的多个资源。VPN网关、负载均衡、伸缩组中有多个维度的资源，请在转入转出时注意将关联资源分配到同一组内。
 
@@ -229,7 +229,7 @@ A：若使用的是 FortiToken 身份认证方式，可以用基于 TOTP 算法�
 
 > 创建角色时，系统默认勾选的操作，为各个模块必须要授权上的操作，建议不要取消，避免影响授权的完整性。如果您不需要为用户授权某个模块的权限，可以取消默认勾选的操作。
 
-![CreateRole](../images/userguide/CreateRole.png)
+![](../images/userguide/CreateRole.png)
 
 ### 22.4.2 管理角色
 
@@ -239,7 +239,7 @@ A：若使用的是 FortiToken 身份认证方式，可以用基于 TOTP 算法�
 
 > 更新角色授权的权限集合后，用此角色授权的用户，在授权范围下的权限也会更新。
 
-![roledetails](../images/userguide/roledetails.png)
+![](../images/userguide/roledetails.png)
 
 ## 21.5 人员管理
 
@@ -256,12 +256,12 @@ A：若使用的是 FortiToken 身份认证方式，可以用基于 TOTP 算法�
 - 授权范围：可以选择可子账号授权所有项目组资源/指定项目组资源。当资源没有项目组时
 - 角色：为子账号在授权范围下授权合适的角色，支持同时授权多个角色，最后生效的权限为多个角色所允许操作的集合。
 
-![createsubaccount](../images/userguide/createsubaccount.png)
+![](../images/userguide/createsubaccount.png)
 
 > 创建子账号前，建议先通过项目组对资源进行编组，并配置好子账号需要授权的角色。如果不需要授权自定义角色，可直接使用系统内置角色。
 
 用户使用子账号登录后，可以正常查看一切操作，在进行相关操作时，会提示“权限不足”。比如一个用户未被授权查看虚拟机的权限，则在虚拟机列表处看到如下提示。
-![nopermit](../images/userguide/nopermit.png)
+![](../images/userguide/nopermit.png)
 
 ### 22.3.2 查看账号列表
 
