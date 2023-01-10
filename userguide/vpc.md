@@ -224,3 +224,35 @@ VPC 详情页面展示当前 VPC 网络中已创建的子网资源列表，包�
 用户可通过右侧列表按钮，查看子网详细使用情况，如下图所示。
 
 ![](../images/userguide/usesub1.png)
+
+## 8.13 网络互通
+网络互通功能用于实现同租户两个VPC之间的网络互通，租户可以通过网络互通功能将两个VPC之间建立连接，如此就可以使用私有IP地址在两个VPC之间进行通信，就像两个VPC在同一个网络中一样。
+
+
+### 8.13.1 联通网络
+（1）联通网络的前提是开启VPC网关，如下图所示：
+
+![opengateway](../images/userguide/opengateway.png)
+
+（2）联通页面如下：
+
+![vpclink1](../images/userguide/vpclink1.png)
+
+- VPCID：当前VPC的ID
+- 连接场景：“VPC互通”可以直接使用，用于同租户不同VPC之间的互联；“专线接入”需要在管理侧创建专线才可使用
+- 对端VPC：与当前VPC建立连接的VPC，也需要开启VPC网关
+
+### 8.13.2 查看列表
+
+![vpclinklist](../images/userguide/vpclinklist.png)
+
+### 8.13.3 断开网络
+用户可以通过操作列的“**断开**”按钮单独断开连接，也可以通过选中后**批量断开连接**。
+
+![disconnect](../images/userguide/disconnect.png)
+
+
+### 8.13.4 约束与限制
+- 配置网络互通时，两端VPC的网段（CIDR）不能重叠，否则可能会造成路由冲突，导致配置不生效。
+- 两个VPC之间不能同时建立多个VPC连接。
+- VPC中存在连接时，VPC网关不能关闭
