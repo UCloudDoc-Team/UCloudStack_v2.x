@@ -1,4 +1,4 @@
-<div class="sidebar_title icon-product__UCloudStack_v2.x/v1.x">技术白皮书 v2.6版本</div>
+<div class="sidebar_title icon-product__UCloudStack_v2.x/v1.x">技术白皮书 v2.7版本</div>
 
 * [概览](UCloudStack_v2.x/techwhitepaper/README.md)
 
