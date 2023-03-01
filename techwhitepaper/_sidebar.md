@@ -14,9 +14,7 @@
 
 * [4 产品功能架构](UCloudStack_v2.x/techwhitepaper/funarch.md)
 
-* [5 用户服务支持](UCloudStack_v2.x/techwhitepaper/service.md)
-
-* [6 灾备服务](UCloudStack_v2.x/techwhitepaper/recovery.md)
+* [5 灾备服务](UCloudStack_v2.x/techwhitepaper/recovery.md)
 
 * [返回主页](UCloudStack_v2.x/README.md)
 
