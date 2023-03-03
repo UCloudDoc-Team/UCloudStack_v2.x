@@ -3,7 +3,6 @@
 * [文档概览](UCloudStack_v2.x/README.md)
 * 产品介绍
   * [产品简介](UCloudStack_v2.x/introduction/README.md)
-  * [技术白皮书](UCloudStack_v2.x/techwhitepaper/README.md)
 * 操作指南
   * [用户手册](UCloudStack_v2.x/userguide/README.md)
   * [管理员手册](UCloudStack_v2.x/adminguide/README.md)
