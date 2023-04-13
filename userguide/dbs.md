@@ -50,19 +50,19 @@ Mysql支持创建部分库表的备份计划
 
 平台支持用户查看备份计划详情，包括基础信息和备份数据列表。可点击备份计划名称进入详情页。详情页如下图所示：
 
-![dbsdetails](../images/userguide/dbsdetails.png)
+![](../images/userguide/dbsdetails.png)
 
 ### 34.8.1 从备份数据创建实例
 
 平台支持用户从备份计划的可用备份数据创建实例。如下图所示：
 
-![backupexample](../images/userguide/backupexample.png)
+![](../images/userguide/backupexample.png)
 
 ### 34.8.2 删除备份数据
 
 平台支持用户删除备份数据，备份数据恢复中时不允许删除。如下图所示：
 
-![deletebackup](../images/userguide/deletebackup.png)
+![](../images/userguide/deletebackup.png)
 
 ## 34.9 更新备份计划
 
