@@ -146,7 +146,19 @@ chmod +x mc
 
 ![](../images/userguide/osssg.png)
 
-## 26.14 MinIO Client常用命令
+## 26.14 修改IP
+
+支持用户修改对象存储的内网IP地址。
+
+![updatefsip](../images/userguide/updatefsip.png)
+
+## 26.15 从备份创建
+
+用户可以通过备份创建对象存储。
+
+![createossfrombak](../images/userguide/createossfrombak.png)
+
+## 26.16 MinIO Client常用命令
 ```
 
 mc version                          输出mc版本

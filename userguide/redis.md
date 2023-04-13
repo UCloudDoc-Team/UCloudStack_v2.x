@@ -221,3 +221,15 @@ Redis是平台提供的一种数据库服务，支持单机版和主备版两种
 平台支持用户对自定义参数模板进行删除操作，可点击参数模板列中操作项的“**删除**”按钮进行操作，如下图所示：
 
 ![](../images/userguide/deleteRedistemplate.png)
+
+## 33.21 修改IP
+
+平台支持用户修改Redis的内网IP(VIP)地址。
+
+![updatefsip](../images/userguide/updatefsip.png)
+
+## 33.22 从备份创建
+
+平台支持用户从备份创建Redis。
+
+![createredisfrombak](../images/userguide/createredisfrombak.png)

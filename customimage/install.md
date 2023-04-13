@@ -209,21 +209,20 @@ reset repo                                                 [OK]
 ## 手动检测项和安装方式
 <!-- tabs:start -->
 ### ** Linux **
-|检查项           |检查项影响   |检查项目原因  |  达成项目方式 |
-|:----------------|:------------|:-------------|:--------------|
-|driver  |创建虚拟机无法启动 | UCloudStack 后台使用virtio 驱动存储和网卡, virtio驱动效率会高一些 | 参见[安装Linux virtio驱动](/UCloudStack_v2.x/customimage/linuxvirtio.md) 
-|SElinux |创建虚拟机无法正常使用 |selinux是为了最小权限,或影响虚拟机启动功能设置 | 文件: /etc/selinux/config 修改: SELINUX=disabled |
-|ssh     |远程ssh连接慢 | 默认 UseDNS/GSSAPIAuthentication 是开启的| 文件: /etc/ssh/sshd_config  关闭: UseDNS no/ GSSAPIAuthentication no|
-|console |物理机后台登录有问题|方便后台登录排查原因|参见 [各版本操作系统console开启](#virt_console)|
-|firewall|系统无法自动配置一些功能| 默认开启后影响服务访问,平台已在虚拟机网络层面做了防火墙功能|参见 [各个操作系统关系防火墙](#disable_firewall)|
-|fstab   |无法正常启动虚拟机| 清理fstab文件，去除文件中不需要的device id，保证使用的device id都在blkid命令的显示结果中| 防止启动时不存在的设备导致系统系统卡主| 对比blkid 和 /etc/fatab 是否匹配,删除多余的配置项|
-|DNS     |防止绑定外网后虚拟机无法正常上网| NA | 默认检查 114.114.114.114 如果存在自定义或者其他DNS可以忽略此项自行判断|
-|ipv6    |无法正常启动机器 | UCloudStack 虚拟机依赖ipv6管理网来管理和配置虚拟机| 参见[开启管理网络ipv6](#use_ipv6) |
-|acpid   |无法执行关机命令| 虚拟机关机依赖 acpid| 参见[安装acpid服务](#install_acpid)|
-|arping  | 绑定外网的虚拟机无法访问| 外网绑定成功需要对外发送arp包|参见[arping安装](#install_arping)|
-|hotplug | 云硬盘和弹性网卡热插拔后不生效| 系统热插拔设备需要支持 |参见[hotplug配置](#config_hotplug)|
-|qemu-guest-agent   |无法正常启动机器| 虚拟机网络配置,改密码等都依赖qga| 参见[qga安装](#install_qga)|
-|exporter   |监控信息无法显示| guest os 监控信息收集| 参见[node exporter安装](#install_node_exporter)|
+| 检查项           | 检查项影响                       | 检查项目原因                                                                             | 达成项目方式                                                             |
+|:-----------------|:---------------------------------|:-----------------------------------------------------------------------------------------|:-------------------------------------------------------------------------|
+| driver           | 创建虚拟机无法启动               | UCloudStack 后台使用virtio 驱动存储和网卡, virtio驱动效率会高一些                        | 参见[安装Linux virtio驱动](/UCloudStack_v2.x/customimage/linuxvirtio.md) |
+| SElinux          | 创建虚拟机无法正常使用           | selinux是为了最小权限,或影响虚拟机启动功能设置                                           | 文件: /etc/selinux/config 修改: SELINUX=disabled                         |
+| ssh              | 远程ssh连接慢                    | 默认 UseDNS/GSSAPIAuthentication 是开启的                                                | 文件: /etc/ssh/sshd_config  关闭: UseDNS no/ GSSAPIAuthentication no     |
+| console          | 物理机后台登录有问题             | 方便后台登录排查原因                                                                     | 参见 [各版本操作系统console开启](#virt_console)                          |
+| firewall         | 系统无法自动配置一些功能         | 默认开启后影响服务访问,平台已在虚拟机网络层面做了防火墙功能                              | 参见 [各个操作系统关系防火墙](#disable_firewall)                         |
+| fstab            | 无法正常启动虚拟机               | 清理fstab文件，去除文件中不需要的device id，保证使用的device id都在blkid命令的显示结果中 | 防止启动时不存在的设备导致系统系统卡主                                   |
+| DNS              | 防止绑定外网后虚拟机无法正常上网 | NA                                                                                       | 默认检查 114.114.114.114 如果存在自定义或者其他DNS可以忽略此项自行判断   |
+| ipv6             | 无法正常启动机器                 | UCloudStack 虚拟机依赖ipv6管理网来管理和配置虚拟机                                       | 参见[开启管理网络ipv6](#use_ipv6)                                        |
+| acpid            | 无法执行关机命令                 | 虚拟机关机依赖 acpid                                                                     | 参见[安装acpid服务](#install_acpid)                                      |
+| arping           | 绑定外网的虚拟机无法访问         | 外网绑定成功需要对外发送arp包                                                            | 参见[arping安装](#install_arping)                                        |
+| hotplug          | 云硬盘和弹性网卡热插拔后不生效   | 系统热插拔设备需要支持                                                                   | 参见[hotplug配置](#config_hotplug)                                       |
+| qemu-guest-agent | 无法正常启动机器                 | 虚拟机网络配置,改密码等都依赖qga                                                         | 参见[qga安装](#install_qga)                                              |
 
 <span id = "virt_console"></span>
 
@@ -326,7 +325,7 @@ reset repo                                                 [OK]
 ### ** Windows **
 
 | 检查项             | 检查项影响                     | 检查项目原因                                          | 达成项目方式                                   |
-|:-------------------|:--------------------------|:------------------------------------------------------|:-------------------------------------------|
+|:-------------------|:-------------------------------|:------------------------------------------------------|:-----------------------------------------------|
 | PasswordComplexity | 创建机器时设置额密码无法使用   | N/A                                                   | 参见[密码复杂度设置](#set_passwd_complex)      |
 | Firewall           | 可能导致机器无法启动           | UCloudStack平台已经提供安全组因此可以关闭机器中防火墙 | 参见[关闭系统防火墙](#win_disable_firewall)    |
 | Remote Desktop     | 无法通过远程连接工具连接虚拟机 | 如果需要远程连接,需要打开远程连接功能                 | 参见[开启远程桌面连接](#enable_remote_desktop) |

@@ -130,7 +130,18 @@ mount -t nfs4 192.168.179.179:/ /datanfs
 
 ![](../images/userguide/modifyFSname.png)
 
-## 25.12 删除文件存储
+## 25.12 修改IP
+
+支持用户修改文件存储的内网IP地址。
+
+![updatefsip](../images/userguide/updatefsip.png)
+
+## 25.13 从备份创建
+支持用户从备份创建新实例。
+
+![createfsfrombak](../images/userguide/createfsfrombak.png)
+
+## 25.14 删除文件存储
 
 用户可在控制台删除账户内文件存储，支持对文件存储进行批量删除操作。可通过文件存储列表操作项中的 “**删除**” 进行操作，如下图所示：
 

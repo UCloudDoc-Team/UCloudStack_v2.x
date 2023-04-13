@@ -12,10 +12,12 @@
 
 3. 执行 `qemu-img convert` 转换磁盘类型类 QCOW2 ，以供平台使用，具体命令如下：    
 
-```
 命令:
+```
     qemu-img convert -f <raw/qcow2/vmdk/vhd> -O qcow2 <源盘文件> <输出盘文件>
+```
 举例:
+```
     qemu-img convert -f raw -O qcow2 image-centos-74.raw image-centos-74.qcow2
 ```
 

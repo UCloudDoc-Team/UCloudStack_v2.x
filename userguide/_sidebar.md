@@ -1,4 +1,4 @@
-<div class="sidebar_title icon-product__UCloudStack_v2.x">用户手册 v2.7版本</div>
+<div class="sidebar_title icon-product__UCloudStack_v2.x">用户手册 v2.8版本</div>
 
 * [概览](UCloudStack_v2.x/userguide/README.md)
 * [版权声明](UCloudStack_v2.x/userguide/copyright.md)
@@ -28,13 +28,14 @@
 * [24 应用商店](UCloudStack_v2.x/userguide/app.md)
 * [25 文件存储](UCloudStack_v2.x/userguide/fs.md)
 * [26 对象存储](UCloudStack_v2.x/userguide/oss.md)
-* [27 虚拟机模板](UCloudStack_v2.x/userguide/vmtemplate.md)
+* [27 资源模板](UCloudStack_v2.x/userguide/resourcetemplate.md)
 * [28 隔离组](UCloudStack_v2.x/userguide/isolation.md)
 * [29 组播](UCloudStack_v2.x/userguide/multicast.md)
 * [30 通知组](UCloudStack_v2.x/userguide/contactgroup.md)
 * [31 资源事件](UCloudStack_v2.x/userguide/event.md)
 * [32 MySQL](UCloudStack_v2.x/userguide/mysql.md)
 * [33 Redis](UCloudStack_v2.x/userguide/redis.md)
-* [34 数据库备份服务](UCloudStack_v2.x/userguide/dbs.md)
+* [34 备份服务](UCloudStack_v2.x/userguide/dbs.md)
 * [35 标签管理](UCloudStack_v2.x/userguide/tag.md)
+* [36 开放API](CloudDocs_v2.x/userguide/openapi.md)
 * [返回主页](UCloudStack_v2.x/README.md)

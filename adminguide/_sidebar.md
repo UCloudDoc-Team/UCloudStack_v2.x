@@ -1,4 +1,4 @@
-<div class="sidebar_title icon-product__UCloudStack_v2.x">管理员手册 v2.7版本</div>
+<div class="sidebar_title icon-product__UCloudStack_v2.x">管理员手册 v2.8版本</div>
 
  * [概览](UCloudStack_v2.x/adminguide/README.md)
  * [版权声明](UCloudStack_v2.x/adminguide/copyright.md)
@@ -17,5 +17,6 @@
  * [13 一键巡检](UCloudStack_v2.x/adminguide/inspection.md)
  * [14 资源用量](UCloudStack_v2.x/adminguide/ru.md)
  * [15 管理员](UCloudStack_v2.x/adminguide/admin.md)
+ * [16 资源概览](CloudDocs_v2.x/adminguide/adminoverview.md)
  * [返回主页](UCloudStack_v2.x/README.md)
 

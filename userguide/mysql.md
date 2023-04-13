@@ -174,13 +174,23 @@ MySQL是平台提供的一种数据库服务，支持单机版和主备版两种
 
 平台支持用户查看备份管理列表信息，包括资源ID、状态、所属存储池、来源备份计划、保留时间(天)、保存路径、创建时间、更新时间、到期时间、操作。可点击MySQL名称进入详情页，切换到“**备份管理**”页面进行查看，如下图所示：
 
-![](../images/userguide/mysqldbs.png)
+![mysqlbakview](../images/userguide/mysqlbakview1.png)
+
+![mysqlbakview](../images/userguide/mysqlbakview2.png)
+
+![mysqlbakview](../images/userguide/mysqlbakview3.png)
 
 ### 32.14.2 删除备份
 
 平台支持用户对备份数据进行删除操作，可点击备份列表中操作项的”**删除**“按钮进行操作，也可通过备份列表的“**批量删除**”按钮进行操作，如下图所示：
 
 ![](../images/userguide/deletemysqldbs.png)
+
+### 32.14.3 从备份创建
+
+平台支持用户从备份创建mysql。
+
+![createmysqlfrombak](../images/userguide/createmysqlfrombak.png)
 
 ## 32.15 查看操作日志
 
@@ -223,3 +233,9 @@ MySQL是平台提供的一种数据库服务，支持单机版和主备版两种
 平台支持用户对自定义参数模板进行删除操作，可点击参数模板列中操作项的“**删除**”按钮进行操作，如下图所示：
 
 ![](../images/userguide/deletemysqltemplate.png)
+
+## 32.22 修改IP
+
+支持用户修改mysql的内网IP(VIP)地址。
+
+![updatefsip](../images/userguide/updatefsip.png)
