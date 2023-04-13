@@ -36,5 +36,5 @@
 * [33 Redis](UCloudStack_v2.x/userguide/redis.md)
 * [34 数据库备份服务](UCloudStack_v2.x/userguide/dbs.md)
 * [35 标签管理](UCloudStack_v2.x/userguide/tag.md)
-* [36 开放API](CloudDocs_v2.x/userguide/openapi.md)
+* [36 开放API](UCloudStack_v2.x/userguide/openapi.md)
 * [返回主页](UCloudStack_v2.x/README.md)
