@@ -7,5 +7,6 @@
 * [3 平台技术架构](UCloudStack_v2.x/techwhitepaper/techarch.md)
 * [4 产品功能架构](UCloudStack_v2.x/techwhitepaper/funarch.md)
 * [5 灾备服务](UCloudStack_v2.x/techwhitepaper/recovery.md)
+* [6 测试服务](UCloudStack_v2.x/techwhitepaper/test.md)
 * [返回主页](UCloudStack_v2.x/README.md)
   
