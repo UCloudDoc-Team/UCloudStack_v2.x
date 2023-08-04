@@ -14,7 +14,7 @@
 
 * [4 核心产品服务](UCloudStack_v2.x/N_whitepaper/funarch.md)
 
-* [5 PaaS产品服务](UCloudStack_v2.x/N_whitepaper/recovery.md)
+* [5 PaaS产品服务](UCloudStack_v2.x/N_whitepaper/paas.md)
 
 * [6 运维运营管理](UCloudStack_v2.x/N_whitepaper/operationmanagement.md)
 

@@ -23,10 +23,10 @@ UCloudStack云平台系统常见集群节点角色有4种，分别是管理节�
 生产环境至少部署3台以上，保证分布式系统的正常部署和运行。采用 SATA+SSD缓存的方案构建超融合节点，必须保证SSD缓存盘和HDD数据盘的容量比不高于1:20，数量比不高于1:5。
 
 在部署上，每台计算节点均会部署用于运行计算存储网络的KVM、Qemu、Libvirt、OVS、Ceph等核心组件，同时在每个地域中至少有3台计算节点会部署核心调度及管理模块，如下图所示：
-![](../images/techwhitepaper/deploycmp.png)
+![](../images/N_whitepaper/2-1.png)
 
-  其中【Schedule Manager】即为UCloudStack云平台的核心调度及管理模块，用于虚拟资源的运行调度及虚拟网络的流表下发管理，每一个地域仅需部署一套高可用的Schedule Manager。一般为主备模式，可在3台或多台计算节点上进行部署，当部署调度模块的主计算节点服务器物理故障时，部署调度模块的备计算节点将自动接替调度服务，保证核心调度及流表控制服务的可用性。
-  
+其中【Schedule Manager】即为UCloudStack云平台的核心调度及管理模块，用于虚拟资源的运行调度及虚拟网络的流表下发管理，每一个地域仅需部署一套高可用的Schedule Manager。一般为主备模式，可在3台或多台计算节点上进行部署，当部署调度模块的主计算节点服务器物理故障时，部署调度模块的备计算节点将自动接替调度服务，保证核心调度及流表控制服务的可用性。
+
 每个地域或数据中心的部署的Schedule Manager均会开放一个API端点，作为管理服务连接并管理数据中心计算资源的统一入口。API端点支持通过内网和互联网的连接模式，在TCP/IP网络通信可达的情况下，管理服务（Management Service）支持部署于相同数据中心，也可部署于公有云或其它数据中心，并可为多数据中心计算资源提供统一调度和管理，满足云平台多应用场景部署。
 ### 2.1.3 独立计算节点
 
@@ -97,7 +97,7 @@ UCloudStack云平台轻量且架构灵活，物理节点方案可根据企业业
 
 为构建高可用、高可靠、高安全的企业专有云平台，UCloudStack平台均采用高可用冗余性设计。本文以标准网络拓扑图为基础进行物理网络架构描述，本架构设计至少需要6台万兆交换机、2台千兆交换机、多台计算&存储节点服务器。若有IPMI管理及网络设备管理等需求，可根据需求增加IPMI和Management交换机并接入网络。
 
-![](../images/techwhitepaper/UCoudStack_Network_Topology.png)
+![](../images/N_whitepaper/2-2.png)
 
 UCloudStack 平台网络设计为核心、接入二层架构，接入交换机双上联到核心，且按计算业务分集群划分。本架构设计从业务场景上提供公网服务，因此整体业务架构分为内网区域和外网区域两张网络，分别承载云平台内网通信和外网通信，两张网络在网络设备层面物理隔离。
 
@@ -158,23 +158,23 @@ UCloudStack 平台网络设计为核心、接入二层架构，接入交换机�
 
 > 注：以上网卡bond均采用“mode=4”模式，即IEEE 802.3ad动态链路聚合。
 
-<span id="_224-标准架构扩展"></span>
-
 ### 2.2.4 标准架构扩展
 
 在实际项目中，根据用户需求和所提供的环境，可对标准网络架构进行调整，如项目较小规模（ 45 节点内）或仅需一个简单的测试环境或等场景。
 
-（1）如需内外网物理隔离且考虑接入冗余，可采用 2 组共 4 台接入交换机进行业务部署。
+**（1）如需内外网物理隔离且考虑接入冗余，可采用 2 组共 4 台接入交换机进行业务部署**
+
 - 2 台堆叠用于服务器内网接入，2 台堆叠用于服务器外网接入；
 - 每台服务器内外网分别使用 2 个接口绑定接入内外网接入交换机，可支持 45 台服务器节点冗余接入（每台交换机48个接口，考虑堆叠检测和备用的端口占用；下同）。
 
-（2）如需内外网物理隔离且不考虑接入冗余，可采用 2 台接入交换机进行业务部署；
+**（2）如需内外网物理隔离且不考虑接入冗余，可采用 2 台接入交换机进行业务部署**
+
 - 1 台用于服务器内网接入，1 台用于服务器外网接入；
 - 每台服务器分别使用 1 个接口接入内网接入交换机及外网接入交换机，支持 45 台服务器节点接入；
 
-（3）若内外网无需物理隔离且考虑接入冗余，可采用 2 台交换机堆叠，通过 Vlan 隔离内外网，如下图所示：
+**（3）若内外网无需物理隔离且考虑接入冗余，可采用 2 台交换机堆叠，通过 Vlan 隔离内外网，如下图所示：**
 
-![](../images/techwhitepaper/Network_Topology.png)
+![](../images/N_whitepaper/2-3.png)
 
 - 方案一：通过在交换机上划分 Vlan ，服务器分别使用 2 个接口绑定接入交换机内外网 Vlan 接口，即每台服务器需 2 组 `bond` (4 个接口）实现内外网业务通信，可支持 22 节点；
 - 方案二：通过在服务器操作系统内划分 Vlan（即子接口），服务器分别使用 2 个接口绑定接入交换机 Trunk 接口，即每台服务器仅需 2 个接口绑定实现内外网业务通信，可支持 45 节点；
@@ -185,8 +185,6 @@ UCloudStack 平台网络设计为核心、接入二层架构，接入交换机�
 
 - 可以为独立存储节点单独划分一对接入交换机上联至内网核心交换机，实现计算和存储网络进行分离。
 - 平台计算虚拟机可通过物理网络挂载多个存储网络的存储集群，采用独立的存储网络设计可将存储节点及分布式存储系统内部同步流量与虚拟机计算读写存储的流量进行分离，提高平台整体的稳定性和性能。
-
-
 
 ## 2.3 硬件选型
 
@@ -242,25 +240,25 @@ UCloudStack 平台网络设计为核心、接入二层架构，接入交换机�
 
 | 业务  | 配置描述                   | 构建方案         |
 |-----|---------------------------|--------------|
-| 内网核心交换机 | CE88-40G板卡(16口)*4，64*40GE	  | 	可选（48 节点以上扩容） |
-| 外网核心交换机	| 48*10GE + 6*100GE		  | 	可选（48 节点以上扩容） |
-| 内网接入交换机	| 48*10GE + 6*100GE		  | 	必选　         |
-| 存储接入交换机	| 48*10GE + 6*100GE  | 		可选（独立存储区域）	 |
-| 外网接入交换机	| 48*GE + 4*10GE + 2*40GE| 可选（内外网物理隔离）  |
-| 管理汇报交换机	| 48*GE + 4*10GE + 2*40GE	|可选（构建运维管理网） |
-| IPMI接入交换机	| 48*GE + 4*10GE + 2*40GE	|可选（构建IPMI管理网） |
-| 网络设备MGT接入| 48*GE + 4*10GE + 2*40GE|可选（构建MGT管理网）|
+| 内网核心交换机 | CE88-40G板卡(16口)* 4，64* 40GE	| 	可选（48 节点以上扩容） |
+| 外网核心交换机	| 48* 10GE + 6*100GE	| 	可选（48 节点以上扩容） |
+| 内网接入交换机	| 48* 10GE + 6*100GE		| 	必选　         |
+| 存储接入交换机	| 48* 10GE + 6*100GE | 		可选（独立存储区域）	 |
+| 外网接入交换机	| 48* GE + 4* 10GE + 2*40GE | 可选（内外网物理隔离）  |
+| 管理汇报交换机	| 48* GE + 4* 10GE + 2*40GE	|可选（构建运维管理网） |
+| IPMI接入交换机	| 48* GE + 4* 10GE + 2*40GE	|可选（构建IPMI管理网） |
+| 网络设备MGT接入| 48* GE + 4* 10GE + 2*40GE |可选（构建MGT管理网）|
 
 **（2）服务器推荐配置**
 
-| 机型      | 配置描述                                                     |
-|---------|----------------------------------------------------------|
-| 融合型——低配 | Factor Form 2U<br/>CPU Intel Xeon Silver 4310 Processor(12CORES_2.1GHz_120W_X86)  *2<br/>DDR4_32GB_RDIMM_3200MHz *4<br/>OS HDD 480G_SSD_SATA3_512E_2.5"_6Gb/s *2<br/>Cache HDD 960G_SSD_U.2_N/A_512E_2.5"_32Gb/s*2<br/>Data HDD SATA3_HDD_8TB *4<br/>LSI-9311-8I*1<br/>双口万兆光口网卡(不含光模块)*2<br/>PSU=800W*2/导轨                         |
-| 融合型——中配 | Factor Form 2U<br/>CPU Intel Xeon Silver 4310 Processor(12CORES_2.1GHz_120W_X86)  *2<br/>DDR4_32GB_RDIMM_3200MHz *8<br/>OS HDD 480G_SSD_SATA3_512E_2.5"_6Gb/s *2<br/>Cache HDD 1.92T_SSD_U.2_N/A_512E_2.5"_32Gb/s*2<br/>Data HDD SATA3_HDD_8TB *10<br/>LSI-9311-8I<br/>双口万兆光口网卡(不含光模块)*2<br/>PSU=800W*2/导轨|
-| 融合型——高配 | Factor Form 2U<br/>CPU Intel Xeon Silver 4310 Processor(12CORES_2.1GHz_120W_X86)  *2<br/>DDR4_32GB_RDIMM_3200MHz *16<br/>OS HDD 480G_SSD_SATA3_512E_2.5"_6Gb/s *2<br/>Cache HDD 3.84T_NVME_U.2_N/A_512E_2.5"_32Gb/s*2<br/>Data HDD SATA3_HDD_16TB *10<br/>LSI-9311-8I<br/>双口万兆光口网卡(不含光模块)*2<br/>PSU=800W*2/导轨|
-| 存储型——低配 | Factor Form 2U<br/>CPU Intel Xeon Silver 4310 Processor(12CORES_2.1GHz_120W_X86)  *2<br/>DDR4_32GB_RDIMM_3200MHz *4<br/>OS HDD 480G_SSD_SATA3_512E_2.5""_6Gb/s *2<br/>Cache HDD 3.84T_NVME_U.2_N/A_512E_2.5""_32Gb/s*2<br/>Data HDD SATA3_HDD_16TB *10<br/>LSI-9311-8I<br/>双口万兆光口网卡(不含光模块)*2<br/>PSU=800W*2/导轨"|
-| 存储型——高配 | Factor Form 4U<br/>CPU Intel® Xeon® Silver 4314 Processor(16CORES_2.4GHz_135W_X86)  *2<br/>DDR4_32GB_RDIMM_3200MH*8<br/>OS HDD 480G_SSD_SATA3_512E_2.5""_6Gb/s *2<br/>Data HDD SATA3_HDD_16TB *36<br/>LSI-9311-8I<br/>双口万兆光口网卡(不含光模块)*2<br/>PSU=1300W*2/导轨"<br/>|
-| 计算型     | Factor Form 2U<br/>CPU Intel Xeon Silver 4310 Processor(12CORES_2.1GHz_120W_X86)  *2<br/>DDR4_32GB_RDIMM_3200MHz *8<br/>OS HDD 480G_SSD_SATA3_512E_2.5""_6Gb/s *2<br/>LSI-9311-8I<br/>双口万兆光口网卡(不含光模块)*2<br/>PSU=800W*2/导轨|
+| 机型         | 配置描述                                                     |
+| ------------ | ------------------------------------------------------------ |
+| 融合型——低配 | Factor Form 2U<br/>CPU Intel Xeon Silver 4310 Processor(12CORES_2.1GHz_120W_X86)  *2<br/>DDR4_32GB_RDIMM_3200MHz *4<br/>OS HDD 480G_SSD_SATA3_512E_2.5"_6Gb/s *2<br/>Cache HDD 960G_SSD_U.2_N/A_512E_2.5"_32Gb/s*2<br/>Data HDD SATA3_HDD_8TB *4<br/>LSI-9311-8I*1<br/>双口万兆光口网卡(不含光模块)*2<br/>PSU=800W*2/导轨 |
+| 融合型——中配 | Factor Form 2U<br/>CPU Intel Xeon Silver 4310 Processor(12CORES_2.1GHz_120W_X86)  *2<br/>DDR4_32GB_RDIMM_3200MHz *8<br/>OS HDD 480G_SSD_SATA3_512E_2.5"_6Gb/s *2<br/>Cache HDD 1.92T_SSD_U.2_N/A_512E_2.5"_32Gb/s*2<br/>Data HDD SATA3_HDD_8TB *10<br/>LSI-9311-8I<br/>双口万兆光口网卡(不含光模块)*2<br/>PSU=800W*2/导轨 |
+| 融合型——高配 | Factor Form 2U<br/>CPU Intel Xeon Silver 4310 Processor(12CORES_2.1GHz_120W_X86)  *2<br/>DDR4_32GB_RDIMM_3200MHz *16<br/>OS HDD 480G_SSD_SATA3_512E_2.5"_6Gb/s *2<br/>Cache HDD 3.84T_NVME_U.2_N/A_512E_2.5"_32Gb/s*2<br/>Data HDD SATA3_HDD_16TB *10<br/>LSI-9311-8I<br/>双口万兆光口网卡(不含光模块)*2<br/>PSU=800W*2/导轨 |
+| 存储型——低配 | Factor Form 2U<br/>CPU Intel Xeon Silver 4310 Processor(12CORES_2.1GHz_120W_X86)  *2<br/>DDR4_32GB_RDIMM_3200MHz *4<br/>OS HDD 480G_SSD_SATA3_512E_2.5""_6Gb/s *2<br/>Cache HDD 3.84T_NVME_U.2_N/A_512E_2.5""_32Gb/s*2<br/>Data HDD SATA3_HDD_16TB *10<br/>LSI-9311-8I<br/>双口万兆光口网卡(不含光模块)*2<br/>PSU=800W*2/导轨" |
+| 存储型——高配 | Factor Form 4U<br/>CPU Intel® Xeon® Silver 4314 Processor(16CORES_2.4GHz_135W_X86)  *2<br/>DDR4_32GB_RDIMM_3200MH*8<br/>OS HDD 480G_SSD_SATA3_512E_2.5""_6Gb/s *2<br/>Data HDD SATA3_HDD_16TB *36<br/>LSI-9311-8I<br/>双口万兆光口网卡(不含光模块)*2<br/>PSU=1300W*2/导轨"<br/> |
+| 计算型       | Factor Form 2U<br/>CPU Intel Xeon Silver 4310 Processor(12CORES_2.1GHz_120W_X86)  *2<br/>DDR4_32GB_RDIMM_3200MHz *8<br/>OS HDD 480G_SSD_SATA3_512E_2.5""_6Gb/s *2<br/>LSI-9311-8I<br/>双口万兆光口网卡(不含光模块)*2<br/>PSU=800W*2/导轨 |
 
 
 ## 2.4 平台资源占用
@@ -283,7 +281,7 @@ UCloudStack 平台网络设计为核心、接入二层架构，接入交换机�
 
 网络设备和服务器的物理机柜空间规划如下图所示：
 
-![](../images/techwhitepaper/Cabinet_Space.png)
+![](../images/N_whitepaper/2-4.png)
 
 所有设备在机柜中对称部署，实现机柜级冗余，单机柜掉电或故障不影响云平台业务。一个机柜可支撑 15 个节点，根据网络架构设计一组接入交换机支撑 45 个节点，即一组接入交换机支撑 3 个机柜。3 个机柜为 1 组，平均 1 组机柜支撑 45 个节点、1 组内网接入交换机、1 组外网接入交换机、1 台 IPMI 接入交换机。
 
